@@ -2531,6 +2531,379 @@ table.adm-table tr:hover td { background: #fafafa; }
   flex-shrink: 0;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   COMMAND CENTER — Sidebar Layout & Customer Profile
+   ═══════════════════════════════════════════════════════════ */
+
+/* Sidebar layout */
+.cc-layout {
+  display: flex;
+  min-height: calc(100vh - 120px);
+  gap: 0;
+}
+.cc-sidebar {
+  width: 240px;
+  background: #0f1d35;
+  border-radius: 16px 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 24px 0;
+  position: relative;
+}
+.cc-sidebar-hdr {
+  padding: 0 20px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  margin-bottom: 8px;
+}
+.cc-sidebar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+.cc-sidebar-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,.35);
+  margin-top: 2px;
+}
+.cc-sidebar-nav {
+  flex: 1;
+  padding: 8px 12px;
+}
+.cc-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255,255,255,.55);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .18s;
+  text-align: left;
+  margin-bottom: 2px;
+}
+.cc-nav-item:hover { background: rgba(255,255,255,.06); color: rgba(255,255,255,.8); }
+.cc-nav-item.active {
+  background: #1B2F52;
+  color: #C9A84C;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.cc-nav-ico { font-size: 16px; width: 20px; text-align: center; }
+.cc-sidebar-footer {
+  padding: 16px 20px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: 11px;
+  color: rgba(255,255,255,.3);
+}
+.cc-main {
+  flex: 1;
+  background: #f5f7fa;
+  border-radius: 0 16px 16px 0;
+  padding: 28px 32px;
+  overflow-y: auto;
+  min-height: 500px;
+}
+
+/* Customer profile header card */
+.cc-profile-card {
+  background: linear-gradient(135deg, #0f1d35, #1B2F52);
+  border-radius: 16px;
+  padding: 28px 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.cc-profile-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 100% 0%, rgba(201,168,76,.12), transparent 55%);
+  pointer-events: none;
+}
+.cc-profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.cc-profile-district {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+.cc-profile-badge {
+  background: rgba(5,150,105,.25);
+  border: 1px solid rgba(5,150,105,.45);
+  color: #34d399;
+  padding: 5px 16px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.cc-profile-badge.expired { background: rgba(220,38,38,.2); border-color: rgba(220,38,38,.35); color: #f87171; }
+.cc-profile-badge.warning { background: rgba(217,119,6,.2); border-color: rgba(217,119,6,.35); color: #fbbf24; }
+
+/* Stats row */
+.cc-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.cc-stat-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(27,47,82,.07);
+}
+.cc-stat-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #1B2F52;
+  line-height: 1;
+}
+.cc-stat-l {
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-top: 6px;
+}
+
+/* Info cards row (Contact / Contract) */
+.cc-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.cc-info-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(27,47,82,.07);
+  position: relative;
+}
+.cc-info-label {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cc-info-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #1B2F52;
+  margin-bottom: 2px;
+}
+.cc-info-title {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+.cc-info-detail {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+.cc-info-detail a { color: #1B2F52; text-decoration: none; }
+.cc-info-detail a:hover { text-decoration: underline; }
+.cc-contract-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.cc-contract-row:last-child { border-bottom: none; }
+.cc-contract-lbl { color: #6b7280; }
+.cc-contract-val { color: #1B2F52; font-weight: 700; }
+
+/* Module pills */
+.cc-modules-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(27,47,82,.07);
+  margin-bottom: 20px;
+}
+.cc-modules-label {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cc-module-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cc-module-pill {
+  padding: 9px 18px;
+  border-radius: 99px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid #1B2F52;
+  cursor: pointer;
+  transition: all .18s;
+}
+.cc-module-pill.on {
+  background: #1B2F52;
+  color: #C9A84C;
+}
+.cc-module-pill.off {
+  background: #fff;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+}
+
+/* Section edit button */
+.cc-edit-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B2F52;
+  cursor: pointer;
+  background: none;
+  border: 1.5px solid #e5e7eb;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  transition: all .15s;
+}
+.cc-edit-link:hover { background: #1B2F52; color: #fff; border-color: #1B2F52; }
+
+/* Customer profile edit modal */
+.cc-edit-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 9999;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+.cc-edit-overlay.open { display: flex; }
+.cc-edit-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 12px 48px rgba(27,47,82,.2);
+  animation: admModalIn .22s ease;
+}
+.cc-edit-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.cc-edit-modal-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1B2F52;
+  margin: 0;
+}
+.cc-edit-modal-body {
+  padding: 24px;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.cc-edit-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid #f3f4f6;
+  background: #f9fafb;
+  border-radius: 0 0 16px 16px;
+}
+.cc-cancel-btn {
+  background: none;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all .15s;
+}
+.cc-cancel-btn:hover { border-color: #9ca3af; color: #374151; }
+
+/* Back link */
+.cc-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b7280;
+  text-decoration: none;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: color .15s;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0;
+}
+.cc-back-link:hover { color: #1B2F52; }
+
+/* CC Section title */
+.cc-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1B2F52;
+  margin-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .cc-layout { flex-direction: column; }
+  .cc-sidebar {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    padding: 16px 0;
+  }
+  .cc-sidebar-nav { display: flex; flex-wrap: wrap; gap: 4px; }
+  .cc-nav-item { width: auto; }
+  .cc-main { border-radius: 0 0 16px 16px; padding: 20px 16px; }
+  .cc-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .cc-info-row { grid-template-columns: 1fr; }
+}
+
 /* Section titles */
 .adm-section-title {
   font-family: 'Playfair Display', serif;
@@ -3305,235 +3678,145 @@ table.adm-table tr:hover td { background: #fafafa; }
 
     <!-- ── ADMIN DASHBOARD (shown after login) ───────────────────── -->
     <div id="adm-dash-wrap" style="display:none;">
+      <div id="adm-last-sync" style="display:none;"></div>
 
-      <!-- Top bar -->
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
-        <div>
-          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9ca3af;margin-bottom:2px;">LaunchPoint Navigator</div>
-          <div style="font-family:'Playfair Display',serif;font-size:22px;color:#1B2F52;">Admin Portal</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div id="adm-last-sync" style="font-size:11px;color:#9ca3af;"></div>
-          <button class="adm-logout" onclick="ADM.logout()">&#128274; Lock Portal</button>
-        </div>
-      </div>
+      <!-- ═══ COMMAND CENTER LAYOUT ═══ -->
+      <div class="cc-layout">
 
-      <!-- Org header strip -->
-      <div class="adm-header" id="adm-org-header">
-        <div style="position:relative;z-index:1;">
-          <div class="adm-header-type" id="adm-org-type">Organization</div>
-          <div class="adm-org-name adm-header-org" id="adm-org-name">Your Organization</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;" id="adm-org-location"></div>
-        </div>
-        <div class="adm-header-meta" style="position:relative;z-index:1;">
-          <div class="adm-header-stat"><div class="adm-header-stat-n" id="adm-stat-users">0</div><div class="adm-header-stat-l">Total Users</div></div>
-          <div class="adm-header-stat"><div class="adm-header-stat-n" id="adm-stat-active">0</div><div class="adm-header-stat-l">Active Today</div></div>
-          <div class="adm-header-stat"><div class="adm-header-stat-n" id="adm-stat-complete">0%</div><div class="adm-header-stat-l">Avg Progress</div></div>
-          <div class="adm-header-stat"><div class="adm-header-stat-n" id="adm-stat-days">0</div><div class="adm-header-stat-l">Days Left</div></div>
-          <div id="adm-contract-status" class="adm-header-badge">&#9679; Active</div>
-        </div>
-      </div>
-
-      <!-- Sub-nav -->
-      <div class="adm-nav" id="adm-nav">
-        <button class="adm-nav-btn on" onclick="ADM.show('overview',this)">&#128202; Overview</button>
-        <button class="adm-nav-btn" onclick="ADM.show('users',this)">&#128101; Users</button>
-        <button class="adm-nav-btn" onclick="ADM.show('modules',this)">&#128218; Modules</button>
-        <button class="adm-nav-btn" onclick="ADM.show('contract',this)">&#128203; Contract</button>
-        <button class="adm-nav-btn" onclick="ADM.show('reports',this)">&#128196; Reports</button>
-        <button class="adm-nav-btn" onclick="ADM.show('settings',this)">&#9881;&#65039; Settings</button>
-      </div>
-
-      <!-- ── OVERVIEW ──────────────────────────────────────────── -->
-      <div id="adm-overview" class="adm-section">
-        <div class="adm-kpi-grid" id="adm-kpi-grid"></div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;" id="adm-overview-grid">
-
-          <!-- Recent Activity -->
-          <div class="adm-table-wrap">
-            <div class="adm-table-hdr"><div class="adm-table-title">&#9889; Recent Activity</div></div>
-            <div style="padding:6px 20px 14px;" id="adm-activity-feed"></div>
+        <!-- ── Sidebar ── -->
+        <div class="cc-sidebar">
+          <div class="cc-sidebar-hdr">
+            <div class="cc-sidebar-title">Command Center</div>
+            <div class="cc-sidebar-sub">LaunchPoint Navigator</div>
           </div>
-
-          <!-- Module Completion Rates -->
-          <div class="adm-table-wrap">
-            <div class="adm-table-hdr"><div class="adm-table-title">&#128218; Module Completion</div></div>
-            <div style="padding:10px 20px 16px;" id="adm-module-overview"></div>
+          <div class="cc-sidebar-nav">
+            <button class="cc-nav-item active" onclick="ADM.ccNav('hub',this)"><span class="cc-nav-ico">&#128200;</span> Customer Hub</button>
+            <button class="cc-nav-item" onclick="ADM.ccNav('customers',this)"><span class="cc-nav-ico">&#128101;</span> Customers</button>
+            <button class="cc-nav-item" onclick="ADM.ccNav('allusers',this)"><span class="cc-nav-ico">&#128100;</span> All Users</button>
+            <button class="cc-nav-item" onclick="ADM.ccNav('modcontrol',this)"><span class="cc-nav-ico">&#9881;</span> Module Control</button>
           </div>
-
+          <div class="cc-sidebar-footer">
+            <span id="cc-admin-name">Admin</span>
+            <div style="margin-top:8px;"><button onclick="ADM.logout()" style="font-size:11px;padding:6px 12px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.5);border:none;border-radius:6px;cursor:pointer;font-family:'DM Sans',sans-serif;">&#128274; Lock Portal</button></div>
+          </div>
         </div>
 
-        <!-- Top users by progress -->
-        <div class="adm-section-title">&#127775; Top Performers</div>
-        <div class="adm-table-wrap">
-          <table class="adm-table" id="adm-top-table">
-            <thead><tr>
-              <th>Student</th><th>Grade</th><th>Neighborhood</th><th>Careers Saved</th><th>FL Score</th><th>Progress</th><th>Last Active</th>
-            </tr></thead>
-            <tbody id="adm-top-tbody"></tbody>
-          </table>
-        </div>
-      </div>
+        <!-- ── Main Content Area ── -->
+        <div class="cc-main">
 
-      <!-- ── USERS ─────────────────────────────────────────────── -->
-      <div id="adm-users" class="adm-section" style="display:none;">
-        <div class="adm-table-wrap">
-          <div class="adm-table-hdr">
-            <div class="adm-table-title">&#128101; All Users <span id="adm-user-count" style="font-size:12px;color:#9ca3af;font-family:'DM Sans',sans-serif;font-weight:400;margin-left:8px;"></span></div>
-            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-              <input class="adm-search" id="adm-user-search" placeholder="&#128269; Search users..." oninput="ADM.filterUsers()">
-              <select id="adm-user-filter" onchange="ADM.filterUsers()" style="padding:7px 10px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:12px;font-family:'DM Sans',sans-serif;outline:none;background:#fff;">
-                <option value="all">All Grades</option>
-                <option value="6">Grade 6</option><option value="7">Grade 7</option><option value="8">Grade 8</option>
-                <option value="9">Grade 9</option><option value="10">Grade 10</option>
-                <option value="11">Grade 11</option><option value="12">Grade 12</option>
-              </select>
-              <button class="adm-save-btn" style="font-size:11px;padding:7px 14px;" onclick="ADM.exportUsers()">&#8595; Export CSV</button>
+          <!-- ══ CUSTOMER HUB (default view) ══ -->
+          <div id="cc-hub" class="cc-section">
+            <button class="cc-back-link" onclick="ADM.ccNav('customers',document.querySelectorAll('.cc-nav-item')[1])">&#8592; Back</button>
+
+            <!-- Profile card -->
+            <div class="cc-profile-card" id="cc-profile-card">
+              <div style="position:relative;z-index:1;">
+                <div class="cc-profile-name" id="cc-org-name">Your Organization</div>
+                <div class="cc-profile-district" id="cc-org-district"></div>
+              </div>
+              <div class="cc-profile-badge" id="cc-status-badge" style="position:relative;z-index:1;">Active</div>
+            </div>
+
+            <!-- Stats row -->
+            <div class="cc-stats-row">
+              <div class="cc-stat-card"><div class="cc-stat-n" id="cc-stat-users">0</div><div class="cc-stat-l">Users</div></div>
+              <div class="cc-stat-card"><div class="cc-stat-n" id="cc-stat-health">0</div><div class="cc-stat-l">Health</div></div>
+              <div class="cc-stat-card"><div class="cc-stat-n" id="cc-stat-mrr">$0</div><div class="cc-stat-l">MRR</div></div>
+              <div class="cc-stat-card"><div class="cc-stat-n" id="cc-stat-contract">$0</div><div class="cc-stat-l">Contract</div></div>
+            </div>
+
+            <!-- Contact & Contract cards -->
+            <div class="cc-info-row">
+              <div class="cc-info-card">
+                <div class="cc-info-label">CONTACT <button class="cc-edit-link" onclick="ADM.ccEdit('contact')">&#9998; Edit</button></div>
+                <div class="cc-info-name" id="cc-contact-name">&#8212;</div>
+                <div class="cc-info-title" id="cc-contact-title"></div>
+                <div class="cc-info-detail" id="cc-contact-email"></div>
+                <div class="cc-info-detail" id="cc-contact-phone"></div>
+              </div>
+              <div class="cc-info-card">
+                <div class="cc-info-label">CONTRACT <button class="cc-edit-link" onclick="ADM.ccEdit('contract')">&#9998; Edit</button></div>
+                <div id="cc-contract-details">
+                  <div class="cc-contract-row"><div class="cc-contract-lbl">Start</div><div class="cc-contract-val" id="cc-contract-start">&#8212;</div></div>
+                  <div class="cc-contract-row"><div class="cc-contract-lbl">End</div><div class="cc-contract-val" id="cc-contract-end">&#8212;</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Module pills -->
+            <div class="cc-modules-card">
+              <div class="cc-modules-label">MODULES (CLICK TO TOGGLE) <button class="cc-edit-link" onclick="ADM.ccEdit('org')">&#9998; Edit Organization</button></div>
+              <div class="cc-module-pills" id="cc-module-pills"></div>
             </div>
           </div>
-          <div style="overflow-x:auto;">
-            <table class="adm-table" id="adm-users-table">
-              <thead><tr>
-                <th>Name</th><th>Grade</th><th>Stage</th><th>Neighborhood</th><th>Sub-Neighborhood</th>
-                <th>Careers Saved</th><th>FL Modules</th><th>School/Aid</th><th>Net Score</th><th>Last Active</th><th>Status</th><th>Actions</th>
-              </tr></thead>
-              <tbody id="adm-users-tbody"></tbody>
-            </table>
+
+          <!-- ══ CUSTOMERS LIST ══ -->
+          <div id="cc-customers" class="cc-section" style="display:none;">
+            <div class="cc-section-title">&#128101; Customers</div>
+            <div id="cc-customers-list"></div>
           </div>
-        </div>
-        <div style="font-size:11px;color:#9ca3af;margin-top:8px;">
-          &#9432; User data is stored locally in this browser. Export to CSV to share with your team.
-        </div>
+
+          <!-- ══ ALL USERS ══ -->
+          <div id="cc-allusers" class="cc-section" style="display:none;"></div>
+
+          <!-- ══ MODULE CONTROL ══ -->
+          <div id="cc-modcontrol" class="cc-section" style="display:none;"></div>
+
+          <!-- ══ SETTINGS (accessible from Customer Hub edit) ══ -->
+          <div id="cc-settings" class="cc-section" style="display:none;"></div>
+
+          <!-- ══ REPORTS (accessible via customers) ══ -->
+          <div id="cc-reports" class="cc-section" style="display:none;"></div>
+
+        </div><!-- end cc-main -->
+      </div><!-- end cc-layout -->
+
+      <!-- ════ HIDDEN LEGACY ELEMENTS (data targets) ════ -->
+      <div style="display:none;">
+        <span id="adm-org-type"></span>
+        <span id="adm-org-name"></span>
+        <span id="adm-org-location"></span>
+        <span id="adm-stat-users"></span>
+        <span id="adm-stat-active"></span>
+        <span id="adm-stat-complete"></span>
+        <span id="adm-stat-days"></span>
+        <span id="adm-contract-status"></span>
+        <div class="adm-nav" id="adm-nav"></div>
       </div>
 
-      <!-- ── MODULES ───────────────────────────────────────────── -->
-      <div id="adm-modules" class="adm-section" style="display:none;">
-        <div class="adm-section-title">&#128218; Active Modules</div>
-        <div class="adm-module-grid" id="adm-module-grid"></div>
-        <div style="font-size:12px;color:#9ca3af;background:#f9fafb;border-radius:10px;padding:14px;margin-top:4px;">
-          &#9432; Module visibility controls which tabs are accessible to students. Changes take effect immediately. All modules are included in your subscription.
-        </div>
-      </div>
-
-      <!-- ── CONTRACT ──────────────────────────────────────────── -->
-      <div id="adm-contract" class="adm-section" style="display:none;">
-        <div class="adm-section-title">&#128203; Contract Details</div>
-        <div class="adm-contract-card" id="adm-contract-card"></div>
-        <div class="adm-section-title" style="margin-top:20px;">&#128181; Subscription Usage</div>
-        <div class="adm-contract-card" id="adm-usage-card"></div>
-        <div class="adm-section-title" style="margin-top:20px;">&#128222; Support &amp; Renewal</div>
-        <div class="adm-contract-card">
-          <div class="adm-contract-row"><div class="adm-contract-lbl">Account Manager</div><div class="adm-contract-val">LaunchPoint Partner Team</div></div>
-          <div class="adm-contract-row"><div class="adm-contract-lbl">Support Email</div><div class="adm-contract-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90e3e5e0e0ffe2e4d0fcf1e5fef3f8e0fff9fee4fef1e6f9f7f1e4ffe2bef3fffd">[email&#160;protected]</a></div></div>
-          <div class="adm-contract-row"><div class="adm-contract-lbl">Support Phone</div><div class="adm-contract-val">(800) 555-LPNAV</div></div>
-          <div class="adm-contract-row"><div class="adm-contract-lbl">Renewal Process</div><div class="adm-contract-val">Contact 60 days before expiration</div></div>
-          <div class="adm-contract-row"><div class="adm-contract-lbl">Training Resources</div><div class="adm-contract-val"><a href="#" style="color:#1B2F52;font-weight:700;">admin.launchpointnavigator.com</a></div></div>
-        </div>
-      </div>
-
-      <!-- ── REPORTS ───────────────────────────────────────────── -->
-      <div id="adm-reports" class="adm-section" style="display:none;">
-        <div class="adm-section-title">&#128196; Downloadable Reports</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-bottom:24px;" id="adm-report-cards"></div>
-        <div class="adm-section-title">&#128202; Engagement Analytics</div>
-        <div class="adm-table-wrap">
-          <div style="padding:20px;" id="adm-analytics-body"></div>
-        </div>
-      </div>
-
-      <!-- ── SETTINGS ──────────────────────────────────────────── -->
+      <!-- ════ LEGACY SECTIONS (removed from view, IDs preserved for settings) ════ -->
+      <div id="adm-overview" class="adm-section" style="display:none;"></div>
+      <div id="adm-users" class="adm-section" style="display:none;"></div>
+      <div id="adm-modules" class="adm-section" style="display:none;"></div>
+      <div id="adm-contract" class="adm-section" style="display:none;"></div>
+      <div id="adm-reports" class="adm-section" style="display:none;"></div>
       <div id="adm-settings" class="adm-section" style="display:none;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;" id="adm-settings-grid">
-
-          <!-- Org Settings -->
-          <div class="adm-contract-card">
-            <div class="adm-section-title" style="margin-bottom:16px;">&#127970; Organization Settings</div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Organization Name</label>
-              <input class="adm-form-input" id="set-org-name" placeholder="e.g. Jefferson County Schools">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Organization Type</label>
-              <select class="adm-form-select" id="set-org-type">
-                <option value="school">School</option>
-                <option value="district">School District</option>
-                <option value="creditunion">Credit Union</option>
-                <option value="bank">Bank</option>
-                <option value="nonprofit">Nonprofit</option>
-                <option value="parent">Parent Organization</option>
-                <option value="library">Public Library</option>
-                <option value="workforce">Workforce Agency</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Location / City</label>
-              <input class="adm-form-input" id="set-org-location" placeholder="e.g. Birmingham, AL">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Primary Contact</label>
-              <input class="adm-form-input" id="set-contact-name" placeholder="Full name">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Contact Email</label>
-              <input class="adm-form-input" id="set-contact-email" placeholder="admin@yourorg.com" type="email">
-            </div>
-            <button class="adm-save-btn" onclick="ADM.saveSettings()">&#10003; Save Organization</button>
-          </div>
-
-          <!-- Contract Settings -->
-          <div class="adm-contract-card">
-            <div class="adm-section-title" style="margin-bottom:16px;">&#128203; Contract Settings</div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Contract Start Date</label>
-              <input class="adm-form-input" id="set-start-date" type="date">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Contract End Date</label>
-              <input class="adm-form-input" id="set-end-date" type="date">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">User License Limit</label>
-              <input class="adm-form-input" id="set-user-limit" type="number" placeholder="e.g. 500" min="1">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">Contract Notes</label>
-              <textarea class="adm-form-input" id="set-contract-notes" rows="3" placeholder="Renewal terms, special provisions..." style="resize:none;min-height:80px;"></textarea>
-            </div>
-            <button class="adm-save-btn" onclick="ADM.saveSettings()">&#10003; Save Contract</button>
-          </div>
-
+        <div style="display:none;">
+          <input id="set-org-name"><select id="set-org-type"></select>
+          <input id="set-org-location"><input id="set-contact-name">
+          <input id="set-contact-email"><input id="set-start-date">
+          <input id="set-end-date"><input id="set-user-limit">
+          <textarea id="set-contract-notes"></textarea>
+          <input id="set-pw-current"><input id="set-pw-new">
         </div>
-
-        <!-- Security -->
-        <div class="adm-contract-card" style="margin-bottom:16px;">
-          <div class="adm-section-title" style="margin-bottom:16px;">&#128274; Security</div>
-          <div class="adm-form-grid">
-            <div class="adm-form-group">
-              <label class="adm-form-label">Current Password</label>
-              <input class="adm-form-input" id="set-pw-current" type="password" placeholder="Current password">
-            </div>
-            <div class="adm-form-group">
-              <label class="adm-form-label">New Password</label>
-              <input class="adm-form-input" id="set-pw-new" type="password" placeholder="New password (min 8 chars)">
-            </div>
-          </div>
-          <button class="adm-save-btn" onclick="ADM.changePassword()">&#128274; Update Password</button>
-        </div>
-
-        <!-- Danger zone -->
-        <div class="adm-contract-card" style="border-left:4px solid #dc2626;">
-          <div class="adm-section-title" style="margin-bottom:12px;color:#dc2626;">&#9888;&#65039; Data Management</div>
-          <p style="font-size:13px;color:#6b7280;margin-bottom:16px;line-height:1.6;">These actions affect stored data. Student progress records cannot be recovered after deletion.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <button class="adm-save-btn" onclick="ADM.exportAll()">&#8595; Export All Data</button>
-            <button class="adm-save-btn danger" onclick="ADM.clearAllUsers()">&#128465; Clear All User Records</button>
-          </div>
-        </div>
-
       </div>
 
     </div><!-- end adm-dash-wrap -->
+
+    <!-- ── CUSTOMER PROFILE EDIT MODAL ─────────────────────────── -->
+    <div class="cc-edit-overlay" id="cc-edit-overlay" onclick="if(event.target===this)ADM.ccCloseEdit()">
+      <div class="cc-edit-modal">
+        <div class="cc-edit-modal-header">
+          <h3 id="cc-edit-title">Edit</h3>
+          <button class="adm-modal-close" onclick="ADM.ccCloseEdit()">&times;</button>
+        </div>
+        <div class="cc-edit-modal-body" id="cc-edit-body"></div>
+        <div class="cc-edit-modal-footer">
+          <button class="cc-cancel-btn" onclick="ADM.ccCloseEdit()">Cancel</button>
+          <button class="adm-save-btn" id="cc-edit-save-btn" onclick="ADM.ccSaveEdit()">&#10003; Save Changes</button>
+        </div>
+      </div>
+    </div>
 
     <!-- ── EDIT USER MODAL ──────────────────────────────────────── -->
     <div class="adm-modal-overlay" id="adm-edit-overlay" onclick="if(event.target===this)ADM.closeEditModal()">
@@ -10236,8 +10519,13 @@ var ADM = {
       orgName: 'Your Organization',
       orgType: 'school',
       orgLocation: '',
+      orgDistrict: '',
       contactName: '',
+      contactTitle: '',
       contactEmail: '',
+      contactPhone: '',
+      mrr: 0,
+      contractValue: 0,
       startDate: today.toISOString().split('T')[0],
       endDate: endDate.toISOString().split('T')[0],
       userLimit: 500,
@@ -10383,6 +10671,8 @@ var ADM = {
     ADM.renderSection(ADM._activeSection);
     var sync = document.getElementById('adm-last-sync');
     if (sync) sync.textContent = 'Last synced: ' + new Date().toLocaleTimeString();
+    // Render Command Center hub
+    ADM.ccRenderHub();
   },
 
   // ── Org header ──────────────────────────────────────────────────
@@ -10766,6 +11056,7 @@ var ADM = {
     if (typeEl) data.orgType = typeEl.value;
     ADM.save(data);
     ADM.renderHeader();
+    ADM.ccRenderHub();
     LPN.nudge('adm-saved','✅ Settings Saved!','Organization settings have been updated successfully.',[]);
   },
   changePassword: function() {
@@ -10878,6 +11169,331 @@ var ADM = {
     if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
     if (diff < 604800) return Math.floor(diff/86400) + 'd ago';
     return date.toLocaleDateString();
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // COMMAND CENTER — Customer Profile Navigation & Editing
+  // ═══════════════════════════════════════════════════════════════
+
+  _ccSection: 'hub',
+  _ccEditType: null,
+
+  // ── Navigation ────────────────────────────────────────────────
+  ccNav: function(section, btn) {
+    // Hide all CC sections
+    var secs = document.querySelectorAll('.cc-section');
+    for (var i = 0; i < secs.length; i++) secs[i].style.display = 'none';
+    var target = document.getElementById('cc-' + section);
+    if (target) target.style.display = 'block';
+    // Update active nav item
+    var navItems = document.querySelectorAll('.cc-nav-item');
+    for (var j = 0; j < navItems.length; j++) navItems[j].classList.remove('active');
+    if (btn) btn.classList.add('active');
+    ADM._ccSection = section;
+    // Render section content
+    if (section === 'hub') ADM.ccRenderHub();
+    else if (section === 'customers') ADM.ccRenderCustomers();
+    else if (section === 'allusers') ADM.ccRenderAllUsers();
+    else if (section === 'modcontrol') ADM.ccRenderModControl();
+  },
+
+  // ── Customer Hub (Profile View) ────────────────────────────────
+  ccRenderHub: function() {
+    var data = ADM.load();
+    var users = ADM.loadUsers();
+    var typeMap = {school:'School',district:'School District',creditunion:'Credit Union',bank:'Bank',nonprofit:'Nonprofit',parent:'Parent Organization',library:'Public Library',workforce:'Workforce Agency',other:'Organization'};
+
+    // Admin name in sidebar
+    var adminEl = document.getElementById('cc-admin-name');
+    if (adminEl) adminEl.textContent = (ST.user || 'Admin') + ' \u00B7 Admin';
+
+    // Profile card
+    var nameEl = document.getElementById('cc-org-name');
+    if (nameEl) nameEl.textContent = data.orgName || 'Your Organization';
+    var districtEl = document.getElementById('cc-org-district');
+    if (districtEl) {
+      var parts = [];
+      if (data.orgDistrict) parts.push(data.orgDistrict);
+      else if (data.orgType && typeMap[data.orgType]) parts.push(typeMap[data.orgType]);
+      if (data.orgLocation) parts.push(data.orgLocation);
+      districtEl.textContent = parts.join(' \u00B7 ') || '';
+    }
+
+    // Status badge
+    var badgeEl = document.getElementById('cc-status-badge');
+    if (badgeEl && data.endDate) {
+      var daysLeft = Math.ceil((new Date(data.endDate) - new Date()) / 86400000);
+      if (daysLeft < 0) { badgeEl.textContent = 'Expired'; badgeEl.className = 'cc-profile-badge expired'; }
+      else if (daysLeft <= 30) { badgeEl.textContent = 'Expiring Soon'; badgeEl.className = 'cc-profile-badge warning'; }
+      else { badgeEl.textContent = 'Active'; badgeEl.className = 'cc-profile-badge'; }
+    }
+
+    // Stats
+    var set = function(id, val) { var e = document.getElementById(id); if (e) e.textContent = val; };
+    set('cc-stat-users', users.length ? users.length.toLocaleString() : '0');
+
+    // Health score = average progress of all users
+    var avgProgress = users.length ? Math.round(users.reduce(function(s,u){return s+(u.progress||0);},0)/users.length) : 0;
+    set('cc-stat-health', avgProgress);
+
+    // MRR and Contract value
+    var mrr = data.mrr || 0;
+    var cv = data.contractValue || 0;
+    set('cc-stat-mrr', '$' + mrr.toLocaleString());
+    set('cc-stat-contract', '$' + cv.toLocaleString());
+
+    // Contact info
+    set('cc-contact-name', data.contactName || '\u2014');
+    var titleEl = document.getElementById('cc-contact-title');
+    if (titleEl) titleEl.textContent = data.contactTitle || '';
+    var emailEl = document.getElementById('cc-contact-email');
+    if (emailEl) emailEl.innerHTML = data.contactEmail ? '<a href="mailto:' + data.contactEmail + '">' + data.contactEmail + '</a>' : '';
+    var phoneEl = document.getElementById('cc-contact-phone');
+    if (phoneEl) phoneEl.textContent = data.contactPhone || '';
+
+    // Contract dates
+    var fmtDate = function(d) {
+      if (!d) return '\u2014';
+      var dt = new Date(d + 'T00:00:00');
+      return dt.toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'});
+    };
+    set('cc-contract-start', fmtDate(data.startDate));
+    set('cc-contract-end', fmtDate(data.endDate));
+
+    // Module pills
+    var pillsEl = document.getElementById('cc-module-pills');
+    if (pillsEl) {
+      var moduleKeys = ['Stage 1 Assessment', 'Stage 2 Assessment', 'Career Exploration', 'Financial Literacy', 'Education Roadmap', 'Budget', 'Workforce Intelligence'];
+      var moduleMap = {
+        'Stage 1 Assessment': 'Discover',
+        'Stage 2 Assessment': 'Refine',
+        'Career Exploration': 'Careers',
+        'Financial Literacy': 'Learn',
+        'Education Roadmap': 'Roadmap',
+        'Budget': 'Budget',
+        'Workforce Intelligence': 'Alabama'
+      };
+      var mods = data.modules || {};
+      pillsEl.innerHTML = moduleKeys.map(function(label) {
+        var key = moduleMap[label] || label;
+        var isOn = mods[key] !== false;
+        return '<button class="cc-module-pill ' + (isOn ? 'on' : 'off') + '" onclick="ADM.ccToggleModule(\'' + key + '\',this)">' + (isOn ? '\u2713 ' : '') + label + '</button>';
+      }).join('');
+    }
+  },
+
+  ccToggleModule: function(key, btn) {
+    var data = ADM.load();
+    if (!data.modules) data.modules = {};
+    var current = data.modules[key] !== false;
+    data.modules[key] = !current;
+    ADM.save(data);
+    ADM.ccRenderHub();
+    LPN.nudge('cc-mod', (data.modules[key] ? '\u2705 Module Enabled' : '\uD83D\uDEAB Module Disabled'), key + ' is now ' + (data.modules[key] ? 'visible to' : 'hidden from') + ' students.', []);
+  },
+
+  // ── Customers List ─────────────────────────────────────────────
+  ccRenderCustomers: function() {
+    var data = ADM.load();
+    var users = ADM.loadUsers();
+    var typeMap = {school:'School',district:'School District',creditunion:'Credit Union',bank:'Bank',nonprofit:'Nonprofit',parent:'Parent Organization',library:'Public Library',workforce:'Workforce Agency',other:'Organization'};
+    var daysLeft = data.endDate ? Math.max(0, Math.ceil((new Date(data.endDate) - new Date()) / 86400000)) : 0;
+    var statusCls = daysLeft <= 0 ? 'expired' : daysLeft <= 30 ? 'warning' : '';
+    var statusLbl = daysLeft <= 0 ? 'Expired' : daysLeft <= 30 ? 'Expiring Soon' : 'Active';
+    var avgP = users.length ? Math.round(users.reduce(function(s,u){return s+(u.progress||0);},0)/users.length) : 0;
+
+    var listEl = document.getElementById('cc-customers-list');
+    if (listEl) {
+      listEl.innerHTML = '<div class="adm-table-wrap">'
+        +'<div class="adm-table-hdr"><div class="adm-table-title">\uD83C\uDFE2 All Customers</div></div>'
+        +'<div style="overflow-x:auto;">'
+        +'<table class="adm-table"><thead><tr>'
+        +'<th>Organization</th><th>Type</th><th>Users</th><th>Health</th><th>Contract</th><th>Status</th><th>Actions</th>'
+        +'</tr></thead><tbody>'
+        +'<tr>'
+        +'<td><strong>' + (data.orgName || 'Your Organization') + '</strong>'
+        +'<div style="font-size:10px;color:#9ca3af;">' + (data.orgLocation || '') + '</div></td>'
+        +'<td>' + (typeMap[data.orgType] || 'Organization') + '</td>'
+        +'<td>' + users.length + '</td>'
+        +'<td>' + avgP + '</td>'
+        +'<td>$' + (data.contractValue || 0).toLocaleString() + '</td>'
+        +'<td><span class="cc-profile-badge ' + statusCls + '" style="font-size:11px;padding:3px 10px;">' + statusLbl + '</span></td>'
+        +'<td><button class="adm-edit-btn" onclick="ADM.ccNav(\'hub\',document.querySelectorAll(\'.cc-nav-item\')[0])">View Profile</button></td>'
+        +'</tr>'
+        +'</tbody></table></div></div>'
+        +'<div style="font-size:11px;color:#9ca3af;margin-top:10px;">\u2139 Additional customers will appear here as your LaunchPoint deployment scales.</div>';
+    }
+  },
+
+  // ── All Users (reuse existing users section) ───────────────────
+  ccRenderAllUsers: function() {
+    var target = document.getElementById('cc-allusers');
+    if (!target) return;
+    // Move existing users content into this section if not done
+    if (!target.querySelector('#cc-users-inner')) {
+      var users = ADM.loadUsers();
+      ADM._allUsers = users;
+      var html = '<div id="cc-users-inner">'
+        +'<div class="cc-section-title">\uD83D\uDC65 All Users</div>'
+        +'<div class="adm-table-wrap">'
+        +'<div class="adm-table-hdr">'
+        +'<div class="adm-table-title">\uD83D\uDC65 All Users <span id="adm-user-count" style="font-size:12px;color:#9ca3af;font-family:\'DM Sans\',sans-serif;font-weight:400;margin-left:8px;">(' + users.length + ' total)</span></div>'
+        +'<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">'
+        +'<input class="adm-search" id="adm-user-search" placeholder="\uD83D\uDD0D Search users..." oninput="ADM.filterUsers()">'
+        +'<select id="adm-user-filter" onchange="ADM.filterUsers()" style="padding:7px 10px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:12px;font-family:\'DM Sans\',sans-serif;outline:none;background:#fff;">'
+        +'<option value="all">All Grades</option>'
+        +'<option value="6">Grade 6</option><option value="7">Grade 7</option><option value="8">Grade 8</option>'
+        +'<option value="9">Grade 9</option><option value="10">Grade 10</option>'
+        +'<option value="11">Grade 11</option><option value="12">Grade 12</option>'
+        +'</select>'
+        +'<button class="adm-save-btn" style="font-size:11px;padding:7px 14px;" onclick="ADM.exportUsers()">\u2193 Export CSV</button>'
+        +'</div></div>'
+        +'<div style="overflow-x:auto;">'
+        +'<table class="adm-table" id="adm-users-table">'
+        +'<thead><tr><th>Name</th><th>Grade</th><th>Stage</th><th>Neighborhood</th><th>Sub-Neighborhood</th>'
+        +'<th>Careers Saved</th><th>FL Modules</th><th>School/Aid</th><th>Progress</th><th>Last Active</th><th>Status</th><th>Actions</th></tr></thead>'
+        +'<tbody id="adm-users-tbody"></tbody>'
+        +'</table></div></div>'
+        +'<div style="font-size:11px;color:#9ca3af;margin-top:8px;">\u2139 User data is stored locally in this browser. Export to CSV to share with your team.</div>'
+        +'</div>';
+      target.innerHTML = html;
+    }
+    ADM.renderUsers();
+  },
+
+  // ── Module Control (reuse existing modules section) ────────────
+  ccRenderModControl: function() {
+    var target = document.getElementById('cc-modcontrol');
+    if (!target) return;
+    if (!target.querySelector('#cc-mod-inner')) {
+      target.innerHTML = '<div id="cc-mod-inner">'
+        +'<div class="cc-section-title">\u2699 Module Control</div>'
+        +'<div class="adm-module-grid" id="adm-module-grid"></div>'
+        +'<div style="font-size:12px;color:#9ca3af;background:#f9fafb;border-radius:10px;padding:14px;margin-top:4px;">'
+        +'\u2139 Module visibility controls which tabs are accessible to students. Changes take effect immediately.</div>'
+        +'</div>';
+    }
+    ADM.renderModules();
+  },
+
+  // ── Edit Modal ─────────────────────────────────────────────────
+  ccEdit: function(type) {
+    ADM._ccEditType = type;
+    var data = ADM.load();
+    var titleEl = document.getElementById('cc-edit-title');
+    var bodyEl = document.getElementById('cc-edit-body');
+    if (!titleEl || !bodyEl) return;
+
+    if (type === 'contact') {
+      titleEl.textContent = 'Edit Contact Information';
+      bodyEl.innerHTML = '<div class="adm-form-group">'
+        +'<label class="adm-form-label">Contact Name</label>'
+        +'<input class="adm-form-input" id="cc-ed-contact-name" value="' + (data.contactName || '').replace(/"/g,'&quot;') + '" placeholder="e.g. Alice Walker">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Title / Role</label>'
+        +'<input class="adm-form-input" id="cc-ed-contact-title" value="' + (data.contactTitle || '').replace(/"/g,'&quot;') + '" placeholder="e.g. Counselor, Principal">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Email</label>'
+        +'<input class="adm-form-input" id="cc-ed-contact-email" type="email" value="' + (data.contactEmail || '').replace(/"/g,'&quot;') + '" placeholder="alice@school.org">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Phone</label>'
+        +'<input class="adm-form-input" id="cc-ed-contact-phone" type="tel" value="' + (data.contactPhone || '').replace(/"/g,'&quot;') + '" placeholder="(555) 123-4567">'
+        +'</div>';
+    } else if (type === 'contract') {
+      titleEl.textContent = 'Edit Contract Details';
+      bodyEl.innerHTML = '<div class="adm-form-group">'
+        +'<label class="adm-form-label">Contract Start Date</label>'
+        +'<input class="adm-form-input" id="cc-ed-start-date" type="date" value="' + (data.startDate || '') + '">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Contract End Date</label>'
+        +'<input class="adm-form-input" id="cc-ed-end-date" type="date" value="' + (data.endDate || '') + '">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Monthly Recurring Revenue (MRR)</label>'
+        +'<input class="adm-form-input" id="cc-ed-mrr" type="number" value="' + (data.mrr || 0) + '" placeholder="e.g. 2400" min="0">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Total Contract Value</label>'
+        +'<input class="adm-form-input" id="cc-ed-contract-value" type="number" value="' + (data.contractValue || 0) + '" placeholder="e.g. 28800" min="0">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">User License Limit</label>'
+        +'<input class="adm-form-input" id="cc-ed-user-limit" type="number" value="' + (data.userLimit || 500) + '" placeholder="e.g. 500" min="1">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Contract Notes</label>'
+        +'<textarea class="adm-form-input" id="cc-ed-contract-notes" rows="3" placeholder="Renewal terms, special provisions..." style="resize:none;min-height:80px;">' + (data.contractNotes || '') + '</textarea>'
+        +'</div>';
+    } else if (type === 'org') {
+      titleEl.textContent = 'Edit Organization';
+      bodyEl.innerHTML = '<div class="adm-form-group">'
+        +'<label class="adm-form-label">Organization Name</label>'
+        +'<input class="adm-form-input" id="cc-ed-org-name" value="' + (data.orgName || '').replace(/"/g,'&quot;') + '" placeholder="e.g. Gulfport High School">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Organization Type</label>'
+        +'<select class="adm-form-select" id="cc-ed-org-type">'
+        +'<option value="school"' + (data.orgType==='school'?' selected':'') + '>School</option>'
+        +'<option value="district"' + (data.orgType==='district'?' selected':'') + '>School District</option>'
+        +'<option value="creditunion"' + (data.orgType==='creditunion'?' selected':'') + '>Credit Union</option>'
+        +'<option value="bank"' + (data.orgType==='bank'?' selected':'') + '>Bank</option>'
+        +'<option value="nonprofit"' + (data.orgType==='nonprofit'?' selected':'') + '>Nonprofit</option>'
+        +'<option value="parent"' + (data.orgType==='parent'?' selected':'') + '>Parent Organization</option>'
+        +'<option value="library"' + (data.orgType==='library'?' selected':'') + '>Public Library</option>'
+        +'<option value="workforce"' + (data.orgType==='workforce'?' selected':'') + '>Workforce Agency</option>'
+        +'<option value="other"' + (data.orgType==='other'?' selected':'') + '>Other</option>'
+        +'</select></div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">District / Parent Organization</label>'
+        +'<input class="adm-form-input" id="cc-ed-org-district" value="' + (data.orgDistrict || '').replace(/"/g,'&quot;') + '" placeholder="e.g. Harrison County School District">'
+        +'</div>'
+        +'<div class="adm-form-group">'
+        +'<label class="adm-form-label">Location / City</label>'
+        +'<input class="adm-form-input" id="cc-ed-org-location" value="' + (data.orgLocation || '').replace(/"/g,'&quot;') + '" placeholder="e.g. Gulfport, MS">'
+        +'</div>';
+    }
+
+    document.getElementById('cc-edit-overlay').classList.add('open');
+  },
+
+  ccCloseEdit: function() {
+    document.getElementById('cc-edit-overlay').classList.remove('open');
+    ADM._ccEditType = null;
+  },
+
+  ccSaveEdit: function() {
+    var type = ADM._ccEditType;
+    var data = ADM.load();
+    var get = function(id) { var e = document.getElementById(id); if (!e) return ''; return (e.value || '').trim(); };
+
+    if (type === 'contact') {
+      data.contactName  = get('cc-ed-contact-name');
+      data.contactTitle = get('cc-ed-contact-title');
+      data.contactEmail = get('cc-ed-contact-email');
+      data.contactPhone = get('cc-ed-contact-phone');
+    } else if (type === 'contract') {
+      data.startDate      = get('cc-ed-start-date');
+      data.endDate        = get('cc-ed-end-date');
+      data.mrr            = parseInt(get('cc-ed-mrr')) || 0;
+      data.contractValue  = parseInt(get('cc-ed-contract-value')) || 0;
+      data.userLimit      = parseInt(get('cc-ed-user-limit')) || 500;
+      data.contractNotes  = get('cc-ed-contract-notes');
+    } else if (type === 'org') {
+      data.orgName     = get('cc-ed-org-name');
+      data.orgType     = get('cc-ed-org-type');
+      data.orgDistrict = get('cc-ed-org-district');
+      data.orgLocation = get('cc-ed-org-location');
+    }
+
+    ADM.save(data);
+    ADM.ccCloseEdit();
+    ADM.ccRenderHub();
+    ADM.renderHeader();
+    LPN.nudge('cc-saved', '\u2705 Changes Saved', 'Customer profile has been updated successfully.', []);
   }
 };
 
