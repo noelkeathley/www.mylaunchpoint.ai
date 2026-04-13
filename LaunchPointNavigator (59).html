@@ -2393,6 +2393,119 @@ table.adm-table tr:hover td { background: #fafafa; }
 .adm-save-btn.danger { background: #dc2626; }
 .adm-save-btn.danger:hover { background: #991b1b; }
 
+/* Edit User Modal */
+.adm-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 9999;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+.adm-modal-overlay.open { display: flex; }
+.adm-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 12px 48px rgba(27,47,82,.2);
+  animation: admModalIn .22s ease;
+}
+@keyframes admModalIn {
+  from { opacity: 0; transform: translateY(-20px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.adm-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.adm-modal-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1B2F52;
+  margin: 0;
+}
+.adm-modal-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.adm-modal-close:hover { background: #f3f4f6; color: #374151; }
+.adm-modal-body {
+  padding: 24px;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.adm-modal-body .adm-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.adm-modal-section {
+  margin-bottom: 20px;
+}
+.adm-modal-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B2F52;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f3f4f6;
+}
+.adm-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid #f3f4f6;
+  background: #f9fafb;
+  border-radius: 0 0 16px 16px;
+}
+.adm-modal-footer .adm-save-btn { margin-left: 8px; }
+.adm-edit-btn {
+  background: none;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  color: #1B2F52;
+  cursor: pointer;
+  transition: all .15s;
+}
+.adm-edit-btn:hover { background: #1B2F52; color: #fff; border-color: #1B2F52; }
+.adm-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+.adm-checkbox-wrap input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1B2F52;
+  cursor: pointer;
+}
+.adm-checkbox-wrap label {
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
 /* Export row */
 .adm-export-row {
   display: flex;
@@ -3282,7 +3395,7 @@ table.adm-table tr:hover td { background: #fafafa; }
             <table class="adm-table" id="adm-users-table">
               <thead><tr>
                 <th>Name</th><th>Grade</th><th>Stage</th><th>Neighborhood</th><th>Sub-Neighborhood</th>
-                <th>Careers Saved</th><th>FL Modules</th><th>School/Aid</th><th>Net Score</th><th>Last Active</th><th>Status</th>
+                <th>Careers Saved</th><th>FL Modules</th><th>School/Aid</th><th>Net Score</th><th>Last Active</th><th>Status</th><th>Actions</th>
               </tr></thead>
               <tbody id="adm-users-tbody"></tbody>
             </table>
@@ -3421,6 +3534,145 @@ table.adm-table tr:hover td { background: #fafafa; }
       </div>
 
     </div><!-- end adm-dash-wrap -->
+
+    <!-- ── EDIT USER MODAL ──────────────────────────────────────── -->
+    <div class="adm-modal-overlay" id="adm-edit-overlay" onclick="if(event.target===this)ADM.closeEditModal()">
+      <div class="adm-modal">
+        <div class="adm-modal-header">
+          <h3 id="adm-edit-title">Edit User</h3>
+          <button class="adm-modal-close" onclick="ADM.closeEditModal()">&times;</button>
+        </div>
+        <div class="adm-modal-body">
+
+          <!-- Student Info -->
+          <div class="adm-modal-section">
+            <div class="adm-modal-section-title">Student Information</div>
+            <div class="adm-form-grid">
+              <div class="adm-form-group">
+                <label class="adm-form-label">Student Name</label>
+                <input class="adm-form-input" id="edit-name" placeholder="Full name">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Grade</label>
+                <select class="adm-form-select" id="edit-grade">
+                  <option value="6">Grade 6</option><option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option><option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option><option value="11">Grade 11</option>
+                  <option value="12">Grade 12</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Person -->
+          <div class="adm-modal-section">
+            <div class="adm-modal-section-title">Contact Person (Parent / Guardian)</div>
+            <div class="adm-form-grid">
+              <div class="adm-form-group">
+                <label class="adm-form-label">Contact Name</label>
+                <input class="adm-form-input" id="edit-contact-person" placeholder="Parent or guardian name">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Contact Email</label>
+                <input class="adm-form-input" id="edit-contact-email" type="email" placeholder="parent@email.com">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Contact Phone</label>
+                <input class="adm-form-input" id="edit-contact-phone" type="tel" placeholder="(555) 123-4567">
+              </div>
+            </div>
+          </div>
+
+          <!-- Assessment Progress -->
+          <div class="adm-modal-section">
+            <div class="adm-modal-section-title">Assessment Progress</div>
+            <div class="adm-form-grid">
+              <div>
+                <div class="adm-checkbox-wrap">
+                  <input type="checkbox" id="edit-s1done">
+                  <label for="edit-s1done">Stage 1 (Discover) Complete</label>
+                </div>
+                <div class="adm-checkbox-wrap">
+                  <input type="checkbox" id="edit-s2done">
+                  <label for="edit-s2done">Stage 2 (Refine) Complete</label>
+                </div>
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Overall Progress %</label>
+                <input class="adm-form-input" id="edit-progress" type="number" min="0" max="100" placeholder="0-100">
+              </div>
+            </div>
+            <div class="adm-form-grid" style="margin-top:4px;">
+              <div class="adm-form-group">
+                <label class="adm-form-label">Career Neighborhood</label>
+                <input class="adm-form-input" id="edit-neighborhood" placeholder="e.g. Technology & Innovation">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Sub-Neighborhood</label>
+                <input class="adm-form-input" id="edit-sub-neighborhood" placeholder="e.g. Software Development">
+              </div>
+            </div>
+          </div>
+
+          <!-- Careers & Financial Literacy -->
+          <div class="adm-modal-section">
+            <div class="adm-modal-section-title">Careers &amp; Financial Literacy</div>
+            <div class="adm-form-grid">
+              <div class="adm-form-group">
+                <label class="adm-form-label">Saved Careers</label>
+                <input class="adm-form-input" id="edit-saved-careers" type="number" min="0" placeholder="0">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">FL Modules Completed (0-6)</label>
+                <input class="adm-form-input" id="edit-fl-modules" type="number" min="0" max="6" placeholder="0">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">FL Average Score %</label>
+                <input class="adm-form-input" id="edit-fl-avg" type="number" min="0" max="100" placeholder="0">
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">Net Score</label>
+                <input class="adm-form-input" id="edit-net-score" type="number" min="0" max="100" placeholder="0">
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Plan -->
+          <div class="adm-modal-section">
+            <div class="adm-modal-section-title">Education Plan</div>
+            <div class="adm-form-grid">
+              <div>
+                <div class="adm-checkbox-wrap">
+                  <input type="checkbox" id="edit-has-faid">
+                  <label for="edit-has-faid">Has Education Plan</label>
+                </div>
+              </div>
+              <div class="adm-form-group">
+                <label class="adm-form-label">School Selected</label>
+                <input class="adm-form-input" id="edit-fa-school" placeholder="School name">
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="adm-modal-section" style="margin-bottom:0;">
+            <div class="adm-modal-section-title">Admin Notes</div>
+            <div class="adm-form-group" style="margin-bottom:0;">
+              <textarea class="adm-form-input" id="edit-notes" rows="3" placeholder="Internal notes about this student..." style="resize:none;min-height:70px;"></textarea>
+            </div>
+          </div>
+
+        </div>
+        <div class="adm-modal-footer">
+          <button class="adm-save-btn danger" onclick="ADM.deleteUser()" style="font-size:11px;padding:8px 16px;">&#128465; Delete User</button>
+          <div>
+            <button class="adm-edit-btn" onclick="ADM.closeEditModal()">Cancel</button>
+            <button class="adm-save-btn" onclick="ADM.saveEditUser()">&#10003; Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div><!-- end p-admin -->
 
   </div><!-- end .panels -->
@@ -10269,16 +10521,17 @@ var ADM = {
     var grade  = (document.getElementById('adm-user-filter')||{}).value||'all';
     var users  = (ADM._allUsers || ADM.loadUsers()).filter(function(u) {
       var matchGrade  = grade === 'all' || u.grade === grade;
-      var matchSearch = !search || u.name.toLowerCase().includes(search) || (u.neighborhood||'').toLowerCase().includes(search) || (u.subNeighborhood||'').toLowerCase().includes(search);
+      var matchSearch = !search || u.name.toLowerCase().includes(search) || (u.neighborhood||'').toLowerCase().includes(search) || (u.subNeighborhood||'').toLowerCase().includes(search) || (u.contactPerson||'').toLowerCase().includes(search) || (u.contactEmail||'').toLowerCase().includes(search);
       return matchGrade && matchSearch;
     });
     var tbody = document.getElementById('adm-users-tbody');
     if (!tbody) return;
-    tbody.innerHTML = users.map(function(u) {
+    tbody.innerHTML = users.map(function(u, idx) {
       var statusCls = (Date.now()-new Date(u.lastActive||0).getTime())<86400000?'active':(Date.now()-new Date(u.lastActive||0).getTime())<604800000?'pending':'inactive';
       var statusLbl = statusCls==='active'?'Active Today':statusCls==='pending'?'This Week':'Inactive';
+      var realIdx = (ADM._allUsers || []).indexOf(u);
       return '<tr>'
-        +'<td><strong>'+u.name+'</strong><div style="font-size:10px;color:#9ca3af;">'+(u.sessions||1)+' session'+(u.sessions!==1?'s':'')+'</div></td>'
+        +'<td><strong>'+u.name+'</strong><div style="font-size:10px;color:#9ca3af;">'+(u.sessions||1)+' session'+(u.sessions!==1?'s':'')+(u.contactPerson?' · '+u.contactPerson:'')+'</div></td>'
         +'<td>'+u.grade+'</td>'
         +'<td>'+(u.s2done?'<span class="adm-badge complete">Both</span>':u.s1done?'<span class="adm-badge active">S1</span>':'<span class="adm-badge inactive">—</span>')+'</td>'
         +'<td style="font-size:11px;">'+((u.neighborhood||'—').split('(')[0].trim().substring(0,18))+'</td>'
@@ -10289,17 +10542,19 @@ var ADM = {
         +'<td><div style="display:flex;align-items:center;gap:6px;"><div class="adm-progress-bar"><div class="adm-progress-fill" style="width:'+(u.progress||0)+'%"></div></div><span style="font-size:10px;color:#9ca3af;">'+(u.progress||0)+'%</span></div></td>'
         +'<td style="font-size:11px;">'+ADM.timeAgo(new Date(u.lastActive||0))+'</td>'
         +'<td><span class="adm-badge '+statusCls+'">'+statusLbl+'</span></td>'
+        +'<td><button class="adm-edit-btn" onclick="ADM.editUser('+realIdx+')">&#9998; Edit</button></td>'
         +'</tr>';
-    }).join('') || '<tr><td colspan="11" style="text-align:center;color:#9ca3af;padding:24px;">No users match this filter.</td></tr>';
+    }).join('') || '<tr><td colspan="12" style="text-align:center;color:#9ca3af;padding:24px;">No users match this filter.</td></tr>';
   },
   exportUsers: function() {
     var users = ADM.loadUsers();
-    var header = ['Name','Grade','Stage','Neighborhood','Sub-Neighborhood','Saved Careers','FL Modules','FL Avg Score','Has Ed Plan','School','Net Score','Progress %','Sessions','Last Active','First Seen'];
+    var header = ['Name','Grade','Stage','Neighborhood','Sub-Neighborhood','Saved Careers','FL Modules','FL Avg Score','Has Ed Plan','School','Net Score','Progress %','Sessions','Last Active','First Seen','Contact Person','Contact Email','Contact Phone','Notes'];
     var rows = users.map(function(u) {
       return [u.name, u.grade, u.s2done?'Both':u.s1done?'S1 Only':'Not Started',
         u.neighborhood||'', u.subNeighborhood||'', u.savedCareers||0, u.flModules||0, u.flAvgScore||0,
         u.hasFAID?'Yes':'No', u.faSchool||'', u.netScore||0, u.progress||0, u.sessions||1,
-        u.lastActive?new Date(u.lastActive).toLocaleDateString():'', u.firstSeen?new Date(u.firstSeen).toLocaleDateString():''].join(',');
+        u.lastActive?new Date(u.lastActive).toLocaleDateString():'', u.firstSeen?new Date(u.firstSeen).toLocaleDateString():'',
+        u.contactPerson||'', u.contactEmail||'', u.contactPhone||'', '"'+(u.notes||'').replace(/"/g,'""')+'"'].join(',');
     });
     var csv = [header.join(','), ...rows].join('\n');
     var blob = new Blob([csv], {type:'text/csv'});
@@ -10529,6 +10784,89 @@ var ADM = {
     try { localStorage.removeItem(ADM.UKEY); } catch(e) {}
     LPN.nudge('clear-done','🗑️ Cleared','All user records have been deleted. The roster is now empty.',[]);
     ADM.renderAll();
+  },
+
+  // ── Edit User Modal ─────────────────────────────────────────────
+  _editIdx: -1,
+
+  editUser: function(idx) {
+    var users = ADM.loadUsers();
+    if (idx < 0 || idx >= users.length) return;
+    ADM._editIdx = idx;
+    var u = users[idx];
+    var set = function(id, val) { var e = document.getElementById(id); if (e) { if (e.type === 'checkbox') e.checked = !!val; else e.value = val || ''; } };
+    document.getElementById('adm-edit-title').textContent = 'Edit — ' + (u.name || 'User');
+    set('edit-name', u.name);
+    set('edit-grade', u.grade);
+    set('edit-contact-person', u.contactPerson);
+    set('edit-contact-email', u.contactEmail);
+    set('edit-contact-phone', u.contactPhone);
+    set('edit-s1done', u.s1done);
+    set('edit-s2done', u.s2done);
+    set('edit-progress', u.progress);
+    set('edit-neighborhood', u.neighborhood);
+    set('edit-sub-neighborhood', u.subNeighborhood);
+    set('edit-saved-careers', u.savedCareers);
+    set('edit-fl-modules', u.flModules);
+    set('edit-fl-avg', u.flAvgScore);
+    set('edit-net-score', u.netScore);
+    set('edit-has-faid', u.hasFAID);
+    set('edit-fa-school', u.faSchool === '—' ? '' : u.faSchool);
+    set('edit-notes', u.notes);
+    document.getElementById('adm-edit-overlay').classList.add('open');
+  },
+
+  closeEditModal: function() {
+    document.getElementById('adm-edit-overlay').classList.remove('open');
+    ADM._editIdx = -1;
+  },
+
+  saveEditUser: function() {
+    var idx = ADM._editIdx;
+    var users = ADM.loadUsers();
+    if (idx < 0 || idx >= users.length) return;
+    var get = function(id) { var e = document.getElementById(id); if (!e) return ''; if (e.type === 'checkbox') return e.checked; return (e.value || '').trim(); };
+    var u = users[idx];
+    u.name            = get('edit-name') || u.name;
+    u.grade           = get('edit-grade') || u.grade;
+    u.contactPerson   = get('edit-contact-person');
+    u.contactEmail    = get('edit-contact-email');
+    u.contactPhone    = get('edit-contact-phone');
+    u.s1done          = get('edit-s1done');
+    u.s2done          = get('edit-s2done');
+    u.progress        = parseInt(get('edit-progress')) || 0;
+    u.neighborhood    = get('edit-neighborhood') || u.neighborhood;
+    u.subNeighborhood = get('edit-sub-neighborhood') || u.subNeighborhood;
+    u.savedCareers    = parseInt(get('edit-saved-careers')) || 0;
+    u.flModules       = parseInt(get('edit-fl-modules')) || 0;
+    u.flAvgScore      = parseInt(get('edit-fl-avg')) || 0;
+    u.netScore        = parseInt(get('edit-net-score')) || 0;
+    u.hasFAID         = get('edit-has-faid');
+    u.faSchool        = get('edit-fa-school') || '—';
+    u.notes           = get('edit-notes');
+    ADM.saveUsers(users);
+    ADM.closeEditModal();
+    ADM._allUsers = users;
+    ADM.filterUsers();
+    ADM.renderHeader();
+    LPN.nudge('user-saved', '&#10003; User Updated', u.name + '\'s record has been saved successfully.', []);
+  },
+
+  deleteUser: function() {
+    var idx = ADM._editIdx;
+    var users = ADM.loadUsers();
+    if (idx < 0 || idx >= users.length) return;
+    var name = users[idx].name;
+    if (!confirm('Delete ' + name + '? This action cannot be undone.')) return;
+    users.splice(idx, 1);
+    ADM.saveUsers(users);
+    ADM.closeEditModal();
+    ADM._allUsers = users;
+    ADM.filterUsers();
+    ADM.renderHeader();
+    var cnt = document.getElementById('adm-user-count');
+    if (cnt) cnt.textContent = '(' + users.length + ' total)';
+    LPN.nudge('user-deleted', '&#128465; User Deleted', name + ' has been removed from the roster.', []);
   },
 
   // ── Utility ──────────────────────────────────────────────────────
