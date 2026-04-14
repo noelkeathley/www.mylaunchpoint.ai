@@ -7974,10 +7974,13 @@ var Careers = {
   renderScope: function() {
     var d    = s2data(ST.s2nbhd);
     var subs = d ? d.subs : [];
-    var nbhdTotal = subs.reduce(function(n,s){return n+(CAREER_DATA[s]||[]).length;},0);
+    var _nbhdSeen = {};
+    var nbhdTotal = 0;
+    subs.forEach(function(s){(CAREER_DATA[s]||[]).forEach(function(c){ if(!_nbhdSeen[c.t]){_nbhdSeen[c.t]=true;nbhdTotal++;} });});
     var subTotal  = (CAREER_DATA[ST.s2pri]||[]).length;
+    var _allSeen = {};
     var allTotal  = 0;
-    Object.keys(CAREER_DATA).forEach(function(k){allTotal+=(CAREER_DATA[k]||[]).length;});
+    Object.keys(CAREER_DATA).forEach(function(k){(CAREER_DATA[k]||[]).forEach(function(c){ if(!_allSeen[c.t]){_allSeen[c.t]=true;allTotal++;} });});
 
     // Build scope buttons depending on whether assessment is done
     var scopeBtns = [];
@@ -8153,6 +8156,13 @@ var Careers = {
       nsubs.forEach(function(s){(CAREER_DATA[s]||[]).forEach(function(c){pool.push(Object.assign({_s:s},c));});});
     }
     else pool=(CAREER_DATA[Careers.activeSub]||[]).map(function(c){return Object.assign({_s:Careers.activeSub},c);});
+    // Deduplicate — same career title may appear in multiple sub-neighborhoods
+    var _seen = {};
+    pool = pool.filter(function(c) {
+      if (_seen[c.t]) return false;
+      _seen[c.t] = true;
+      return true;
+    });
     if(qTerms.length) pool=pool.filter(function(c){
       var t=c.t.toLowerCase();
       return qTerms.some(function(term){ return t.indexOf(term)>=0; });
