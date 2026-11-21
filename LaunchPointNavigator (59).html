@@ -2945,6 +2945,157 @@ table.adm-table tr:hover td { background: #fafafa; }
 .au-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#0C2340,#E87722);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;}
 .au-open-badge{background:#f0fdf4;color:#065f46;border:1px solid #86efac;border-radius:99px;font-size:10px;font-weight:700;padding:2px 8px;}
 .au-closed-badge{background:#f9fafb;color:#9ca3af;border:1px solid #e5e7eb;border-radius:99px;font-size:10px;font-weight:700;padding:2px 8px;}
+/* ═══ PAYING FOR MY EDUCATION (pfe-) ═══ */
+.rm-subnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;}
+.rm-subnav a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:99px;background:#fff;border:1px solid #e5e7eb;color:#1B2F52;font-size:13px;font-weight:600;text-decoration:none;box-shadow:0 1px 4px rgba(27,47,82,.06);}
+.rm-subnav a:hover,.rm-subnav a:focus-visible{border-color:#C9A84C;background:#fffdf7;outline:none;}
+.rm-subnav a.pfe-hl{background:#1B2F52;color:#fff;border-color:#1B2F52;}
+#pfe-root{margin-top:36px;scroll-margin-top:80px;}
+.pfe-wrap{background:#fff;border-radius:14px;box-shadow:0 2px 16px rgba(27,47,82,.1);overflow:hidden;}
+.pfe-head{background:linear-gradient(135deg,#0f1d35,#1B2F52);padding:24px 28px 0;}
+.pfe-kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px;}
+.pfe-title{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:6px;}
+.pfe-sub{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;max-width:720px;}
+.pfe-tabs{display:flex;gap:2px;overflow-x:auto;margin-top:18px;scrollbar-width:thin;}
+.pfe-tab{background:transparent;border:none;color:rgba(255,255,255,.6);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 14px;border-radius:9px 9px 0 0;cursor:pointer;white-space:nowrap;}
+.pfe-tab:hover{color:#fff;background:rgba(255,255,255,.06);}
+.pfe-tab:focus-visible{outline:2px solid #C9A84C;outline-offset:-2px;}
+.pfe-tab.on{background:#fff;color:#1B2F52;}
+.pfe-body{padding:24px 28px 28px;}
+.pfe-h{font-family:'Playfair Display',serif;font-size:20px;color:#1B2F52;margin:0 0 6px;}
+.pfe-h3{font-size:15px;font-weight:700;color:#1B2F52;margin:0 0 6px;}
+.pfe-p{font-size:13px;color:#4b5563;line-height:1.65;margin:0 0 12px;}
+.pfe-muted{font-size:11.5px;color:#6b7280;line-height:1.5;}
+.pfe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;}
+.pfe-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+.pfe-card{position:relative;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;width:100%;}
+.pfe-card:hover,.pfe-card:focus-visible{border-color:#C9A84C;box-shadow:0 4px 18px rgba(27,47,82,.1);transform:translateY(-1px);outline:none;}
+.pfe-card-ico{font-size:24px;margin-bottom:8px;}
+.pfe-card-t{font-size:14px;font-weight:700;color:#1B2F52;margin-bottom:4px;}
+.pfe-card-d{font-size:12px;color:#6b7280;line-height:1.5;}
+.pfe-rec{position:absolute;top:10px;right:10px;background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
+.pfe-feature{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:linear-gradient(135deg,#fffdf7,#fef3c7);border:2px solid #C9A84C;border-radius:14px;padding:20px 22px;margin-bottom:20px;}
+.pfe-feature-t{font-family:'Playfair Display',serif;font-size:20px;color:#1B2F52;}
+.pfe-btn{display:inline-flex;align-items:center;gap:6px;background:#1B2F52;color:#fff;border:none;border-radius:9px;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;}
+.pfe-btn:hover{background:#2a4470;}
+.pfe-btn:focus-visible,.pfe-btn2:focus-visible,.pfe-chip:focus-visible{outline:2px solid #C9A84C;outline-offset:2px;}
+.pfe-btn.gold{background:#C9A84C;color:#1B2F52;}
+.pfe-btn.green{background:#047857;}
+.pfe-btn2{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#1B2F52;border:1px solid #d1d5db;border-radius:9px;padding:9px 14px;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer;text-decoration:none;}
+.pfe-btn2:hover{border-color:#1B2F52;}
+.pfe-btn2.danger{color:#b91c1c;border-color:#fecaca;}
+.pfe-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.pfe-box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:14px;}
+.pfe-note{background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#1e3a8a;line-height:1.55;margin-bottom:14px;}
+.pfe-warn{background:#fef3c7;border:1px solid #fde68a;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#92400e;line-height:1.55;margin-bottom:14px;}
+.pfe-privacy{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#065f46;line-height:1.55;margin-bottom:14px;}
+.pfe-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:99px;vertical-align:middle;}
+.pfe-b-verified{background:#d1fae5;color:#065f46;}
+.pfe-b-illustrative{background:#ede9fe;color:#5b21b6;}
+.pfe-b-pending{background:#fef3c7;color:#92400e;}
+.pfe-b-expired{background:#fee2e2;color:#991b1b;}
+.pfe-b-sample{background:#fde68a;color:#78350f;}
+.pfe-b-free{background:#d1fae5;color:#065f46;}
+.pfe-b-repay{background:#fee2e2;color:#991b1b;}
+.pfe-b-cond{background:#e0e7ff;color:#3730a3;}
+.pfe-b-oblig{background:#f3f4f6;color:#374151;}
+.pfe-fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px 14px;}
+.pfe-f label{display:block;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.pfe-f input,.pfe-f select,.pfe-f textarea,.pfe-in{width:100%;box-sizing:border-box;padding:9px 11px;border:1.5px solid #e5e7eb;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13.5px;color:#1B2F52;background:#fff;}
+.pfe-f input:focus,.pfe-f select:focus,.pfe-f textarea:focus,.pfe-in:focus{border-color:#1B2F52;outline:none;box-shadow:0 0 0 3px rgba(27,47,82,.12);}
+.pfe-f input.pfe-ex{background:#fffbeb;}
+.pfe-f .pfe-hint{font-size:10.5px;color:#6b7280;margin-top:3px;line-height:1.4;}
+.pfe-f-err input{border-color:#dc2626;}
+.pfe-sec-t{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin:16px 0 8px;}
+.pfe-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px;}
+.pfe-stat{border-radius:12px;padding:14px;text-align:center;border:1px solid #e5e7eb;background:#fff;}
+.pfe-stat-l{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;font-weight:700;color:#4b5563;margin-bottom:4px;}
+.pfe-stat-v{font-family:'Playfair Display',serif;font-size:22px;color:#1B2F52;}
+.pfe-stat-s{font-size:11px;color:#4b5563;margin-top:2px;}
+.pfe-stat.red{background:#fff5f5;border-color:#fecaca}.pfe-stat.red .pfe-stat-v{color:#dc2626}
+.pfe-stat.green{background:#f0fdf4;border-color:#bbf7d0}.pfe-stat.green .pfe-stat-v{color:#047857}
+.pfe-stat.blue{background:#eff6ff;border-color:#bfdbfe}
+.pfe-stat.gold{background:#fffdf7;border-color:#fde68a}.pfe-stat.gold .pfe-stat-v{color:#92400e}
+.pfe-bar{display:flex;height:16px;border-radius:99px;overflow:hidden;background:#e5e7eb;margin:6px 0;}
+.pfe-bar span{display:block;height:100%;}
+.pfe-legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;color:#4b5563;}
+.pfe-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;}
+.pfe-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.pfe-table th,.pfe-table td{padding:8px 10px;border-bottom:1px solid #f3f4f6;text-align:right;}
+.pfe-table th:first-child,.pfe-table td:first-child{text-align:left;}
+.pfe-table thead th{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:#6b7280;background:#f9fafb;}
+.pfe-table tr.tot td{font-weight:700;color:#1B2F52;border-top:2px solid #e5e7eb;}
+.pfe-scroll{overflow-x:auto;}
+.pfe-acc{border:1px solid #e5e7eb;border-radius:10px;margin-bottom:8px;background:#fff;}
+.pfe-acc>summary{cursor:pointer;padding:12px 14px;font-size:13.5px;font-weight:700;color:#1B2F52;list-style:none;display:flex;justify-content:space-between;gap:8px;}
+.pfe-acc>summary::-webkit-details-marker{display:none;}
+.pfe-acc>summary::after{content:'+';color:#C9A84C;font-size:18px;line-height:1;}
+.pfe-acc[open]>summary::after{content:'−';}
+.pfe-acc>div{padding:0 14px 14px;font-size:13px;color:#374151;line-height:1.65;}
+.pfe-acc ul{margin:6px 0 6px 18px;padding:0;}
+.pfe-quiz{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:12px 14px;margin-top:10px;}
+.pfe-quiz-q{font-size:13px;font-weight:700;color:#4c1d95;margin-bottom:8px;}
+.pfe-quiz-opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid #e5e7eb;border-radius:8px;padding:8px 11px;margin-bottom:6px;font-family:'DM Sans',sans-serif;font-size:12.5px;color:#1B2F52;cursor:pointer;}
+.pfe-quiz-opt:hover{border-color:#7c3aed;}
+.pfe-quiz-opt.ok{background:#d1fae5;border-color:#059669;}
+.pfe-quiz-opt.no{background:#fee2e2;border-color:#dc2626;}
+.pfe-quiz-e{font-size:12px;color:#374151;margin-top:4px;line-height:1.5;}
+.pfe-check{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;margin-bottom:8px;background:#fff;}
+.pfe-check input{width:20px;height:20px;margin-top:2px;accent-color:#059669;flex-shrink:0;cursor:pointer;}
+.pfe-check.done{background:#f0fdf4;border-color:#bbf7d0;}
+.pfe-check.done .pfe-check-t{text-decoration:line-through;color:#6b7280;}
+.pfe-check-t{font-size:13.5px;font-weight:700;color:#1B2F52;}
+.pfe-check-d{font-size:12px;color:#6b7280;line-height:1.5;margin-top:2px;}
+.pfe-prog{height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden;}
+.pfe-prog>span{display:block;height:100%;background:linear-gradient(90deg,#059669,#34d399);border-radius:99px;transition:width .3s;}
+.pfe-prog-wrap{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.pfe-prog-wrap .pfe-prog{flex:1;}
+.pfe-prog-wrap strong{font-size:12px;color:#047857;white-space:nowrap;}
+.pfe-prog-card{border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;margin-bottom:10px;background:#fff;}
+.pfe-prog-card h4{margin:0 0 4px;font-size:14px;color:#1B2F52;}
+.pfe-kv{display:grid;grid-template-columns:150px 1fr;gap:4px 12px;font-size:12px;margin-top:8px;}
+.pfe-kv dt{color:#6b7280;font-weight:700;text-transform:uppercase;font-size:10px;letter-spacing:.05em;padding-top:2px;}
+.pfe-kv dd{margin:0;color:#374151;line-height:1.5;}
+.pfe-chip{display:inline-flex;align-items:center;gap:4px;background:#f3f4f6;border:1px solid #e5e7eb;color:#374151;border-radius:99px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.pfe-chip.on{background:#1B2F52;color:#fff;border-color:#1B2F52;}
+.pfe-opt-col{border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#fff;}
+.pfe-opt-col h4{margin:0 0 8px;font-size:14px;color:#1B2F52;display:flex;justify-content:space-between;gap:6px;align-items:center;}
+.pfe-cmp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.pfe-mini{display:grid;grid-template-columns:1fr 88px;gap:6px 8px;align-items:center;}
+.pfe-mini label{font-size:12px;color:#374151;}
+.pfe-mini input{padding:6px 8px;border:1.5px solid #e5e7eb;border-radius:7px;font-size:13px;font-family:'DM Sans',sans-serif;width:100%;box-sizing:border-box;text-align:right;}
+.pfe-mini input:focus{border-color:#1B2F52;outline:none;}
+.pfe-scen{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:16px;}
+.pfe-scen button{text-align:left;background:#fff;border:2px solid #e5e7eb;border-radius:10px;padding:10px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.pfe-scen button.on{border-color:#C9A84C;background:#fffdf7;}
+.pfe-scen b{display:block;font-size:11px;color:#92400e;letter-spacing:.06em;}
+.pfe-scen span{font-size:12.5px;font-weight:700;color:#1B2F52;}
+.pfe-risk{list-style:none;margin:0;padding:0;}
+.pfe-risk li{font-size:12.5px;color:#374151;padding:6px 0 6px 22px;position:relative;line-height:1.5;border-bottom:1px solid #f3f4f6;}
+.pfe-risk li::before{content:'⚠';position:absolute;left:0;color:#d97706;}
+.pfe-ms{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #f3f4f6;font-size:12.5px;color:#374151;}
+.pfe-ms input{width:17px;height:17px;accent-color:#059669;}
+.pfe-ms.done span{color:#047857;font-weight:600;}
+.pfe-modal-ov{position:fixed;inset:0;background:rgba(15,29,53,.55);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px;}
+.pfe-modal{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:90vh;overflow:auto;padding:22px;}
+.pfe-adm-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px 12px;border:1px solid rgba(255,255,255,.1);border-radius:10px;margin-bottom:8px;background:rgba(255,255,255,.04);}
+#pfe-print{display:none;}
+@media (max-width:640px){
+  .pfe-head{padding:18px 16px 0;} .pfe-body{padding:18px 16px 22px;}
+  .pfe-title{font-size:20px;} .pfe-kv{grid-template-columns:1fr;} .pfe-kv dt{padding-top:6px;}
+  .pfe-feature{padding:16px;} .pfe-table{font-size:11.5px;}
+}
+@media print{
+  body.pfe-printing > *:not(#pfe-print){display:none !important;}
+  body.pfe-printing #pfe-print{display:block !important;font-family:'DM Sans',Arial,sans-serif;color:#111;padding:0 8px;}
+  #pfe-print h1{font-family:'Playfair Display',Georgia,serif;font-size:22px;margin:0 0 4px;}
+  #pfe-print h2{font-size:14px;margin:18px 0 6px;border-bottom:1px solid #999;padding-bottom:3px;}
+  #pfe-print table{width:100%;border-collapse:collapse;font-size:12px;}
+  #pfe-print td,#pfe-print th{border-bottom:1px solid #ddd;padding:5px 6px;text-align:left;}
+  #pfe-print .r{text-align:right;}
+  #pfe-print .foot{font-size:10px;color:#555;margin-top:18px;}
+}
+
 </style>
 </head>
 <body>
@@ -3251,6 +3402,8 @@ table.adm-table tr:hover td { background: #fafafa; }
       </div>
         <div style="margin-top:12px;display:inline-block;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.3);border-radius:7px;padding:5px 14px;font-size:11px;color:#e8c97a;">&#128640; Full personalization coming soon</div>
       </div></div>
+
+      <nav class="rm-subnav" aria-label="Education Roadmap sections"><a href="#edu-path-cards" onclick="var e=document.getElementById('edu-path-cards');if(e){e.scrollIntoView({behavior:'smooth',block:'center'});}return false;">🏫 Explore Schools &amp; Programs</a><a href="#finaid-root" onclick="var e=document.getElementById('finaid-root');if(e){e.scrollIntoView({behavior:'smooth'});}return false;">🏅 Scholarships</a><a class="pfe-hl" href="#pfe-root" onclick="try{PFE.go('home')}catch(x){}return false;">💸 Paying for My Education</a></nav>
       <div class="edu-paths">
         <div class="edu-path hl"><div class="edu-path-ico">&#127891;</div><div class="edu-path-title">4-Year University</div><div class="edu-path-desc">Best for careers requiring professional licensure or graduate school.</div><div class="edu-facts"><div class="edu-fact">Average cost: $25,000&ndash;$55,000/yr</div><div class="edu-fact">Timeline: 4 years</div><div class="edu-fact">Pell Grant eligible up to $7,395/yr</div></div></div>
         <div class="edu-path"><div class="edu-path-ico">&#127979;</div><div class="edu-path-title">Community College</div><div class="edu-path-desc">Start here, transfer later. Save $40,000+ on the first two years.</div><div class="edu-facts"><div class="edu-fact">Average cost: $3,500&ndash;$6,000/yr</div><div class="edu-fact">Timeline: 2 years + transfer</div><div class="edu-fact">Often fully covered by FAFSA grants</div></div></div>
@@ -3271,6 +3424,7 @@ table.adm-table tr:hover td { background: #fafafa; }
         <p style="font-size:13px;color:#6b7280;margin-bottom:18px;">Pick a school, add scholarships and grants, and watch your real net cost drop in real-time.</p>
         <div id="finaid-root"></div>
       </div>
+      <div id="pfe-root"></div>
     </div>
 
     <!-- BUDGET -->
@@ -3694,6 +3848,7 @@ table.adm-table tr:hover td { background: #fafafa; }
             <button class="cc-nav-item" onclick="ADM.ccNav('customers',this)"><span class="cc-nav-ico">&#128101;</span> Customers</button>
             <button class="cc-nav-item" onclick="ADM.ccNav('allusers',this)"><span class="cc-nav-ico">&#128100;</span> All Users</button>
             <button class="cc-nav-item" onclick="ADM.ccNav('modcontrol',this)"><span class="cc-nav-ico">&#9881;</span> Module Control</button>
+            <button class="cc-nav-item" onclick="ADM.ccNav('pfeadmin',this)"><span class="cc-nav-ico">&#128184;</span> Financial Aid Content</button>
           </div>
           <div class="cc-sidebar-footer">
             <span id="cc-admin-name">Admin</span>
@@ -3761,6 +3916,7 @@ table.adm-table tr:hover td { background: #fafafa; }
 
           <!-- ══ MODULE CONTROL ══ -->
           <div id="cc-modcontrol" class="cc-section" style="display:none;"></div>
+          <div id="cc-pfeadmin" class="cc-section" style="display:none;"></div>
 
           <!-- ══ SETTINGS (accessible from Customer Hub edit) ══ -->
           <div id="cc-settings" class="cc-section" style="display:none;"></div>
@@ -4200,6 +4356,7 @@ var Profile = {
       +'<div style="font-size:13px;font-weight:700;color:#1B2F52;">Total Score</div>'
       +'<div style="font-family:\'Playfair Display\',serif;font-size:24px;font-weight:700;color:#7c3aed;">'+score+'<span style="font-size:14px;color:#9ca3af;">/100</span></div>'
       +'</div></div>';
+    try { html += PFE.profileCard(); } catch(e) {}
     // Quick actions
     html+='<div class="pf-card gold"><div class="pf-card-hdr"><div class="pf-card-ico">&#128640;</div><div class="pf-card-title">Quick Actions</div></div>'
       +'<div class="pf-action-grid">'
@@ -4282,6 +4439,7 @@ function lpGuest(grade) {
   // ── 1. Wipe all localStorage so nothing from a prior session bleeds in ──
   try { localStorage.removeItem('lpnav_v5'); } catch(e) {}
   try { localStorage.removeItem('lpfl_progress'); } catch(e) {}
+  try { PFE.clearStudentData(); } catch(e) {}
   try { localStorage.removeItem('lpfinaid_v1'); } catch(e) {}
 
   // ── 2. Reset ST to clean defaults then apply guest profile ──────────────
@@ -7123,6 +7281,7 @@ var APP = {
     try { localStorage.removeItem('lpfinaid_v1'); } catch(e) {}
     try { localStorage.removeItem('lpnet_v1'); } catch(e) {}
     // Reset ST to blank slate
+    try { PFE.clearStudentData(); } catch(e) {}
     ST.user=''; ST.grade=''; ST.isGuest=false;
     ST.s1done=false; ST.s1scores=null; ST.s1pri=null; ST.s1sec=null;
     ST.s2done=false; ST.s2nbhd=''; ST.s2scores=null; ST.s2pri=''; ST.s2sec='';
@@ -7176,7 +7335,7 @@ var APP = {
     window.scrollTo(0, 0);
     if (name === 'careers') Careers.render();
     if (name === 'finlit')  FL.renderHome();
-    if (name === 'roadmap') Roadmap.render();
+    if (name === 'roadmap') { Roadmap.render(); try { PFE.init(); } catch(e) {} }
     if (name === 'budget')  Budget.calc();
     if (name === 'alabama') Alabama.init();
     if (name === 'network') { NET.init(); NET.show('dashboard'); }
@@ -7265,6 +7424,7 @@ var APP = {
     }).join(''));
     EduRoadmap.renderCards();
     FinAid.init();
+    try { PFE.init(); } catch(e) {}
   },
 
 "Investing": [
@@ -11205,6 +11365,7 @@ var ADM = {
     else if (section === 'customers') ADM.ccRenderCustomers();
     else if (section === 'allusers') ADM.ccRenderAllUsers();
     else if (section === 'modcontrol') ADM.ccRenderModControl();
+    else if (section === 'pfeadmin') PFEAdmin.render();
   },
 
   // ── Customer Hub (Profile View) ────────────────────────────────
@@ -12805,6 +12966,1847 @@ var FinAid = {
   fmt: function(n) {
     if (!n || n===0) return '$0';
     return '$' + Math.round(n).toLocaleString();
+  }
+};
+
+// ═══ PAYING FOR MY EDUCATION ═══
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — pure calculation helpers (no DOM access)
+// Kept separate so the math can be unit-tested outside the browser.
+// ═══════════════════════════════════════════════════════════════════
+var PFECalc = {
+
+  // Coerce any user input to a finite, non-negative number.
+  num: function(v) {
+    if (v === null || v === undefined) return 0;
+    var n = typeof v === 'number' ? v : parseFloat(String(v).replace(/[$,\s]/g, ''));
+    if (!isFinite(n) || isNaN(n) || n < 0) return 0;
+    return n;
+  },
+
+  sum: function(obj, keys) {
+    var t = 0;
+    keys.forEach(function(k) { t += PFECalc.num(obj ? obj[k] : 0); });
+    return t;
+  },
+
+  // Standard amortization. principal in dollars, annualRatePct e.g. 6.52, months > 0.
+  monthlyPayment: function(principal, annualRatePct, months) {
+    var P = PFECalc.num(principal), n = Math.round(PFECalc.num(months));
+    if (P <= 0 || n <= 0) return 0;
+    var r = PFECalc.num(annualRatePct) / 100 / 12;
+    if (r === 0) return P / n;
+    return P * r / (1 - Math.pow(1 + r, -n));
+  },
+
+  // Full loan picture.
+  // opts: { amount, ratePct, years, feePct, accrueInSchool (bool), monthsBeforeRepay }
+  // Assumptions (documented in the UI):
+  //  • Origination fee is deducted up front — you receive less but owe the full amount.
+  //  • If accrueInSchool, simple interest accrues on the full amount from disbursement until
+  //    repayment starts and is then capitalized (added to principal) — how unsubsidized
+  //    loans generally work. Subsidized loans: leave accrueInSchool off.
+  //  • Fixed rate, level monthly payments, no extra payments, no rate discounts.
+  loan: function(opts) {
+    var amt = PFECalc.num(opts.amount);
+    var rate = PFECalc.num(opts.ratePct);
+    var years = PFECalc.num(opts.years);
+    var fee = Math.min(PFECalc.num(opts.feePct), 100);
+    var months = Math.round(years * 12);
+    var accrued = 0;
+    if (opts.accrueInSchool) {
+      accrued = amt * (rate / 100) * (PFECalc.num(opts.monthsBeforeRepay) / 12);
+    }
+    var balance = amt + accrued;
+    var pay = PFECalc.monthlyPayment(balance, rate, months);
+    var total = pay * months;
+    return {
+      borrowed: amt,
+      feeAmount: amt * fee / 100,
+      received: amt - amt * fee / 100,
+      accruedInSchool: accrued,
+      balanceAtRepayment: balance,
+      monthly: pay,
+      months: months,
+      totalRepaid: total,
+      totalInterest: Math.max(0, total - amt)  // everything paid beyond what you borrowed
+    };
+  },
+
+  // Federal Tiered Standard plan term (loans first disbursed on/after July 1, 2026),
+  // based on total principal when entering repayment. Verified Nov 2026 (ed.gov fact sheet).
+  tieredStandardYears: function(balance) {
+    var b = PFECalc.num(balance);
+    if (b < 25000) return 10;
+    if (b < 50000) return 15;
+    if (b < 100000) return 20;
+    return 25;
+  },
+
+  // Cost-of-attendance comparison for one education option (annual figures).
+  // costs: tuition, fees, books, housing, meals, transport, personal, equipment, other
+  // aid  : fedGrants, stateGrants, instGrants, scholarships  (gift aid that lowers net cost)
+  // res  : family, savings, employer, otherFree            (resources that close the gap)
+  // separate: workStudy (potential income), loans (financing)
+  COST_KEYS: ['tuition','fees','books','housing','meals','transport','personal','equipment','other'],
+  GIFT_KEYS: ['fedGrants','stateGrants','instGrants','scholarships'],
+  RES_KEYS:  ['family','savings','employer','otherFree'],
+
+  option: function(o) {
+    var coa  = PFECalc.sum(o, PFECalc.COST_KEYS);
+    var gift = PFECalc.sum(o, PFECalc.GIFT_KEYS);
+    var res  = PFECalc.sum(o, PFECalc.RES_KEYS);
+    var years = PFECalc.num(o.years) || 0;
+    var net = Math.max(0, coa - gift);
+    var giftOverCost = Math.max(0, gift - coa);
+    var gap = Math.max(0, net - res);
+    var ws = PFECalc.num(o.workStudy);
+    var loans = PFECalc.num(o.loans);
+    var afterWorkAndLoans = Math.max(0, gap - ws - loans);
+    return {
+      coa: coa, gift: gift, net: net, giftOverCost: giftOverCost,
+      resources: res, gap: gap,
+      workStudy: ws, loans: loans, unfunded: afterWorkAndLoans,
+      years: years,
+      programCoa: coa * years, programNet: net * years, programGap: gap * years,
+      tuitionOnly: PFECalc.num(o.tuition) > 0 && coa === PFECalc.num(o.tuition)
+    };
+  },
+
+  // Federal Direct Loan annual limits for DEPENDENT undergraduates (unchanged by OBBBA;
+  // verified Nov 2026). Year 1: $5,500, Year 2: $6,500, Year 3+: $7,500.
+  dependentAnnualLimit: function(yearIndex) {
+    return yearIndex <= 0 ? 5500 : yearIndex === 1 ? 6500 : 7500;
+  },
+
+  // Split a multi-year funding gap into federal-loan-eligible borrowing and the part
+  // that federal student loans alone cannot cover. yearsGaps: array of annual gaps.
+  // startYearIndex lets a transfer student begin at year 3 limits, etc.
+  federalBorrowing: function(yearGaps, startYearIndex) {
+    var fed = 0, beyond = 0;
+    (yearGaps || []).forEach(function(g, i) {
+      var gap = PFECalc.num(g);
+      var lim = PFECalc.dependentAnnualLimit((startYearIndex || 0) + i);
+      var b = Math.min(gap, lim);
+      fed += b; beyond += gap - b;
+    });
+    return { federal: fed, beyondFederal: beyond };
+  },
+
+  // Earnings from a job. Weeks default to an academic year unless given.
+  earnings: function(hoursPerWeek, hourly, weeks) {
+    return PFECalc.num(hoursPerWeek) * PFECalc.num(hourly) * PFECalc.num(weeks);
+  },
+
+  // Monthly payment as % of monthly income.
+  pctOfIncome: function(monthlyPay, annualIncome) {
+    var inc = PFECalc.num(annualIncome) / 12;
+    if (inc <= 0) return null;
+    return PFECalc.num(monthlyPay) / inc * 100;
+  },
+
+  // Parse a salary-ish string such as "$60,510" or "$45K–$60K" → number (midpoint for ranges).
+  parseMoney: function(str) {
+    if (str === null || str === undefined) return 0;
+    if (typeof str === 'number') return PFECalc.num(str);
+    var s = String(str).replace(/\/yr|\/year|per year|annually|\(.*?\)/gi, '');
+    var m = s.match(/\d[\d,]*(\.\d+)?\s*[kK]?/g);
+    if (!m) return 0;
+    var vals = m.map(function(x) {
+      var k = /k$/i.test(x.trim());
+      var v = parseFloat(x.replace(/[,kK\s]/g, '')) || 0;
+      return k ? v * 1000 : v;
+    });
+    if (vals.length === 1) return vals[0];
+    return Math.round((vals[0] + vals[vals.length - 1]) / 2);
+  },
+
+  money: function(n, opts) {
+    var v = Number(n);
+    if (!isFinite(v)) v = 0;
+    var neg = v < 0; v = Math.abs(v);
+    var s = (opts && opts.cents) ? v.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                                 : Math.round(v).toLocaleString('en-US');
+    return (neg ? '−$' : '$') + s;
+  }
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — content & seed data
+// Every dollar figure or rule shown to students lives here (or in the admin
+// overrides stored in localStorage 'lppfe_programs_v1'), never inline in UI code.
+// status: 'verified'     = checked against an official/authoritative source on lastVerified
+//         'illustrative' = an example or category description, not a specific program
+//         'pending'      = awaiting verification by an administrator
+// ═══════════════════════════════════════════════════════════════════
+var PFE_DATA = {
+
+  VERIFIED_ON: '2026-11-20',
+
+  // Key federal facts used by calculators and lessons. Admin can override each value.
+  FACTS: {
+    pellMax:        { label:'Maximum Federal Pell Grant (2026–27)', value:7395, unit:'$', source:'https://studentaid.gov/articles/dont-miss-out-on-pell-grants/', verified:'2026-11-20' },
+    pellMin:        { label:'Minimum Federal Pell Grant (2026–27)', value:740, unit:'$', source:'https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2026-01-30/2026-27-federal-pell-grant-maximum-and-minimum-award-amounts', verified:'2026-11-20' },
+    ugLoanRate:     { label:'Undergraduate Direct Loan interest rate (first disbursed Jul 1 2026 – Jun 30 2027)', value:6.52, unit:'%', source:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-06-04/interest-rates-federal-direct-loans-first-disbursed-between-july-1-2026-and-june-30-2027', verified:'2026-11-20' },
+    plusLoanRate:   { label:'Parent PLUS interest rate (first disbursed Jul 1 2026 – Jun 30 2027)', value:9.07, unit:'%', source:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-06-04/interest-rates-federal-direct-loans-first-disbursed-between-july-1-2026-and-june-30-2027', verified:'2026-11-20' },
+    ugLoanFee:      { label:'Direct Subsidized/Unsubsidized origination fee (first disbursed Oct 1 2026 – Sep 30 2027)', value:1.057, unit:'%', source:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-05-13/fy27-sequester-required-changes-title-iv-student-aid-programs', verified:'2026-11-20' },
+    plusLoanFee:    { label:'Direct PLUS origination fee (first disbursed Oct 1 2026 – Sep 30 2027)', value:4.228, unit:'%', source:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-05-13/fy27-sequester-required-changes-title-iv-student-aid-programs', verified:'2026-11-20' },
+    fafsaOpened:    { label:'2027–28 FAFSA opened', value:'September 24, 2026', unit:'', source:'https://www.nasfaa.org/news-item/39879/FSA_Officially_Launches_2027-28_FAFSA', verified:'2026-11-20' }
+  },
+
+  // Dependent-undergrad Direct Loan annual limits (unchanged by OBBBA, verified 2026-11-20)
+  LOAN_LIMITS_NOTE: 'Dependent undergraduates can borrow up to $5,500 (year 1), $6,500 (year 2) and $7,500 (year 3 and beyond) per year in federal Direct Loans, with a $31,000 total limit. Only part of each amount can be subsidized.',
+
+  STATES: [
+    ['AL','Alabama'],['AK','Alaska'],['AZ','Arizona'],['AR','Arkansas'],['CA','California'],['CO','Colorado'],['CT','Connecticut'],
+    ['DE','Delaware'],['DC','District of Columbia'],['FL','Florida'],['GA','Georgia'],['HI','Hawaii'],['ID','Idaho'],['IL','Illinois'],
+    ['IN','Indiana'],['IA','Iowa'],['KS','Kansas'],['KY','Kentucky'],['LA','Louisiana'],['ME','Maine'],['MD','Maryland'],
+    ['MA','Massachusetts'],['MI','Michigan'],['MN','Minnesota'],['MS','Mississippi'],['MO','Missouri'],['MT','Montana'],
+    ['NE','Nebraska'],['NV','Nevada'],['NH','New Hampshire'],['NJ','New Jersey'],['NM','New Mexico'],['NY','New York'],
+    ['NC','North Carolina'],['ND','North Dakota'],['OH','Ohio'],['OK','Oklahoma'],['OR','Oregon'],['PA','Pennsylvania'],
+    ['RI','Rhode Island'],['SC','South Carolina'],['SD','South Dakota'],['TN','Tennessee'],['TX','Texas'],['UT','Utah'],
+    ['VT','Vermont'],['VA','Virginia'],['WA','Washington'],['WV','West Virginia'],['WI','Wisconsin'],['WY','Wyoming']
+  ],
+
+  // Directory page on ed.gov that lists each state's higher education agency (URL pattern verified 2026-11-20).
+  stateAgencyUrl: function(code) {
+    return 'https://www.ed.gov/about/contact-us/state-contacts/' + String(code || '').toLowerCase();
+  },
+
+  EDU_TYPES: {
+    university:'4-year university', community:'Community college', technical:'Technical / trade school',
+    certificate:'Certificate / bootcamp', apprenticeship:'Apprenticeship'
+  },
+
+  // ── Program records ────────────────────────────────────────────────
+  // category: federal | state | other    type: grant | loan | work | service | training | payment | benefit
+  // repayment: none | required | conditional    obligation: none | employment | service
+  PROGRAMS: [
+    { id:'fed-pell', name:'Federal Pell Grant', category:'federal', type:'grant', geo:'US',
+      eduTypes:['university','community','technical','certificate'],
+      description:'The biggest federal grant for undergraduates with financial need. It usually does not have to be repaid.',
+      eligibility:'Undergraduates who have not earned a bachelor’s degree and show financial need on the FAFSA. Your award depends on your Student Aid Index (SAI), cost of attendance, and enrollment. Starting in 2026–27, students whose SAI is twice the maximum Pell award or higher are not eligible.',
+      amount:'Up to $7,395 for 2026–27 (minimum award $740)', amountStatus:'verified',
+      application:'Submit the FAFSA each year. Your school tells you if you qualify.',
+      deadline:'File the FAFSA as early as you can. Federal, state, and school deadlines differ.', deadlineStatus:'general',
+      sourceUrl:'https://studentaid.gov/articles/dont-miss-out-on-pell-grants/', sourceName:'StudentAid.gov',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-workforce-pell', name:'Workforce Pell Grant', category:'federal', type:'grant', geo:'US',
+      eduTypes:['technical','certificate'],
+      description:'A newer form of Pell Grant for qualifying short-term workforce training programs, starting July 1, 2026.',
+      eligibility:'Pell-eligible students in an approved short-term workforce program. You cannot receive regular Pell and Workforce Pell at the same time, and Workforce Pell counts toward your lifetime Pell eligibility.',
+      amount:'Varies by program — ask the school’s financial aid office', amountStatus:'unverified',
+      application:'Submit the FAFSA and confirm the program is approved for Workforce Pell.',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://www.nasfaa.org/uploads/documents/Federal_Student_Aid_Change_OB3.pdf', sourceName:'NASFAA summary of the One Big Beautiful Bill Act',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-fseog', name:'Federal Supplemental Educational Opportunity Grant (FSEOG)', category:'federal', type:'grant', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'A grant for undergraduates with exceptional financial need. Pell Grant recipients get priority.',
+      eligibility:'Undergraduates with exceptional need at a participating school. Each school receives a limited amount of money, so not every eligible student gets FSEOG.',
+      amount:'$100 to $4,000 per year, depending on need and school funds', amountStatus:'verified',
+      application:'Submit the FAFSA early — schools award FSEOG until their funds run out.',
+      deadline:'Set by each school; apply early.', deadlineStatus:'general',
+      sourceUrl:'https://fsapartners.ed.gov/sites/default/files/2026-2027/2026-2027_Federal_Student_Aid_Handbook/_knowledge-center_fsa-handbook_2026-2027_vol6_ch6-federal-supplemental-educational-opportunity-grant-program.pdf', sourceName:'2026–27 Federal Student Aid Handbook',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-fws', name:'Federal Work-Study', category:'federal', type:'work', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'Part-time jobs for students with financial need, on or off campus. You earn a paycheck for hours you actually work.',
+      eligibility:'Students with financial need at participating schools. Being offered work-study does not guarantee a job — you still have to find and keep a position.',
+      amount:'No fixed amount. You are paid at least the federal minimum wage for hours worked.', amountStatus:'verified',
+      application:'Answer “yes” to work-study interest on the FAFSA, then apply for work-study jobs at your school.',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://fsapartners.ed.gov/knowledge-center/fsa-handbook/2021-2022/vol3/ch6-awarding-campus-based', sourceName:'Federal Student Aid Handbook',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'employment', status:'verified', active:true },
+
+    { id:'fed-sub', name:'Federal Direct Subsidized Loan', category:'federal', type:'loan', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'A federal loan for undergraduates with financial need. The government pays the interest while you are in school at least half-time.',
+      eligibility:'Undergraduates with financial need, enrolled at least half-time.',
+      amount:'6.52% fixed rate for loans first disbursed Jul 1 2026 – Jun 30 2027; 1.057% origination fee. Dependent students: up to $3,500 (yr 1), $4,500 (yr 2), $5,500 (yr 3+) may be subsidized.', amountStatus:'verified',
+      application:'Submit the FAFSA; accept the loan in your school’s aid offer.',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-06-04/interest-rates-federal-direct-loans-first-disbursed-between-july-1-2026-and-june-30-2027', sourceName:'Federal Student Aid',
+      lastVerified:'2026-11-20', repayment:'required', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-unsub', name:'Federal Direct Unsubsidized Loan', category:'federal', type:'loan', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'A federal loan that does not require financial need. Interest starts building as soon as the money is paid out.',
+      eligibility:'Undergraduate and graduate students enrolled at least half-time.',
+      amount:'6.52% fixed rate (undergraduates) for loans first disbursed Jul 1 2026 – Jun 30 2027; 1.057% origination fee. Dependent undergrads: $5,500 / $6,500 / $7,500 total Direct Loans per year.', amountStatus:'verified',
+      application:'Submit the FAFSA; accept the loan in your school’s aid offer.',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-06-04/interest-rates-federal-direct-loans-first-disbursed-between-july-1-2026-and-june-30-2027', sourceName:'Federal Student Aid',
+      lastVerified:'2026-11-20', repayment:'required', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-parent-plus', name:'Federal Direct Parent PLUS Loan', category:'federal', type:'loan', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'A federal loan a parent borrows for a dependent undergraduate. The parent — not the student — is legally responsible for repaying it.',
+      eligibility:'Parents of dependent undergraduates; requires a credit check. New parent borrowers from July 1, 2026 are limited to $20,000 per student per year and $65,000 per student in total. New Parent PLUS loans must be repaid under the standard plan.',
+      amount:'9.07% fixed rate for loans first disbursed Jul 1 2026 – Jun 30 2027; 4.228% origination fee', amountStatus:'verified',
+      application:'Parent applies at StudentAid.gov after the student files the FAFSA.',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://www.nasfaa.org/uploads/documents/Federal_Student_Aid_Change_OB3.pdf', sourceName:'NASFAA summary of OBBBA; Federal Student Aid',
+      lastVerified:'2026-11-20', repayment:'required', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-americorps', name:'Segal AmeriCorps Education Award', category:'other', type:'service', geo:'US',
+      eduTypes:['university','community','technical','certificate'],
+      description:'After you complete a term of AmeriCorps national service, you earn an award to pay college costs or repay qualified student loans.',
+      eligibility:'AmeriCorps members who successfully complete an approved term of service. Must be used within seven years. Payments are subject to federal tax.',
+      amount:'A full-time award equals the maximum Pell Grant for the year your position was approved ($7,395 currently); part-time terms earn less', amountStatus:'verified',
+      application:'Serve with an AmeriCorps program; the award is earned after completing your term.',
+      deadline:'Varies by program.', deadlineStatus:'general',
+      sourceUrl:'https://americorps.gov/members-volunteers/segal-americorps-education-award', sourceName:'AmeriCorps',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'service', status:'verified', active:true },
+
+    { id:'fed-wioa', name:'WIOA Training Assistance (Individual Training Accounts)', category:'other', type:'training', geo:'US',
+      eduTypes:['technical','certificate','community','apprenticeship'],
+      description:'Federal workforce funding, run through local American Job Centers, that can pay for approved job training programs.',
+      eligibility:'Determined by your local workforce board — usually adults, dislocated workers, and some youth. The program must be on your state’s Eligible Training Provider List. Funding is not guaranteed and is usually used after grants like Pell.',
+      amount:'Varies by local workforce board', amountStatus:'unverified',
+      application:'Visit your local American Job Center; search approved programs in CareerOneStop’s Local Training Finder.',
+      deadline:'None statewide — depends on local funding.', deadlineStatus:'general',
+      sourceUrl:'https://www.careeronestop.org/', sourceName:'CareerOneStop (U.S. Department of Labor)',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'fed-apprenticeship', name:'Registered Apprenticeship', category:'other', type:'training', geo:'US',
+      eduTypes:['apprenticeship'],
+      description:'Earn a paycheck while you learn a skilled job, combining on-the-job training with classroom instruction and a recognized credential.',
+      eligibility:'Set by each employer or sponsor (age, education, and testing requirements vary).',
+      amount:'Wages, training costs, and education benefits vary by program', amountStatus:'unverified',
+      application:'Search openings at Apprenticeship.gov or contact employers and your state apprenticeship office.',
+      deadline:'Varies by sponsor.', deadlineStatus:'general',
+      sourceUrl:'https://www.apprenticeship.gov/', sourceName:'U.S. Department of Labor',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'employment', status:'verified', active:true },
+
+    { id:'al-apprenticeship', name:'Alabama Office of Apprenticeship', category:'state', type:'training', geo:'AL',
+      eduTypes:['apprenticeship'],
+      description:'Alabama’s registration agency for registered and youth apprenticeships, part of the Alabama Department of Workforce. Some programs hire high school students age 17 and older.',
+      eligibility:'Set by each sponsoring employer.',
+      amount:'Wages vary by employer and occupation', amountStatus:'unverified',
+      application:'Contact the Alabama Office of Apprenticeship or participating employers.',
+      deadline:'Varies by sponsor.', deadlineStatus:'general',
+      sourceUrl:'https://workforce.alabama.gov/employers/apprenticeships/', sourceName:'Alabama Department of Workforce',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'employment', status:'verified', active:true },
+
+    { id:'al-asap', name:'Alabama Student Assistance Program (ASAP)', category:'state', type:'grant', geo:'AL',
+      eduTypes:['university','community','technical'],
+      description:'Alabama’s need-based state grant for Alabama residents attending participating Alabama schools.',
+      eligibility:'Alabama residents with financial need, enrolled at least half-time at a participating institution. Students with the greatest need (Pell recipients) get priority. Schools award ASAP from a limited pool, first come, first served.',
+      amount:'$300 to $5,000 per academic year', amountStatus:'verified',
+      application:'Submit the FAFSA. Your school’s financial aid office awards ASAP.',
+      deadline:'Funds are limited — file the FAFSA early. Check your school’s priority date.', deadlineStatus:'general',
+      sourceUrl:'https://sp.ache.edu/asap/', sourceName:'Alabama Commission on Higher Education',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'al-asgp', name:'Alabama Student Grant Program (ASGP)', category:'state', type:'grant', geo:'AL',
+      eduTypes:['university'],
+      description:'A state grant for Alabama undergraduates at eligible independent (private, nonprofit) Alabama colleges. It is not need-based.',
+      eligibility:'Undergraduates at a participating independent Alabama institution. Amounts vary from year to year based on available funds.',
+      amount:'Up to $3,000 per academic year', amountStatus:'verified',
+      application:'Return the ASGP application to the financial aid office of the participating school.',
+      deadline:'Set by the participating school.', deadlineStatus:'general',
+      sourceUrl:'https://www.ache.edu/index.php/alabama-student-grant-program/', sourceName:'Alabama Commission on Higher Education',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'al-angeap', name:'Alabama National Guard Educational Assistance Program (ANGEAP)', category:'state', type:'benefit', geo:'AL',
+      eduTypes:['university','community','technical'],
+      description:'Education assistance for members of the Alabama National Guard attending eligible Alabama schools.',
+      eligibility:'Active Alabama National Guard members in good standing. Requires a service commitment.',
+      amount:'Varies — confirm with your Guard unit and ACHE', amountStatus:'unverified',
+      application:'Apply through your Alabama National Guard unit.',
+      deadline:'Varies.', deadlineStatus:'general',
+      sourceUrl:'https://www.ache.edu/index.php/student-assistance/', sourceName:'Alabama Commission on Higher Education',
+      lastVerified:'2026-11-20', repayment:'conditional', obligation:'service', status:'verified', active:true },
+
+    { id:'al-pofseap', name:'Police Officers’ and Firefighters’ Survivors Educational Assistance (Alabama)', category:'state', type:'grant', geo:'AL',
+      eduTypes:['university','community','technical'],
+      description:'Covers tuition, fees, books, and supplies for dependents and eligible spouses of Alabama police officers and firefighters killed in the line of duty.',
+      eligibility:'Eligible dependents or spouses, attending public Alabama institutions for undergraduate study.',
+      amount:'Tuition, fees, books and supplies (see ACHE for limits)', amountStatus:'verified',
+      application:'Apply through the Alabama Commission on Higher Education.',
+      deadline:'Varies.', deadlineStatus:'general',
+      sourceUrl:'https://www.ache.edu/index.php/student-assistance/', sourceName:'Alabama Commission on Higher Education',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'verified', active:true },
+
+    { id:'mil-va', name:'Military & Veterans Education Benefits (GI Bill and others)', category:'other', type:'benefit', geo:'US',
+      eduTypes:['university','community','technical','certificate','apprenticeship'],
+      description:'Service members, veterans, and some family members may qualify for education benefits through the U.S. Department of Veterans Affairs.',
+      eligibility:'Based on military service history (or a qualifying family member’s service). Rules differ for each benefit.',
+      amount:'Varies by benefit and service', amountStatus:'unverified',
+      application:'Apply through VA.gov.',
+      deadline:'Varies.', deadlineStatus:'general',
+      sourceUrl:'', sourceName:'U.S. Department of Veterans Affairs',
+      lastVerified:'', repayment:'none', obligation:'service', status:'pending', active:true },
+
+    { id:'mil-rotc', name:'ROTC Scholarships', category:'other', type:'service', geo:'US',
+      eduTypes:['university'],
+      description:'Army, Navy/Marine Corps, and Air Force/Space Force ROTC scholarships can pay college costs in exchange for a military service commitment after graduation.',
+      eligibility:'Varies by branch; includes academic, fitness, and medical standards plus a service obligation.',
+      amount:'Varies by branch and award type', amountStatus:'unverified',
+      application:'Apply through the branch’s ROTC program; talk to the ROTC unit at your target college.',
+      deadline:'Varies by branch.', deadlineStatus:'general',
+      sourceUrl:'', sourceName:'',
+      lastVerified:'', repayment:'conditional', obligation:'service', status:'pending', active:true },
+
+    { id:'other-vr', name:'Vocational Rehabilitation Services', category:'other', type:'benefit', geo:'US',
+      eduTypes:['university','community','technical','certificate','apprenticeship'],
+      description:'State vocational rehabilitation agencies can help students with disabilities prepare for and pay for education and training tied to an employment goal.',
+      eligibility:'Students with a documented disability that affects employment; determined by your state VR agency.',
+      amount:'Varies by state and individual plan', amountStatus:'unverified',
+      application:'Contact your state vocational rehabilitation agency (in Alabama, the Department of Rehabilitation Services).',
+      deadline:'None — services are ongoing.', deadlineStatus:'general',
+      sourceUrl:'', sourceName:'',
+      lastVerified:'', repayment:'none', obligation:'none', status:'pending', active:true },
+
+    { id:'ex-employer', name:'Employer Tuition Assistance', category:'other', type:'benefit', geo:'US',
+      eduTypes:['university','community','technical','certificate'],
+      description:'Many employers pay for part of employees’ education. Some pay up front; others reimburse you after you pass a course.',
+      eligibility:'Set by each employer. Common rules: minimum hours worked, a job-related field of study, a passing grade, and sometimes a promise to keep working there for a period afterward.',
+      amount:'Varies by employer', amountStatus:'illustrative',
+      application:'Ask HR about education benefits before you accept a job.',
+      deadline:'Set by employer.', deadlineStatus:'general',
+      sourceUrl:'', sourceName:'',
+      lastVerified:'', repayment:'conditional', obligation:'employment', status:'illustrative', active:true },
+
+    { id:'ex-inst', name:'College Institutional Grants', category:'other', type:'grant', geo:'US',
+      eduTypes:['university','community','technical'],
+      description:'Grants that colleges give from their own money, often based on need, merit, or both. Every school is different.',
+      eligibility:'Set by each school. Many require the FAFSA and sometimes another form.',
+      amount:'Varies by school — use each school’s Net Price Calculator', amountStatus:'illustrative',
+      application:'Apply for admission and file the FAFSA (and any other form the school requires).',
+      deadline:'Set by each school.', deadlineStatus:'general',
+      sourceUrl:'https://collegescorecard.ed.gov/', sourceName:'College Scorecard (compare schools’ average net price)',
+      lastVerified:'2026-11-20', repayment:'none', obligation:'none', status:'illustrative', active:true },
+
+    { id:'ex-payplan', name:'Tuition Payment Plans', category:'other', type:'payment', geo:'US',
+      eduTypes:['university','community','technical','certificate'],
+      description:'Many schools let you split a term’s bill into monthly payments instead of paying all at once. It is not aid — it spreads out the cost without adding loan interest.',
+      eligibility:'Offered by each school; there is often a small enrollment fee.',
+      amount:'Fees vary by school', amountStatus:'illustrative',
+      application:'Ask your school’s business or bursar’s office.',
+      deadline:'Usually before each term starts.', deadlineStatus:'general',
+      sourceUrl:'', sourceName:'',
+      lastVerified:'', repayment:'none', obligation:'none', status:'illustrative', active:true }
+  ],
+
+  // ── Grade bands ────────────────────────────────────────────────────
+  // ms = grades 6–8, early = 9–10, senior = 11–12. Content is never blocked by grade.
+  BAND_LABEL: { ms:'Grades 6–8', early:'Grades 9–10', senior:'Grades 11–12' },
+  RECOMMENDED: {
+    ms:     ['aid101','pathways','compare'],
+    early:  ['aid101','compare','grants','state','pathways'],
+    senior: ['fafsa','plan','noscholarship','loans','compare','state']
+  },
+
+  // ── Education funding milestones (shown on My Profile and in this section) ──
+  MILESTONES: [
+    { id:'m-costs',   label:'Explore education costs',              auto:'compare' },
+    { id:'m-research',label:'Research financial aid',                auto:'grants' },
+    { id:'m-fafsa101',label:'Learn about the FAFSA',                 auto:'fafsaLearn' },
+    { id:'m-compare', label:'Compare programs',                      auto:'compare2' },
+    { id:'m-plan',    label:'Create a funding plan',                 auto:'plan' },
+    { id:'m-fafsa',   label:'Complete the FAFSA (when eligible)',    auto:'fafsaSubmitted', grade:11 },
+    { id:'m-offers',  label:'Review aid offers',                     auto:'offers', grade:12 },
+    { id:'m-final',   label:'Finalize an education funding strategy',auto:null, grade:12 }
+  ],
+
+  // ── FAFSA preparation checklist (no sensitive data is ever collected here) ──
+  FAFSA_CHECKLIST: [
+    { id:'acct',     t:'Create your StudentAid.gov account', d:'You make this account on StudentAid.gov — never inside LaunchPoint. Each contributor (like a parent) needs their own account.' },
+    { id:'contrib',  t:'Identify your required contributors', d:'The FAFSA asks questions to figure out whether a parent (or spouse) must provide information. Your contributors fill in their own section.' },
+    { id:'gather',   t:'Gather the information you will need', d:'Have tax and income information ready for you and your contributors. Keep documents at home — do not upload or type them into LaunchPoint.' },
+    { id:'schools',  t:'Choose the schools to receive your FAFSA', d:'List every school you are considering, even ones you are unsure about. You can add schools later.' },
+    { id:'submit',   t:'Complete and submit the FAFSA', d:'Use the official form at StudentAid.gov. Submitting the FAFSA is free.' },
+    { id:'fss',      t:'Review your FAFSA Submission Summary', d:'Check it for mistakes. You can make corrections on StudentAid.gov if something is wrong.' },
+    { id:'requests', t:'Respond to school requests', d:'Schools may ask for more documents (called verification). Respond quickly so your aid is not delayed.' },
+    { id:'offers',   t:'Compare your financial aid offers', d:'Separate free money (grants, scholarships) from loans and work-study. Use “Compare Costs” to see your real gap.' }
+  ],
+
+  // ── Quizzes ────────────────────────────────────────────────────────
+  QUIZZES: {
+    grants: [
+      { q:'Which type of aid usually does NOT have to be repaid?', a:['A grant','A federal loan','A private loan'], c:0, e:'Grants are gift aid. Loans — federal or private — must be repaid, usually with interest.' },
+      { q:'How do you apply for the Federal Pell Grant?', a:['Write an essay','Submit the FAFSA','Ask your high school'], c:1, e:'Pell eligibility is determined by the FAFSA. There is no separate Pell application.' }
+    ],
+    scholarships: [
+      { q:'A scholarship can be based on…', a:['Only test scores','Merit, need, interests, activities, or background','Only athletics'], c:1, e:'Scholarships come in many forms. Use the Scholarships section above to find ones that fit you.' }
+    ],
+    work: [
+      { q:'If your aid offer includes $2,000 in Federal Work-Study, what does that mean?', a:['$2,000 is taken off your bill','You can earn up to about $2,000 by working a work-study job','You owe $2,000 later'], c:1, e:'Work-study is paid as wages for hours you actually work. It is not an automatic discount and a job is not guaranteed.' }
+    ],
+    loans: [
+      { q:'What is the difference between subsidized and unsubsidized federal loans?', a:['Subsidized loans never charge interest','The government pays interest on subsidized loans while you are in school at least half-time','Unsubsidized loans do not need to be repaid'], c:1, e:'Both must be repaid. On unsubsidized loans, interest starts building right away.' },
+      { q:'Who is responsible for repaying a Parent PLUS loan?', a:['The student','The parent who borrowed it','The college'], c:1, e:'The parent borrower is legally responsible, even though the money paid for the student’s education.' }
+    ],
+    employer: [
+      { q:'Employer tuition reimbursement usually means…', a:['You pay first and the employer pays you back after you pass','The college forgives your bill','You never have to work there'], c:0, e:'Many plans reimburse after you complete a course, and some require you to stay employed for a while afterward.' }
+    ],
+    military: [
+      { q:'ROTC scholarships typically require…', a:['Nothing in return','A commitment to serve in the military after graduation','Repayment at 10% interest'], c:1, e:'ROTC scholarships come with a service obligation. Learn the commitment before you sign.' }
+    ],
+    fafsa: [
+      { q:'How much does it cost to submit the FAFSA?', a:['$25','Nothing — it is free','It depends on your income'], c:1, e:'The official FAFSA at StudentAid.gov is always free. Be careful of websites that charge a fee.' },
+      { q:'What is the Student Aid Index (SAI)?', a:['The amount your family must pay','A number schools use to figure out your aid eligibility','Your college bill'], c:1, e:'The SAI is not a bill and not a guaranteed aid amount. Schools use it along with their cost of attendance.' },
+      { q:'Should you file the FAFSA even if you think you won’t get a grant?', a:['No, it is a waste of time','Yes — it is also used for federal loans, work-study, state aid, and many school scholarships','Only if a parent asks'], c:1, e:'Many state and school programs require the FAFSA, and you might qualify for more than you expect.' }
+    ]
+  }
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — core: state, storage, navigation, dashboard
+// Student data:   localStorage 'lppfe_v1'          (cleared on sign-out / guest)
+// Admin content:  localStorage 'lppfe_programs_v1' (program + fact overrides)
+// Reads (never writes) existing keys: ST (lpnav_v5), AL_EDU, FinAid plan.
+// ═══════════════════════════════════════════════════════════════════
+var PFE = {
+  KEY: 'lppfe_v1',
+  PKEY: 'lppfe_programs_v1',
+  SCHEMA: 1,
+  s: null,
+  view: 'home',
+  opts: {},
+  _inited: false,
+
+  // ── Storage ───────────────────────────────────────────────────────
+  defaults: function() {
+    return {
+      v: PFE.SCHEMA, state: 'AL',
+      checklist: {}, quiz: {}, visited: {}, milestones: {},
+      compare: { count: 2, options: [PFE.blankOption('Option 1'), PFE.blankOption('Option 2'), PFE.blankOption('Option 3')] },
+      loan: { amount: 20000, rate: '', years: 10, fee: '', accrue: true, monthsBefore: 54, career: '', salary: '', takeHome: 78, autoTerm: true },
+      nosch: { started: false, scen: 'A', vals: {} },
+      plans: [], activePlan: null, planCmp: []
+    };
+  },
+  blankOption: function(label) {
+    return { label: label, src: '', kind: 'university', living: 'campus', attend: 'full', years: 4,
+      tuition: 0, fees: 0, books: 0, housing: 0, meals: 0, transport: 0, personal: 0, equipment: 0, other: 0,
+      fedGrants: 0, stateGrants: 0, instGrants: 0, scholarships: 0,
+      family: 0, savings: 0, employer: 0, otherFree: 0, workStudy: 0, loans: 0, sample: false };
+  },
+  load: function() {
+    var d = null;
+    try { d = JSON.parse(localStorage.getItem(PFE.KEY) || 'null'); } catch (e) { d = null; }
+    PFE.s = PFE.migrate(d);
+  },
+  // Forward-only, non-destructive schema migration. Unknown keys are preserved.
+  migrate: function(d) {
+    var def = PFE.defaults();
+    if (!d || typeof d !== 'object') return def;
+    Object.keys(def).forEach(function(k) { if (d[k] === undefined) d[k] = def[k]; });
+    if (!d.compare || !Array.isArray(d.compare.options)) d.compare = def.compare;
+    while (d.compare.options.length < 3) d.compare.options.push(PFE.blankOption('Option ' + (d.compare.options.length + 1)));
+    if (!Array.isArray(d.plans)) d.plans = [];
+    if (!Array.isArray(d.planCmp)) d.planCmp = [];
+    d.v = PFE.SCHEMA;
+    return d;
+  },
+  save: function() {
+    if (typeof ST !== 'undefined' && ST.isGuest) return;          // guests: session-only, never persisted
+    var keep = document.getElementById('inp-keep');               // mirror the app's "keep me signed in" choice (see saveState)
+    if (keep && !keep.checked) return;
+    try { localStorage.setItem(PFE.KEY, JSON.stringify(PFE.s)); } catch (e) {}
+  },
+  clearStudentData: function() {
+    try { localStorage.removeItem(PFE.KEY); } catch (e) {}
+    PFE.s = PFE.defaults(); PFE.view = 'home'; PFE.opts = {};
+  },
+
+  // ── Admin-managed content (programs + facts) ──────────────────────
+  adminStore: function() {
+    try { return JSON.parse(localStorage.getItem(PFE.PKEY) || 'null') || { programs: {}, added: [], facts: {}, history: [] }; }
+    catch (e) { return { programs: {}, added: [], facts: {}, history: [] }; }
+  },
+  fact: function(k) {
+    var st = PFE.adminStore();
+    var base = PFE_DATA.FACTS[k] || {};
+    var o = st.facts && st.facts[k];
+    return o ? Object.assign({}, base, o) : base;
+  },
+  factVal: function(k) { return PFE.fact(k).value; },
+  // Seed programs + admin overrides + admin-added + generated per-state placeholders.
+  programs: function() {
+    var st = PFE.adminStore();
+    var list = PFE_DATA.PROGRAMS.map(function(p) {
+      return st.programs && st.programs[p.id] ? Object.assign({}, p, st.programs[p.id]) : Object.assign({}, p);
+    });
+    (st.added || []).forEach(function(p) { list.push(Object.assign({}, p)); });
+    PFE_DATA.STATES.forEach(function(sc) {
+      var id = 'st-' + sc[0];
+      var hasVerified = list.some(function(p) { return p.geo === sc[0] && p.category === 'state' && p.status === 'verified'; });
+      var base = {
+        id: id, name: sc[1] + ' state financial aid programs', category: 'state', type: 'grant', geo: sc[0],
+        eduTypes: ['university','community','technical','certificate','apprenticeship'],
+        description: 'Your state higher education agency lists need-based grants, community college and technical education funding, and workforce training programs for ' + sc[1] + ' residents.',
+        eligibility: 'Varies by program. Most state grants require state residency and the FAFSA.',
+        amount: 'Awaiting verification', amountStatus: 'unverified',
+        application: 'Find your state higher education agency in the U.S. Department of Education directory, then check each program’s rules.',
+        deadline: 'State deadlines differ from federal deadlines — check with your state agency.', deadlineStatus: 'general',
+        sourceUrl: PFE_DATA.stateAgencyUrl(sc[0]), sourceName: 'U.S. Department of Education — state contacts',
+        lastVerified: '', repayment: 'none', obligation: 'none', status: 'pending', active: true, generated: true, hiddenIfVerified: hasVerified
+      };
+      list.push(st.programs && st.programs[id] ? Object.assign(base, st.programs[id]) : base);
+    });
+    return list;
+  },
+  isExpired: function(p) {
+    if (!p.expires) return false;
+    var t = new Date(p.expires + 'T23:59:59');
+    return !isNaN(t) && t < new Date();
+  },
+
+  // ── Helpers ───────────────────────────────────────────────────────
+  esc: function(s) {
+    return String(s === null || s === undefined ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  },
+  $: function(n, o) { return PFECalc.money(n, o); },
+  grade: function() { var g = parseInt((typeof ST !== 'undefined' && ST.grade) || 0, 10); return isNaN(g) ? 0 : g; },
+  band: function() { var g = PFE.grade(); if (!g) return 'senior'; return g <= 8 ? 'ms' : g <= 10 ? 'early' : 'senior'; },
+  isRec: function(key) { return PFE_DATA.RECOMMENDED[PFE.band()].indexOf(key) >= 0; },
+  statusBadge: function(st) {
+    var m = { verified: ['verified', 'Verified'], illustrative: ['illustrative', 'Example / general info'], pending: ['pending', 'Awaiting verification'] };
+    var x = m[st] || m.pending;
+    return '<span class="pfe-badge pfe-b-' + x[0] + '">' + x[1] + '</span>';
+  },
+  repayBadge: function(r) {
+    if (r === 'required') return '<span class="pfe-badge pfe-b-repay">Must be repaid</span>';
+    if (r === 'conditional') return '<span class="pfe-badge pfe-b-cond">Repay if conditions not met</span>';
+    return '<span class="pfe-badge pfe-b-free">No repayment</span>';
+  },
+  obligBadge: function(o) {
+    if (o === 'employment') return '<span class="pfe-badge pfe-b-oblig">Involves a job</span>';
+    if (o === 'service') return '<span class="pfe-badge pfe-b-oblig">Service commitment</span>';
+    return '';
+  },
+  sourceLink: function(url, name) {
+    if (!url) return '<span class="pfe-muted">Official source awaiting verification</span>';
+    return '<a href="' + PFE.esc(url) + '" target="_blank" rel="noopener noreferrer" style="color:#1d4ed8;font-weight:600;">' + PFE.esc(name || url) + ' ↗</a>';
+  },
+  firstName: function() { return (typeof ST !== 'undefined' && ST.user ? String(ST.user).split(' ')[0] : 'Student'); },
+  today: function() { return new Date().toISOString().slice(0, 10); },
+  // Field: label + number input wired to a setter. example=true shades the box as an example value.
+  numField: function(label, value, oninput, hint, example, id) {
+    return '<div class="pfe-f"><label for="' + id + '">' + label + (example ? ' <span class="pfe-badge pfe-b-sample">example</span>' : '') + '</label>'
+      + '<input id="' + id + '" type="number" min="0" step="any" inputmode="decimal" value="' + PFE.esc(value) + '" oninput="' + oninput + '"' + (example ? ' class="pfe-ex"' : '') + '/>'
+      + (hint ? '<div class="pfe-hint">' + hint + '</div>' : '') + '</div>';
+  },
+
+  // LPN school data (existing AL_EDU) helpers
+  CAT_KIND: { universities: 'university', communityColleges: 'community', tradeSchools: 'technical', bootcamps: 'certificate' },
+  CAT_YEARS: { universities: 4, communityColleges: 2, tradeSchools: 1, bootcamps: 0.5 },
+  CAT_LABEL: { universities: '4-Year University', communityColleges: 'Community College', tradeSchools: 'Trade / Vocational', bootcamps: 'Bootcamp / Certification' },
+  schools: function() {
+    var out = [];
+    if (typeof AL_EDU === 'undefined') return out;
+    Object.keys(PFE.CAT_KIND).forEach(function(cat) {
+      (AL_EDU[cat] || []).forEach(function(inst, i) {
+        out.push({ key: cat + '|' + i, cat: cat, idx: i, name: inst.name, city: inst.city, price: PFECalc.parseMoney(inst.costPerYear), priceStr: inst.costPerYear });
+      });
+    });
+    return out;
+  },
+  avgPrice: function(cat) {
+    var xs = PFE.schools().filter(function(s) { return s.cat === cat && s.price > 0; });
+    if (!xs.length) return { avg: 0, n: 0 };
+    return { avg: Math.round(xs.reduce(function(a, s) { return a + s.price; }, 0) / xs.length), n: xs.length };
+  },
+  schoolSelect: function(id, selected, onchange, allowBlank) {
+    var h = '<select id="' + id + '" onchange="' + onchange + '">' + (allowBlank ? '<option value="">— Enter my own —</option>' : '');
+    Object.keys(PFE.CAT_KIND).forEach(function(cat) {
+      h += '<optgroup label="' + PFE.CAT_LABEL[cat] + '">';
+      PFE.schools().filter(function(s) { return s.cat === cat; }).forEach(function(s) {
+        h += '<option value="' + s.key + '"' + (s.key === selected ? ' selected' : '') + '>' + PFE.esc(s.name) + ' (' + PFE.esc(s.priceStr) + '/yr)</option>';
+      });
+      h += '</optgroup>';
+    });
+    return h + '</select>';
+  },
+  savedCareers: function() {
+    if (typeof ST === 'undefined' || !Array.isArray(ST.savedCareers)) return [];
+    return ST.savedCareers.map(function(c) {
+      var t = typeof c.t === 'object' && c.t ? (c.t.t || '') : String(c.t || '');
+      var s = typeof c.t === 'object' && c.t ? (c.t.s || c.s) : c.s;
+      return { t: t, salary: PFECalc.parseMoney(s), raw: s || '' };
+    }).filter(function(c) { return c.t; });
+  },
+
+  // ── Lifecycle & navigation ────────────────────────────────────────
+  init: function() {
+    if (!PFE.s) PFE.load();
+    PFE._inited = true;
+    PFE.render();
+  },
+  TABS: [
+    ['home', 'Overview'], ['aid101', 'Financial Aid 101'], ['fafsa', 'FAFSA Guide'], ['grants', 'Grants & Other Aid'],
+    ['compare', 'Compare Costs'], ['noscholarship', 'No-Scholarship Planner'], ['loans', 'Student Loan Calculator'], ['plan', 'My Funding Plan']
+  ],
+  go: function(view, opts) {
+    PFE.view = view || 'home';
+    PFE.opts = opts || {};
+    if (!PFE.s) PFE.load();
+    PFE.s.visited[PFE.view] = true;
+    if (PFE.view === 'fafsa') PFE.s.visited.fafsaLearn = true;
+    PFE.save();
+    PFE.render();
+    var r = document.getElementById('pfe-root');
+    if (r && r.scrollIntoView && !(opts && opts.noScroll)) r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  },
+  render: function() {
+    var root = document.getElementById('pfe-root');
+    if (!root) return;
+    if (!PFE.s) PFE.load();
+    var v = PFE.view;
+    var body = '';
+    try {
+      body = ({ home: PFE.vHome, aid101: PFE.vAid101, fafsa: PFE.vFafsa, grants: PFE.vGrants, compare: PFE.vCompare,
+                noscholarship: PFE.vNoSch, loans: PFE.vLoans, plan: PFE.vPlan, pathways: PFE.vPathways }[v] || PFE.vHome)();
+    } catch (e) {
+      body = '<div class="pfe-warn">Something went wrong loading this section. Your saved information is safe. (' + PFE.esc(e.message || e) + ')</div>';
+      if (window.console) console.error(e);
+    }
+    var tabs = PFE.TABS.map(function(t) {
+      var on = t[0] === v || (v === 'pathways' && t[0] === 'home');
+      return '<button class="pfe-tab' + (on ? ' on' : '') + '" role="tab" aria-selected="' + on + '" onclick="PFE.go(\'' + t[0] + '\',{noScroll:true})">' + t[1] + '</button>';
+    }).join('');
+    root.innerHTML = '<section class="pfe-wrap" aria-labelledby="pfe-title">'
+      + '<div class="pfe-head"><div class="pfe-kicker">Education Roadmap · Financial Aid</div>'
+      + '<h2 class="pfe-title" id="pfe-title">💸 Paying for My Education</h2>'
+      + '<p class="pfe-sub">How to afford college or training — even if you never get a single scholarship. Every number here is an estimate you can change.</p>'
+      + '<div class="pfe-tabs" role="tablist" aria-label="Paying for My Education sections">' + tabs + '</div></div>'
+      + '<div class="pfe-body" id="pfe-body">' + body + '</div></section>';
+    if (PFE.after) { var f = PFE.after; PFE.after = null; try { f(); } catch (e) {} }
+  },
+
+  // ── Dashboard ─────────────────────────────────────────────────────
+  CARDS: [
+    { key: 'aid101', ico: '📘', t: 'Financial Aid 101', d: 'Grants, scholarships, work-study, loans and more — in plain language.', go: ['aid101'] },
+    { key: 'fafsa', ico: '📝', t: 'FAFSA Guide', d: 'What the FAFSA is, why it matters, and a checklist to get it done.', go: ['fafsa'] },
+    { key: 'grants', ico: '🎁', t: 'Grants & Free Money', d: 'Search federal, state, and other aid you don’t have to pay back.', go: ['grants', { type: 'free' }] },
+    { key: 'state', ico: '🏛️', t: 'State Financial Aid', d: 'Programs for your state, with official links.', go: ['grants', { category: 'state' }] },
+    { key: 'work', ico: '🧰', t: 'Work-Study & Employment', d: 'Work-study, apprenticeships, and employer-paid training.', go: ['grants', { type: 'earn' }] },
+    { key: 'loans', ico: '🏦', t: 'Student Loans Explained', d: 'Understand loans and calculate payments before you borrow.', go: ['loans'] },
+    { key: 'pathways', ico: '🧭', t: 'Affordable Education Pathways', d: 'Community college, trade school, apprenticeships, and more.', go: ['pathways'] },
+    { key: 'compare', ico: '⚖️', t: 'Compare Education Costs', d: 'Can I afford this school? Compare up to three options.', go: ['compare'] },
+    { key: 'plan', ico: '🗂️', t: 'My Funding Plan', d: 'Build, save, print, and share your personal plan.', go: ['plan'] }
+  ],
+  vHome: function() {
+    var band = PFE.band();
+    var intro = band === 'ms'
+      ? 'College and training cost money — but there are lots of ways to pay that don’t involve paying everything yourself. Start with Financial Aid 101 to learn the difference between grants, scholarships, and loans.'
+      : band === 'early'
+        ? 'Now is a great time to compare costs, learn what aid exists in your state, and see how future earnings compare to education costs.'
+        : 'Senior-year tools are ready: the FAFSA checklist, aid offer comparisons, loan calculator, and your personal funding plan.';
+    var cards = PFE.CARDS.map(function(c) {
+      var args = JSON.stringify(c.go[1] || {}).replace(/"/g, '&quot;');
+      return '<button class="pfe-card" onclick="PFE.go(\'' + c.go[0] + '\',' + args + ')">'
+        + (PFE.isRec(c.key) ? '<span class="pfe-rec">★ For ' + PFE_DATA.BAND_LABEL[band] + '</span>' : '')
+        + '<div class="pfe-card-ico" aria-hidden="true">' + c.ico + '</div><div class="pfe-card-t">' + c.t + '</div><div class="pfe-card-d">' + c.d + '</div></button>';
+    }).join('');
+    var ms = PFE.milestones();
+    var done = ms.filter(function(m) { return m.done; }).length;
+    return '<div class="pfe-feature">'
+      + '<div style="font-size:40px;" aria-hidden="true">🛟</div>'
+      + '<div style="flex:1;min-width:220px;"><div class="pfe-feature-t">What if I don’t get any scholarships?</div>'
+      + '<div class="pfe-p" style="margin:4px 0 0;">Most students pay for school with a mix of grants, work, savings, family help, and sometimes loans. Model six realistic ways to pay — assuming $0 in scholarships.</div></div>'
+      + '<button class="pfe-btn gold" onclick="PFE.go(\'noscholarship\')">Open the planner →</button></div>'
+      + '<p class="pfe-p">' + intro + ' <span class="pfe-muted">(Showing suggestions for ' + PFE_DATA.BAND_LABEL[band] + '. Everything is open to explore.)</span></p>'
+      + '<div class="pfe-grid">' + cards + '</div>'
+      + '<div class="pfe-box" style="margin-top:20px;"><div class="pfe-row" style="justify-content:space-between;"><div class="pfe-h3">🎯 My education funding milestones</div><span class="pfe-muted">' + done + ' of ' + ms.length + ' complete</span></div>'
+      + '<div class="pfe-prog" style="margin:8px 0 10px;"><span style="width:' + Math.round(done / ms.length * 100) + '%"></span></div>'
+      + PFE.milestoneList() + '</div>'
+      + '<p class="pfe-muted">Information last checked ' + PFE_DATA.VERIFIED_ON + '. Financial aid rules change — always confirm with <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">StudentAid.gov</a>, your state agency, and each school’s financial aid office.</p>';
+  },
+
+  // ── Milestones (IGP-style progress) ───────────────────────────────
+  milestones: function() {
+    var s = PFE.s || PFE.defaults();
+    var opts = (s.compare.options || []).slice(0, s.compare.count || 2);
+    var filled = opts.filter(function(o) { return PFECalc.option(o).coa > 0; }).length;
+    var auto = {
+      compare: filled >= 1, grants: !!s.visited.grants, fafsaLearn: !!s.visited.fafsaLearn || !!s.quiz['fafsa-0'],
+      compare2: filled >= 2, plan: (s.plans || []).length > 0, fafsaSubmitted: !!s.checklist.submit, offers: !!s.checklist.offers
+    };
+    return PFE_DATA.MILESTONES.map(function(m) {
+      var a = m.auto ? !!auto[m.auto] : false;
+      return { id: m.id, label: m.label, grade: m.grade, auto: a, done: a || !!s.milestones[m.id] };
+    });
+  },
+  milestoneList: function() {
+    var g = PFE.grade();
+    return PFE.milestones().map(function(m) {
+      var later = m.grade && g && g < m.grade;
+      return '<label class="pfe-ms' + (m.done ? ' done' : '') + '"><input type="checkbox"' + (m.done ? ' checked' : '') + (m.auto ? ' disabled title="Completed automatically from your activity"' : '')
+        + ' onchange="PFE.toggleMilestone(\'' + m.id + '\',this.checked)"/><span>' + m.label + '</span>'
+        + (m.auto ? ' <span class="pfe-muted">· done</span>' : later ? ' <span class="pfe-muted">· usually grade ' + m.grade + '+</span>' : '') + '</label>';
+    }).join('');
+  },
+  toggleMilestone: function(id, on) { PFE.s.milestones[id] = !!on; PFE.save(); PFE.render(); },
+
+  // ── Inline quiz helper ────────────────────────────────────────────
+  quiz: function(setKey) {
+    var qs = PFE_DATA.QUIZZES[setKey] || [];
+    return qs.map(function(q, i) {
+      var id = setKey + '-' + i, ans = PFE.s.quiz[id];
+      var opts = q.a.map(function(a, j) {
+        var cls = ans === undefined ? '' : j === q.c ? ' ok' : j === ans ? ' no' : '';
+        return '<button class="pfe-quiz-opt' + cls + '"' + (ans !== undefined ? ' disabled' : '') + ' onclick="PFE.answer(\'' + id + '\',' + j + ')">' + PFE.esc(a) + '</button>';
+      }).join('');
+      return '<div class="pfe-quiz" id="pfe-q-' + id + '"><div class="pfe-quiz-q">✏️ Check your knowledge: ' + PFE.esc(q.q) + '</div>' + opts
+        + (ans !== undefined ? '<div class="pfe-quiz-e" role="status"><strong>' + (ans === q.c ? '✅ Correct!' : '❌ Not quite.') + '</strong> ' + PFE.esc(q.e) + ' <button class="pfe-btn2" style="padding:3px 9px;font-size:11px;" onclick="PFE.answer(\'' + id + '\',null)">Try again</button></div>' : '')
+        + '</div>';
+    }).join('');
+  },
+  answer: function(id, j) {
+    if (j === null) delete PFE.s.quiz[id]; else PFE.s.quiz[id] = j;
+    PFE.save();
+    var parts = id.split('-'), set = parts[0], i = parseInt(parts[1], 10);
+    var box = document.getElementById('pfe-q-' + id);
+    if (box) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = PFE.quiz(set);
+      var fresh = tmp.querySelector('#pfe-q-' + id);
+      if (fresh) box.parentNode.replaceChild(fresh, box);
+    } else PFE.render();
+  }
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — learning views
+// ═══════════════════════════════════════════════════════════════════
+
+// ── Financial Aid 101 ───────────────────────────────────────────────
+PFE.vAid101 = function() {
+  var pell = PFE.$(PFE.factVal('pellMax'));
+  var ms = PFE.band() === 'ms';
+  function sec(id, ico, title, html, quizKey, open) {
+    return '<details class="pfe-acc" id="pfe-a-' + id + '"' + (open ? ' open' : '') + '><summary>' + ico + ' ' + title + '</summary><div>' + html
+      + (quizKey ? PFE.quiz(quizKey) : '') + '</div></details>';
+  }
+  var picture = '<div class="pfe-box"><div class="pfe-h3">The big picture</div>'
+    + '<div class="pfe-bar" role="img" aria-label="Illustration: a school cost split into free money, your resources, earnings, and loans">'
+    + '<span style="width:35%;background:#059669"></span><span style="width:25%;background:#2563eb"></span><span style="width:15%;background:#C9A84C"></span><span style="width:25%;background:#dc2626"></span></div>'
+    + '<div class="pfe-legend"><span><i style="background:#059669"></i>Grants & scholarships (free money)</span><span><i style="background:#2563eb"></i>Savings & family help</span><span><i style="background:#C9A84C"></i>Work earnings</span><span><i style="background:#dc2626"></i>Loans (must be repaid)</span></div>'
+    + '<p class="pfe-muted" style="margin-top:6px;">Illustration only — every student’s mix is different. The goal: use free money and earnings first, and borrow only what you need.</p></div>';
+  return '<h3 class="pfe-h">Financial Aid 101</h3>'
+    + '<p class="pfe-p">' + (ms ? 'Financial aid is help paying for school after high school. Some of it is free, and some has to be paid back. Here are the main kinds.' : 'Financial aid is any money that helps you pay for education after high school. Knowing which kind you are being offered — and what strings are attached — is the most important skill in paying for school.') + '</p>'
+    + picture
+    + sec('grants', '🎁', 'Grants — usually free money',
+        '<p>Grants usually <strong>do not have to be repaid</strong>. They may depend on financial need, how many classes you take, or the program you choose.</p>'
+        + '<ul><li><strong>Federal:</strong> the Pell Grant (up to ' + pell + ' for 2026–27) and FSEOG.</li><li><strong>State:</strong> many states have need-based grants and workforce or community college programs.</li><li><strong>Institutional:</strong> grants colleges award from their own funds.</li><li><strong>Workforce-related:</strong> job training funds such as WIOA and the new Workforce Pell Grant for short-term programs.</li></ul>'
+        + '<p class="pfe-muted">A grant can sometimes have to be paid back — for example, if you withdraw early in a term. Ask your school.</p>'
+        + '<button class="pfe-btn2" onclick="PFE.go(\'grants\',{type:\'free\'})">Search grants →</button>', 'grants', true)
+    + sec('sch', '🏅', 'Scholarships',
+        '<p>Scholarships may be based on merit, financial need, interests, activities, background, or a future career. Many require an application or essay, and some can be renewed if you keep your grades up.</p>'
+        + '<p>LaunchPoint already has a scholarship tracker for each school — use it to add scholarships to your aid plan.</p>'
+        + '<a class="pfe-btn2" href="#finaid-root" onclick="var e=document.getElementById(\'finaid-root\');if(e){e.scrollIntoView({behavior:\'smooth\'});return false;}">Go to Scholarships →</a>', 'scholarships')
+    + sec('work', '🧰', 'Work-Study',
+        '<p><strong>Federal Work-Study</strong> gives students with financial need a chance to earn money through a part-time job, on or off campus.</p>'
+        + '<ul><li>Being eligible does <strong>not</strong> guarantee you a job — you still have to apply and get hired.</li><li>You earn a <strong>paycheck</strong> for hours worked. It is generally not an automatic discount off your tuition bill.</li><li>Your aid offer shows the most you could earn, not money you get up front.</li></ul>', 'work')
+    + sec('loans', '🏦', 'Student Loans',
+        '<p>A loan is <strong>borrowed money that generally must be repaid with interest</strong>, even if you don’t finish school.</p>'
+        + '<ul><li><strong>Federal loans</strong> come from the U.S. Department of Education. Rates are fixed and set by law, and student Direct Loans don’t require a credit check.</li>'
+        + '<li><strong>Private loans</strong> come from banks and other lenders. They usually require a credit check or cosigner, may have variable rates, and have fewer repayment protections.</li>'
+        + '<li><strong>Subsidized</strong> federal loans (for students with need): the government pays the interest while you are in school at least half-time.</li>'
+        + '<li><strong>Unsubsidized</strong> federal loans: interest starts building right away.</li></ul>'
+        + '<button class="pfe-btn2" onclick="PFE.go(\'loans\')">Understand loans before you borrow →</button>', 'loans')
+    + sec('employer', '🏢', 'Employer Assistance',
+        '<ul><li><strong>Tuition reimbursement</strong> — your employer pays you back for approved courses, usually after you pass.</li><li><strong>Employer-paid training</strong> — the company pays for the training directly.</li><li><strong>Apprenticeships</strong> — you earn wages while learning a skilled trade.</li><li><strong>Industry certifications</strong> — some employers pay for exams and prep.</li><li><strong>Employer-sponsored programs</strong> — partnerships between companies and colleges.</li></ul>'
+        + '<p class="pfe-muted">Watch for strings attached: minimum hours, a required field of study, grade requirements, or a promise to keep working there (or pay the money back).</p>', 'employer')
+    + sec('military', '🎖️', 'Military & Public Service Programs',
+        '<ul><li><strong>Military education benefits</strong> such as the GI Bill, for service members, veterans, and some family members.</li><li><strong>ROTC scholarships</strong> can pay college costs in exchange for a commitment to serve after graduation.</li><li><strong>AmeriCorps</strong> members who complete a term of service earn the Segal AmeriCorps Education Award.</li><li>Some states offer programs for National Guard members and for families of first responders.</li></ul>'
+        + '<p class="pfe-muted">These programs come with real obligations. Learn the service commitment and what happens if you leave early before you sign.</p>', 'military');
+};
+
+// ── FAFSA Guide ─────────────────────────────────────────────────────
+PFE.vFafsa = function() {
+  var items = PFE_DATA.FAFSA_CHECKLIST;
+  var done = items.filter(function(x) { return PFE.s.checklist[x.id]; }).length;
+  var pct = Math.round(done / items.length * 100);
+  var ms = PFE.band() === 'ms';
+  var stateNote = PFE.s.state === 'AL'
+    ? '<div class="pfe-note">🏛️ <strong>Alabama:</strong> public high school seniors must complete the FAFSA or turn in a waiver before graduating. The FAFSA also unlocks Alabama’s need-based ASAP grant. ' + PFE.sourceLink('https://fafsa.ache.edu/Resources/Educators', 'ACHE FAFSA resources') + '</div>' : '';
+  function learn(t, html) { return '<details class="pfe-acc"><summary>' + t + '</summary><div>' + html + '</div></details>'; }
+  var checklist = items.map(function(x) {
+    var on = !!PFE.s.checklist[x.id];
+    return '<label class="pfe-check' + (on ? ' done' : '') + '"><input type="checkbox"' + (on ? ' checked' : '') + ' onchange="PFE.check(\'' + x.id + '\',this.checked)"/>'
+      + '<div><div class="pfe-check-t">' + x.t + '</div><div class="pfe-check-d">' + x.d + '</div></div></label>';
+  }).join('');
+  return '<h3 class="pfe-h">FAFSA Guide</h3>'
+    + '<div class="pfe-privacy">🔒 <strong>Your privacy:</strong> LaunchPoint will never ask for your Social Security number, tax returns, StudentAid.gov username or password, or FAFSA documents. Never type them here. The FAFSA is <strong>free</strong> — only submit it at the official site: <strong>StudentAid.gov</strong>.</div>'
+    + '<div class="pfe-row" style="margin-bottom:16px;"><a class="pfe-btn green" href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank" rel="noopener noreferrer">Official FAFSA at StudentAid.gov ↗</a><a class="pfe-btn2" href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">StudentAid.gov home ↗</a></div>'
+    + stateNote
+    + '<div class="pfe-note">📅 The 2027–28 FAFSA opened on ' + PFE.esc(PFE.factVal('fafsaOpened')) + '. <strong>Federal, state, and school deadlines are different</strong> — some state and school aid runs out early, so check each school’s priority date and your state’s deadline. ' + PFE.sourceLink(PFE.fact('fafsaOpened').source, 'Source') + '</div>'
+    + (ms ? '<p class="pfe-p">You won’t file the FAFSA until your senior year, but it helps to know what it is now. Read the basics below.</p>' : '')
+    + '<div class="pfe-sec-t">Learn the basics</div>'
+    + learn('What is the FAFSA?', '<p>The <strong>Free Application for Federal Student Aid</strong> is the form that determines whether you qualify for federal grants, work-study, and federal student loans. Many states and colleges also use it to award their own aid.</p>')
+    + learn('Why complete it — even if you think you won’t qualify?', '<p>The FAFSA is the key to federal student loans and work-study, most state grants, and many college scholarships. Families are often surprised by what they qualify for, and some schools won’t award their own aid without it.</p>')
+    + learn('Who may qualify for federal student aid?', '<p>Generally, U.S. citizens or eligible noncitizens who are enrolled (or accepted) in an eligible program and meet other requirements. Some students can still qualify for state or school aid even if they are not eligible for federal aid. Check the eligibility rules at StudentAid.gov.</p>')
+    + learn('Dependent vs. independent students', '<p>Most students right out of high school are considered <strong>dependent</strong>, which means a parent provides information on the FAFSA as a “contributor.” The FAFSA asks a set of questions — about age, marriage, military service, and certain life situations — to decide whether you are <strong>independent</strong>. If you have unusual circumstances, a college financial aid office can review them.</p>')
+    + learn('How household and financial information affects aid', '<p>Information like family size, income, and some assets is used to calculate your <strong>Student Aid Index (SAI)</strong>. Generally, a lower SAI means more need-based aid eligibility.</p>')
+    + learn('What is the Student Aid Index (SAI)?', '<p>The SAI is a number schools use to figure out your eligibility. <strong>It is not a bill</strong>, it is not what you will have to pay, and it is not a guaranteed aid amount. Schools combine it with their cost of attendance to build your aid offer.</p>')
+    + learn('Correcting FAFSA information', '<p>After you submit, review your FAFSA Submission Summary. If something is wrong, log in to StudentAid.gov to make a correction. Your school may also ask you to verify information.</p>')
+    + learn('Reviewing aid offers', '<p>Sort every offer into three buckets: <strong>free money</strong> (grants, scholarships), <strong>earned money</strong> (work-study), and <strong>borrowed money</strong> (loans). Then subtract only the free money from the full cost of attendance. Use <a href="#" onclick="PFE.go(\'compare\');return false;">Compare Costs</a> to do the math.</p>')
+    + learn('Special circumstances', '<p>If your family’s situation has changed — job loss, medical bills, divorce, or other unusual circumstances — contact each college’s financial aid office. They can review your situation and may adjust your aid. This is called professional judgment.</p>')
+    + learn('Renewing every year', '<p>You must complete a new FAFSA for each school year you want aid. Set a reminder for October of each year you are in school.</p>')
+    + PFE.quiz('fafsa')
+    + '<div class="pfe-sec-t" style="margin-top:22px;">FAFSA preparation checklist</div>'
+    + '<div class="pfe-prog-wrap"><div class="pfe-prog" role="progressbar" aria-label="FAFSA checklist progress" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100"><span style="width:' + pct + '%"></span></div><strong>' + done + ' / ' + items.length + ' done</strong></div>'
+    + checklist
+    + '<p class="pfe-muted">Your checklist progress is saved on this device only.</p>';
+};
+PFE.check = function(id, on) { PFE.s.checklist[id] = !!on; PFE.save(); PFE.render(); };
+
+// ── Grants & Other Aid (searchable resource center) ─────────────────
+PFE.TYPE_LABEL = { grant: 'Grant', loan: 'Loan', work: 'Work-study', service: 'Service award', training: 'Training / apprenticeship', payment: 'Payment plan', benefit: 'Benefit program' };
+PFE.vGrants = function() {
+  var o = PFE.opts || {};
+  if (o.category === 'state' && !o.state) o.state = PFE.s.state;
+  PFE.opts = o;
+  var stateOpts = PFE_DATA.STATES.map(function(sc) { return '<option value="' + sc[0] + '"' + (sc[0] === PFE.s.state ? ' selected' : '') + '>' + sc[1] + '</option>'; }).join('');
+  var chip = function(key, val, label) {
+    var on = (o[key] || '') === val;
+    return '<button class="pfe-chip' + (on ? ' on' : '') + '" aria-pressed="' + on + '" onclick="PFE.gFilter(\'' + key + '\',\'' + val + '\')">' + label + '</button>';
+  };
+  return '<h3 class="pfe-h">Grants & Other Aid</h3>'
+    + '<p class="pfe-p">Search programs that can help pay for school. <strong>Being listed here does not mean you qualify</strong> — each program has its own rules, and many have limited funds.</p>'
+    + '<div class="pfe-row" style="margin-bottom:10px;">' + PFE.statusBadge('verified') + '<span class="pfe-muted">checked against an official source</span>' + PFE.statusBadge('illustrative') + '<span class="pfe-muted">general category or example</span>' + PFE.statusBadge('pending') + '<span class="pfe-muted">not yet verified</span></div>'
+    + '<div class="pfe-box"><div class="pfe-fields">'
+    + '<div class="pfe-f"><label for="pfe-g-q">Search</label><input id="pfe-g-q" type="search" placeholder="e.g. Pell, apprenticeship" value="' + PFE.esc(o.q || '') + '" oninput="PFE.opts.q=this.value;PFE.gList()"/></div>'
+    + '<div class="pfe-f"><label for="pfe-g-st">My state</label><select id="pfe-g-st" onchange="PFE.s.state=this.value;PFE.opts.state=this.value;PFE.save();PFE.gList()">' + stateOpts + '</select></div>'
+    + '<div class="pfe-f"><label for="pfe-g-edu">Education type</label><select id="pfe-g-edu" onchange="PFE.opts.edu=this.value;PFE.gList()"><option value="">Any</option>'
+    + Object.keys(PFE_DATA.EDU_TYPES).map(function(k) { return '<option value="' + k + '"' + (o.edu === k ? ' selected' : '') + '>' + PFE_DATA.EDU_TYPES[k] + '</option>'; }).join('') + '</select></div>'
+    + '</div><div class="pfe-row" style="margin-top:12px;">'
+    + chip('category', '', 'All sources') + chip('category', 'federal', 'Federal') + chip('category', 'state', 'State') + chip('category', 'other', 'Other') + '</div>'
+    + '<div class="pfe-row" style="margin-top:8px;">'
+    + chip('type', '', 'All types') + chip('type', 'free', 'No repayment') + chip('type', 'earn', 'Work & training') + chip('type', 'loan', 'Loans') + chip('type', 'service', 'Service / military') + '</div>'
+    + '<label class="pfe-row" style="margin-top:10px;font-size:12px;color:#4b5563;gap:6px;"><input type="checkbox"' + (o.showExpired ? ' checked' : '') + ' onchange="PFE.opts.showExpired=this.checked;PFE.gList()"/> Show expired programs</label>'
+    + '</div><div id="pfe-g-list" aria-live="polite">' + PFE.gListHtml() + '</div>';
+};
+PFE.gFilter = function(k, v) { PFE.opts[k] = v; PFE.render(); };
+PFE.gList = function() { var l = document.getElementById('pfe-g-list'); if (l) l.innerHTML = PFE.gListHtml(); };
+PFE.gMatches = function(p, o) {
+  if (p.active === false) return false;
+  if (!o.showExpired && PFE.isExpired(p)) return false;
+  var st = o.state || PFE.s.state;
+  if (p.geo !== 'US' && p.geo !== st) return false;
+  if (p.generated && p.hiddenIfVerified) return false;
+  if (o.category && p.category !== o.category) return false;
+  if (o.type === 'free' && (p.repayment !== 'none' || p.type === 'payment' || p.type === 'work' || p.type === 'training')) return false;
+  if (o.type === 'earn' && ['work', 'training'].indexOf(p.type) < 0 && p.id !== 'ex-employer') return false;
+  if (o.type === 'loan' && p.type !== 'loan') return false;
+  if (o.type === 'service' && p.obligation !== 'service') return false;
+  if (o.edu && (p.eduTypes || []).indexOf(o.edu) < 0) return false;
+  if (o.q) {
+    var hay = (p.name + ' ' + p.description + ' ' + p.eligibility).toLowerCase();
+    if (hay.indexOf(String(o.q).toLowerCase()) < 0) return false;
+  }
+  return true;
+};
+PFE.gListHtml = function() {
+  var o = PFE.opts || {};
+  var list = PFE.programs().filter(function(p) { return PFE.gMatches(p, o); });
+  var order = { federal: 0, state: 1, other: 2 };
+  list.sort(function(a, b) { return (order[a.category] - order[b.category]) || a.name.localeCompare(b.name); });
+  var stName = (PFE_DATA.STATES.filter(function(s) { return s[0] === (o.state || PFE.s.state); })[0] || [])[1] || '';
+  var head = '<p class="pfe-muted" style="margin:6px 0 10px;">' + list.length + ' program' + (list.length === 1 ? '' : 's') + ' shown for ' + PFE.esc(stName) + ' and nationwide.</p>';
+  if (!list.length) return head + '<div class="pfe-note">No programs match these filters. Try clearing a filter or changing your state.</div>';
+  return head + list.map(PFE.programCard).join('');
+};
+PFE.programCard = function(p) {
+  var expired = PFE.isExpired(p);
+  var edu = (p.eduTypes || []).map(function(k) { return PFE_DATA.EDU_TYPES[k]; }).filter(Boolean).join(', ');
+  var amtNote = p.amountStatus === 'verified' ? '' : ' <span class="pfe-muted">(not a verified amount)</span>';
+  return '<article class="pfe-prog-card"' + (expired ? ' style="opacity:.7"' : '') + '>'
+    + '<div class="pfe-row" style="justify-content:space-between;align-items:flex-start;"><h4>' + PFE.esc(p.name) + '</h4><div class="pfe-row" style="gap:4px;">'
+    + PFE.statusBadge(p.status) + (expired ? '<span class="pfe-badge pfe-b-expired">Expired</span>' : '') + PFE.repayBadge(p.repayment) + PFE.obligBadge(p.obligation) + '</div></div>'
+    + '<p class="pfe-p" style="margin:4px 0 0;">' + PFE.esc(p.description) + '</p>'
+    + '<dl class="pfe-kv">'
+    + '<dt>Type</dt><dd>' + (PFE.TYPE_LABEL[p.type] || p.type) + ' · ' + (p.category === 'federal' ? 'Federal' : p.category === 'state' ? 'State' : 'Other') + '</dd>'
+    + '<dt>Where</dt><dd>' + (p.geo === 'US' ? 'Nationwide' : PFE.esc(((PFE_DATA.STATES.filter(function(s) { return s[0] === p.geo; })[0] || [])[1]) || p.geo)) + '</dd>'
+    + '<dt>Education types</dt><dd>' + PFE.esc(edu || '—') + '</dd>'
+    + '<dt>Who may qualify</dt><dd>' + PFE.esc(p.eligibility) + '</dd>'
+    + '<dt>Amount</dt><dd>' + PFE.esc(p.amount || '—') + amtNote + '</dd>'
+    + '<dt>How to apply</dt><dd>' + PFE.esc(p.application || '—') + '</dd>'
+    + '<dt>Deadline</dt><dd>' + PFE.esc(p.deadline || '—') + '</dd>'
+    + '<dt>Official source</dt><dd>' + PFE.sourceLink(p.sourceUrl, p.sourceName) + '</dd>'
+    + '<dt>Last verified</dt><dd>' + (p.lastVerified ? PFE.esc(p.lastVerified) : '<span class="pfe-muted">Not yet verified</span>') + '</dd>'
+    + '</dl></article>';
+};
+
+// ── Affordable Education Pathways ───────────────────────────────────
+PFE.vPathways = function() {
+  var rows = [
+    { cat: 'communityColleges', ico: '🏫', t: 'Community college (then transfer)', d: 'Lower prices for the first two years. Plan your transfer early so your credits count toward a bachelor’s degree.', scen: 'A' },
+    { cat: 'tradeSchools', ico: '🔧', t: 'Technical / trade school', d: 'Shorter programs that lead straight to skilled jobs. Credentials are different from a degree — check what employers in your field require.', scen: 'C' },
+    { cat: 'bootcamps', ico: '💻', t: 'Certificates & bootcamps', d: 'Short, focused programs. Many are not eligible for federal aid — ask before you enroll.', scen: 'C' },
+    { cat: null, ico: '🛠️', t: 'Registered apprenticeship', d: 'Get paid while you learn. Wages, training costs, and credentials vary by program.', scen: 'D' },
+    { cat: null, ico: '🏢', t: 'Employer-sponsored education', d: 'Work for a company that helps pay for school. Usually means part-time study and a longer timeline.', scen: 'E' },
+    { cat: 'universities', ico: '🎓', t: '4-year university', d: 'Required for many careers. The price after grants is often far lower than the published price — check each school’s Net Price Calculator.', scen: 'F' }
+  ];
+  var cards = rows.map(function(r) {
+    var a = r.cat ? PFE.avgPrice(r.cat) : null;
+    var price = a && a.n ? '<div class="pfe-muted" style="margin-top:8px;">Average published price in LaunchPoint’s ' + a.n + ' Alabama ' + PFE.CAT_LABEL[r.cat].toLowerCase() + ' listings: <strong>' + PFE.$(a.avg) + '/yr</strong> (may be tuition only)</div>' : '';
+    return '<div class="pfe-opt-col"><h4><span>' + r.ico + ' ' + r.t + '</span></h4><p class="pfe-p" style="margin:0;">' + r.d + '</p>' + price
+      + '<div class="pfe-row" style="margin-top:10px;"><button class="pfe-btn2" onclick="PFE.s.nosch.started=true;PFE.s.nosch.scen=\'' + r.scen + '\';PFE.go(\'noscholarship\')">Model it with $0 scholarships →</button></div></div>';
+  }).join('');
+  return '<h3 class="pfe-h">Affordable Education Pathways</h3>'
+    + '<p class="pfe-p">There is more than one road to a good career. Lower-cost paths can mean less borrowing — but they may lead to <strong>different credentials, transfer requirements, and career outcomes</strong>. Pick the path that fits your career goal, not just the lowest price.</p>'
+    + '<div class="pfe-cmp-grid">' + cards + '</div>'
+    + '<p class="pfe-muted" style="margin-top:14px;">Compare schools’ graduation rates, typical earnings, and average net price on <a href="https://collegescorecard.ed.gov/" target="_blank" rel="noopener noreferrer">College Scorecard</a>. Find registered apprenticeships at <a href="https://www.apprenticeship.gov/" target="_blank" rel="noopener noreferrer">Apprenticeship.gov</a>.</p>';
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — calculators
+// ═══════════════════════════════════════════════════════════════════
+
+// ── Can I Afford This School? (compare up to 3) ─────────────────────
+PFE.COST_FIELDS = [['tuition','Tuition'],['fees','Mandatory fees'],['books','Books & supplies'],['housing','Housing'],['meals','Meals'],['transport','Transportation'],['personal','Personal expenses'],['equipment','Equipment / program costs'],['other','Other costs']];
+PFE.GIFT_FIELDS = [['fedGrants','Federal grants'],['stateGrants','State grants'],['instGrants','College grants'],['scholarships','Scholarships']];
+PFE.RES_FIELDS  = [['family','Family contribution'],['savings','My savings (per year)'],['employer','Employer assistance'],['otherFree','Other non-repayable']];
+PFE.SEP_FIELDS  = [['workStudy','Work-study / job earnings (potential)'],['loans','Loans (financing)']];
+// Sample practice numbers (NOT real prices) — clearly badged in the UI when used.
+PFE.SAMPLE = {
+  home:   { books: 1200, housing: 0,    meals: 1500, transport: 1800, personal: 1500 },
+  campus: { books: 1200, housing: 7000, meals: 4500, transport: 800,  personal: 1500 },
+  off:    { books: 1200, housing: 8000, meals: 3600, transport: 1200, personal: 1500 }
+};
+PFE.vCompare = function() {
+  var c = PFE.s.compare, n = c.count || 2;
+  var cols = '';
+  for (var i = 0; i < n; i++) cols += PFE.cmpCol(i);
+  return '<h3 class="pfe-h">Can I Afford This School?</h3>'
+    + '<p class="pfe-p">Compare up to three options. Start with <strong>everything</strong> it costs to attend — not just tuition — then subtract only the free money (grants and scholarships). Loans are shown separately because borrowed money still has to be repaid.</p>'
+    + '<div class="pfe-note">💡 Pick a school from LaunchPoint’s Alabama list to fill in its published price, then add the other costs from the school’s official <strong>cost of attendance</strong> page or its <strong>Net Price Calculator</strong>. All results are estimates.</div>'
+    + '<div class="pfe-row" style="margin-bottom:12px;"><span class="pfe-muted">Options to compare:</span>'
+    + [1, 2, 3].map(function(k) { return '<button class="pfe-chip' + (n === k ? ' on' : '') + '" aria-pressed="' + (n === k) + '" onclick="PFE.s.compare.count=' + k + ';PFE.save();PFE.render()">' + k + '</button>'; }).join('')
+    + '</div><div class="pfe-cmp-grid">' + cols + '</div>'
+    + '<div id="pfe-cmp-res" aria-live="polite" style="margin-top:18px;">' + PFE.cmpResults() + '</div>';
+};
+PFE.cmpCol = function(i) {
+  var o = PFE.s.compare.options[i];
+  var inp = function(k, label) {
+    return '<label for="pfe-c' + i + '-' + k + '">' + label + '</label><input id="pfe-c' + i + '-' + k + '" type="number" min="0" step="any" inputmode="decimal" value="' + (PFECalc.num(o[k]) || '') + '" placeholder="0" oninput="PFE.cmpSet(' + i + ',\'' + k + '\',this.value)"/>';
+  };
+  var group = function(title, fields) { return '<div class="pfe-sec-t">' + title + '</div><div class="pfe-mini">' + fields.map(function(f) { return inp(f[0], f[1]); }).join('') + '</div>'; };
+  var sel = function(k, opts) {
+    return '<select class="pfe-in" aria-label="' + k + '" onchange="PFE.cmpSet(' + i + ',\'' + k + '\',this.value,true)">' + opts.map(function(x) { return '<option value="' + x[0] + '"' + (o[k] === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join('') + '</select>';
+  };
+  return '<div class="pfe-opt-col"><h4><input class="pfe-in" style="font-weight:700;" aria-label="Option ' + (i + 1) + ' name" value="' + PFE.esc(o.label) + '" oninput="PFE.s.compare.options[' + i + '].label=this.value;PFE.save();PFE.cmpRefresh()"/>'
+    + (o.sample ? '<span class="pfe-badge pfe-b-sample" title="Contains sample practice numbers">sample</span>' : '') + '</h4>'
+    + '<div class="pfe-f" style="margin-bottom:8px;"><label for="pfe-cs-' + i + '">School or program</label>' + PFE.schoolSelect('pfe-cs-' + i, o.src, 'PFE.cmpSchool(' + i + ',this.value)', true) + '</div>'
+    + '<div class="pfe-fields" style="grid-template-columns:1fr 1fr;">'
+    + '<div class="pfe-f"><label>Type</label>' + sel('kind', [['university','4-year university (public or private)'],['community','Community college'],['technical','Technical / trade school'],['certificate','Certificate program'],['apprenticeship','Apprenticeship']]) + '</div>'
+    + '<div class="pfe-f"><label>Living</label>' + sel('living', [['home','Living at home'],['campus','On campus'],['off','Off campus']]) + '</div>'
+    + '<div class="pfe-f"><label>Attending</label>' + sel('attend', [['full','Full-time'],['part','Part-time']]) + '</div>'
+    + '<div class="pfe-f"><label for="pfe-c' + i + '-years">Years to finish</label><input id="pfe-c' + i + '-years" type="number" min="0" max="12" step="0.5" value="' + PFECalc.num(o.years) + '" oninput="PFE.cmpSet(' + i + ',\'years\',this.value)"/></div>'
+    + '</div>'
+    + (o.attend === 'part' ? '<div class="pfe-warn" style="margin-top:8px;">Part-time: enter the part-time tuition for one year and add years to finish. Pell Grants are reduced for part-time enrollment, and federal loans require at least half-time.</div>' : '')
+    + group('Cost of attendance (per year)', PFE.COST_FIELDS)
+    + '<button class="pfe-btn2" style="margin-top:8px;font-size:11.5px;" onclick="PFE.cmpSample(' + i + ')">Fill sample living costs for practice</button>'
+    + group('Grants & scholarships (per year)', PFE.GIFT_FIELDS)
+    + group('Your resources (per year)', PFE.RES_FIELDS)
+    + group('Shown separately (per year)', PFE.SEP_FIELDS)
+    + '</div>';
+};
+PFE.cmpSet = function(i, k, v, rerender) {
+  var o = PFE.s.compare.options[i];
+  if (['kind', 'living', 'attend'].indexOf(k) >= 0) {
+    if (k === 'attend' && v === 'part' && o.attend !== 'part') o.years = Math.min(12, PFECalc.num(o.years) * 2 || 2);
+    if (k === 'attend' && v === 'full' && o.attend === 'part') o.years = Math.max(0.5, PFECalc.num(o.years) / 2);
+    o[k] = v;
+  } else {
+    var n = parseFloat(v);
+    o[k] = (isFinite(n) && n >= 0) ? n : 0;
+    var box = document.getElementById('pfe-c' + i + '-' + k);
+    if (box) box.parentNode && box.setAttribute('aria-invalid', (v !== '' && !(isFinite(n) && n >= 0)) ? 'true' : 'false');
+  }
+  PFE.save();
+  if (rerender) PFE.render(); else PFE.cmpRefresh();
+};
+PFE.cmpSchool = function(i, key) {
+  var o = PFE.s.compare.options[i];
+  o.src = key;
+  if (key) {
+    var s = PFE.schools().filter(function(x) { return x.key === key; })[0];
+    if (s) { o.label = s.name; o.tuition = s.price; o.kind = PFE.CAT_KIND[s.cat]; o.years = PFE.CAT_YEARS[s.cat]; if (o.attend === 'part') o.years *= 2; }
+  }
+  PFE.save(); PFE.render();
+};
+PFE.cmpSample = function(i) {
+  var o = PFE.s.compare.options[i], smp = PFE.SAMPLE[o.living] || PFE.SAMPLE.campus;
+  Object.keys(smp).forEach(function(k) { o[k] = smp[k]; });
+  o.sample = true; PFE.save(); PFE.render();
+};
+PFE.cmpRefresh = function() { var r = document.getElementById('pfe-cmp-res'); if (r) r.innerHTML = PFE.cmpResults(); };
+PFE.cmpResults = function() {
+  var c = PFE.s.compare, n = c.count || 2, opts = c.options.slice(0, n);
+  var R = opts.map(function(o) { return PFECalc.option(o); });
+  if (!R.some(function(r) { return r.coa > 0; })) {
+    return '<div class="pfe-note">Enter a cost for at least one option to see your results. Tip: choose a school above to get started.</div>';
+  }
+  var th = opts.map(function(o) { return '<th scope="col">' + PFE.esc(o.label || 'Option') + (o.sample ? ' <span class="pfe-badge pfe-b-sample">sample</span>' : '') + '</th>'; }).join('');
+  var row = function(label, fn, cls) { return '<tr' + (cls ? ' class="' + cls + '"' : '') + '><td>' + label + '</td>' + R.map(function(r, j) { return '<td>' + fn(r, opts[j]) + '</td>'; }).join('') + '</tr>'; };
+  var warn = [];
+  R.forEach(function(r, j) {
+    var nm = PFE.esc(opts[j].label || 'Option ' + (j + 1));
+    if (r.coa > 0 && r.tuitionOnly) warn.push('<strong>' + nm + ':</strong> only tuition is entered. Real cost of attendance also includes fees, books, housing, food, and transportation.');
+    if (r.giftOverCost > 0) warn.push('<strong>' + nm + ':</strong> grants and scholarships are higher than the cost entered. Aid usually cannot exceed the cost of attendance — double-check your numbers.');
+    if (r.coa > 0 && !r.years) warn.push('<strong>' + nm + ':</strong> add “years to finish” to see full-program totals.');
+  });
+  var max = Math.max.apply(null, R.map(function(r) { return r.coa; })) || 1;
+  var bars = R.map(function(r, j) {
+    var w = function(v) { return (v / max * 100).toFixed(2) + '%'; };
+    var giftUsed = Math.min(r.gift, r.coa), resUsed = Math.min(r.resources, r.net);
+    return '<div style="margin-bottom:10px;"><div style="font-size:12px;font-weight:700;color:#1B2F52;">' + PFE.esc(opts[j].label || 'Option') + ' — ' + PFE.$(r.coa) + '/yr</div>'
+      + '<div class="pfe-bar" style="width:' + w(r.coa) + ';min-width:8px;" role="img" aria-label="Cost ' + PFE.$(r.coa) + ': grants ' + PFE.$(giftUsed) + ', your resources ' + PFE.$(resUsed) + ', remaining gap ' + PFE.$(r.gap) + '">'
+      + '<span style="width:' + (r.coa ? giftUsed / r.coa * 100 : 0) + '%;background:#059669"></span><span style="width:' + (r.coa ? resUsed / r.coa * 100 : 0) + '%;background:#2563eb"></span><span style="width:' + (r.coa ? r.gap / r.coa * 100 : 0) + '%;background:#dc2626"></span></div></div>';
+  }).join('');
+  return '<div class="pfe-h3">Your estimate</div>'
+    + (warn.length ? '<div class="pfe-warn">' + warn.join('<br>') + '</div>' : '')
+    + '<div class="pfe-scroll"><table class="pfe-table"><thead><tr><th scope="col">Per year (estimated)</th>' + th + '</tr></thead><tbody>'
+    + row('Cost of attendance', function(r) { return PFE.$(r.coa); })
+    + row('− Grants & scholarships', function(r) { return '−' + PFE.$(Math.min(r.gift, r.coa)); })
+    + row('= Net education cost', function(r) { return PFE.$(r.net); }, 'tot')
+    + row('− Family, savings, employer & other', function(r) { return '−' + PFE.$(Math.min(r.resources, r.net)); })
+    + row('= Remaining funding gap', function(r) { return '<strong style="color:' + (r.gap > 0 ? '#dc2626' : '#059669') + '">' + PFE.$(r.gap) + '</strong>'; }, 'tot')
+    + row('<span class="pfe-muted">Potential work earnings (not guaranteed)</span>', function(r) { return PFE.$(r.workStudy); })
+    + row('<span class="pfe-muted">Loans you’d borrow (must be repaid)</span>', function(r) { return PFE.$(r.loans); })
+    + row('<span class="pfe-muted">Still uncovered after work & loans</span>', function(r) { return PFE.$(r.unfunded); })
+    + '</tbody><thead><tr><th scope="col">Whole program</th>' + th + '</tr></thead><tbody>'
+    + row('Years to finish', function(r) { return r.years || '—'; })
+    + row('Full-program cost of attendance', function(r) { return PFE.$(r.programCoa); })
+    + row('Full-program net cost', function(r) { return PFE.$(r.programNet); }, 'tot')
+    + row('Full-program funding gap', function(r) { return PFE.$(r.programGap); }, 'tot')
+    + '</tbody></table></div>'
+    + '<div class="pfe-sec-t">Where the money comes from (per year)</div>' + bars
+    + '<div class="pfe-legend"><span><i style="background:#059669"></i>Grants & scholarships</span><span><i style="background:#2563eb"></i>Family, savings & other</span><span><i style="background:#dc2626"></i>Remaining gap</span></div>'
+    + '<p class="pfe-muted" style="margin-top:10px;">Estimates assume costs stay the same each year (real costs usually rise). Loans are financing, not a discount — they make the gap payable now but cost more later. Work earnings are paid as you work and are not guaranteed.</p>'
+    + '<div class="pfe-row"><button class="pfe-btn" onclick="PFE.planFromCompare()">Save the best option to My Funding Plan →</button><button class="pfe-btn2" onclick="PFE.go(\'loans\',{fromCompare:true})">See loan payments for the gap →</button></div>';
+};
+
+// ── What If I Don't Get Any Scholarships? ───────────────────────────
+PFE.SCEN = {
+  A: { t: 'Community College First', d: 'Two years at a community college, then transfer to a university.',
+       f: function(a) {
+         var cc = PFE.avgPrice('communityColleges').avg, un = PFE.avgPrice('universities').avg;
+         return [['ccCost','Community college cost / yr',cc,'LaunchPoint average published price'],['ccYears','Years at community college',2],['uniCost','University cost / yr',un,'LaunchPoint average published price'],['uniYears','Years at university',2],
+                 ['living','Other living costs / yr (books, transport, housing)',0,'Add if not living at home',true],['grants','Grants you may qualify for / yr',0,'Pell max ' + PFE.$(PFE.factVal('pellMax')) + '; yours depends on your FAFSA'],
+                 ['family','Family + savings / yr',0],['work','Job earnings / yr',0],['lostSem','Semesters of credit that may not transfer',0,'Adds extra semesters at university prices']];
+       },
+       calc: function(v) {
+         var extraYrs = v.lostSem / 2;
+         var years = [];
+         for (var i = 0; i < Math.ceil(v.ccYears); i++) years.push(Math.min(1, v.ccYears - i) * (v.ccCost + v.living));
+         var uy = v.uniYears + extraYrs;
+         for (var j = 0; j < Math.ceil(uy); j++) years.push(Math.min(1, uy - j) * (v.uniCost + v.living));
+         return { years: years, funding: [['Grants', v.grants], ['Family + savings', v.family], ['Job earnings', v.work]], duration: v.ccYears + uy, fedStart: 0,
+           risks: ['Not every course transfers. Check your state’s transfer agreements and the university’s requirements before you pick classes.', 'Some majors (like nursing or engineering) have prerequisites you must start early.', 'Transfer admission and transfer scholarships have their own deadlines.', 'You may change campuses midway — plan for a new housing and transportation situation.'] };
+       } },
+  B: { t: 'Work While Attending School', d: 'Part-time job plus school at the same time.',
+       f: function() { return [['cost','School cost / yr',PFE.avgPrice('universities').avg,'LaunchPoint average university price'],['years','Years in school',4],['living','Other living costs / yr',0,'',true],['hours','Hours worked per week',15,'',true],['wage','Hourly pay ($)',12,'Example — enter what jobs near you pay',true],['weeks','Weeks worked per year',40,'',true],['grants','Grants / yr',0],['family','Family + savings / yr',0],['extra','Extra years if working slows you down',0]]; },
+       calc: function(v) {
+         var yrs = v.years + v.extra, earn = PFECalc.earnings(v.hours, v.wage, v.weeks), years = [];
+         for (var i = 0; i < Math.ceil(yrs); i++) years.push(Math.min(1, yrs - i) * (v.cost + v.living));
+         var risks = ['Earnings shown are before taxes.', 'Working too many hours can lower grades and slow graduation — many advisors suggest keeping hours moderate during the school year.', 'Each extra year in school adds another year of costs and delays full-time pay.'];
+         if (v.hours > 20) risks.unshift('More than 20 hours a week while in school full-time is a heavy load — consider part-time enrollment (and add extra years).');
+         return { years: years, funding: [['Grants', v.grants], ['Family + savings', v.family], ['Job earnings', earn]], duration: yrs, fedStart: 0, earnings: earn, risks: risks };
+       } },
+  C: { t: 'Technical or Trade Education', d: 'A shorter certificate or technical program.',
+       f: function() { return [['cost','Program cost / yr',PFE.avgPrice('tradeSchools').avg,'LaunchPoint average trade-school price'],['years','Years to finish',1],['tools','Tools, uniforms, licensing exams',0,'',true],['living','Other living costs / yr',0,'',true],['grants','Grants / yr',0,'Eligible programs may qualify for Pell or Workforce Pell'],['family','Family + savings / yr',0],['work','Job earnings / yr',0]]; },
+       calc: function(v) {
+         var years = [];
+         for (var i = 0; i < Math.ceil(v.years); i++) years.push(Math.min(1, v.years - i) * (v.cost + v.living) + (i === 0 ? v.tools : 0));
+         return { years: years, funding: [['Grants', v.grants], ['Family + savings', v.family], ['Job earnings', v.work]], duration: v.years, fedStart: 0,
+           risks: ['A certificate is a different credential than a degree — check what employers in your career require.', 'Confirm the program is accredited and eligible for federal aid before enrolling.', 'Ask about job placement rates and licensing exam pass rates.'] };
+       } },
+  D: { t: 'Apprenticeship', d: 'Paid on-the-job training plus classroom instruction.',
+       f: function() { return [['years','Length of apprenticeship (years)',3,'',true],['instr','Your cost for classes / yr',0,'Often paid by the sponsor — confirm',true],['tools','Tools & gear',0,'',true],['wage','Starting hourly wage ($)',16,'Example — wages vary by program',true],['hours','Paid hours per week',40,'',true],['weeks','Weeks per year',50,'',true]]; },
+       calc: function(v) {
+         var years = [];
+         for (var i = 0; i < Math.ceil(v.years); i++) years.push(Math.min(1, v.years - i) * v.instr + (i === 0 ? v.tools : 0));
+         var earn = PFECalc.earnings(v.hours, v.wage, v.weeks);
+         return { years: years, funding: [['Apprenticeship wages (to cover class costs)', earn]], duration: v.years, fedStart: 0, earnings: earn, noLoans: true,
+           risks: ['Apprenticeship wages, training arrangements, and education benefits vary by program.', 'Openings can be competitive and may require testing or prerequisites.', 'You may need to live near the employer.', 'Wages usually rise as you gain skills, but the starting wage shown is just an example.'] };
+       } },
+  E: { t: 'Employer-Sponsored Education', d: 'Work for a company that helps pay tuition.',
+       f: function() { return [['cost','School cost / yr (part-time)',Math.round(PFE.avgPrice('universities').avg / 2),'About half of the average university price — enter yours'],['years','Years (part-time takes longer)',6,'',true],['employer','Employer assistance / yr',0,'Ask HR — varies by employer'],['self','What you pay from your paycheck / yr',0],['grants','Grants / yr',0]]; },
+       calc: function(v) {
+         var years = [];
+         for (var i = 0; i < Math.ceil(v.years); i++) years.push(Math.min(1, v.years - i) * v.cost);
+         return { years: years, funding: [['Employer assistance', v.employer], ['From your paycheck', v.self], ['Grants', v.grants]], duration: v.years, fedStart: 0,
+           risks: ['Many employers require you to stay for a period after they pay — or pay it back.', 'Benefits may only cover job-related fields of study and may require passing grades.', 'Part-time study takes longer; balancing work and school is demanding.', 'Some plans reimburse after the class ends, so you may need cash up front.'] };
+       } },
+  F: { t: 'Four-Year University With Financial Aid', d: 'Grants, savings, family help, work, and loans together.',
+       f: function() { return [['cost','Cost of attendance / yr',PFE.avgPrice('universities').avg,'LaunchPoint average published price — add housing, food, books'],['years','Years',4],['grants','Grants / yr',0,'Your amount depends on your FAFSA'],['savings','Savings (total, used over all years)',0],['family','Family contribution / yr',0],['work','Job earnings / yr',0]]; },
+       calc: function(v) {
+         var years = [];
+         for (var i = 0; i < Math.ceil(v.years); i++) years.push(Math.min(1, v.years - i) * v.cost);
+         return { years: years, funding: [['Grants', v.grants], ['Family contribution', v.family], ['Job earnings', v.work], ['Savings (spread out)', v.years ? v.savings / v.years : 0]], duration: v.years, fedStart: 0,
+           risks: ['Federal student loans have annual limits; any gap above them would need a Parent PLUS loan, a private loan, or a cheaper option.', 'Published prices rise most years.', 'Grants and many scholarships require you to keep making academic progress.', 'Borrowing more than you expect to earn in your first year after graduating is a common warning sign.'] };
+       } }
+};
+PFE.scenVals = function(key) {
+  var def = PFE.SCEN[key].f(), saved = (PFE.s.nosch.vals || {})[key] || {}, v = {}, ex = {};
+  def.forEach(function(d) { v[d[0]] = saved[d[0]] !== undefined ? PFECalc.num(saved[d[0]]) : d[2]; ex[d[0]] = !!d[4] && saved[d[0]] === undefined; });
+  return { v: v, def: def, ex: ex };
+};
+PFE.scenCompute = function(key) {
+  var sv = PFE.scenVals(key), r = PFE.SCEN[key].calc(sv.v);
+  var cost = r.years.reduce(function(a, b) { return a + b; }, 0);
+  var fundYr = r.funding.reduce(function(a, f) { return a + PFECalc.num(f[1]); }, 0);
+  var gaps = r.years.map(function(c, i) { return Math.max(0, c - fundYr * Math.min(1, r.duration - i)); });
+  var fundingTotal = r.funding.map(function(f) { return [f[0], PFECalc.num(f[1]) * r.duration]; });
+  var gap = gaps.reduce(function(a, b) { return a + b; }, 0);
+  var fed = r.noLoans ? { federal: 0, beyondFederal: 0 } : PFECalc.federalBorrowing(gaps, r.fedStart);
+  var term = PFECalc.tieredStandardYears(fed.federal);
+  var monthly = PFECalc.monthlyPayment(fed.federal, PFE.factVal('ugLoanRate'), term * 12);
+  var surplus = Math.max(0, fundYr * r.duration - cost);
+  return { cost: cost, funding: fundingTotal, gap: gap, borrow: fed.federal, beyond: fed.beyondFederal, term: term, monthly: monthly, duration: r.duration, risks: r.risks, earnings: r.earnings, surplus: surplus };
+};
+PFE.vNoSch = function() {
+  var ns = PFE.s.nosch;
+  if (!ns.started) {
+    return '<h3 class="pfe-h">What If I Don’t Get Any Scholarships?</h3>'
+      + '<p class="pfe-p">Scholarships are great — but they are not guaranteed. This planner assumes the worst case on scholarships and shows that you still have real options.</p>'
+      + '<div class="pfe-feature" style="justify-content:center;text-align:center;flex-direction:column;"><div style="font-size:40px;" aria-hidden="true">🛟</div>'
+      + '<button class="pfe-btn gold" style="font-size:15px;padding:14px 22px;" onclick="PFE.s.nosch.started=true;PFE.save();PFE.render()">Assume I receive $0 in scholarships</button>'
+      + '<div class="pfe-muted">You’ll explore six ways to pay. Every number is an estimate you can change.</div></div>';
+  }
+  var key = ns.scen || 'A', sc = PFE.SCEN[key], sv = PFE.scenVals(key);
+  var tabs = Object.keys(PFE.SCEN).map(function(k) {
+    return '<button class="' + (k === key ? 'on' : '') + '" aria-pressed="' + (k === key) + '" onclick="PFE.s.nosch.scen=\'' + k + '\';PFE.save();PFE.render()"><b>SCENARIO ' + k + '</b><span>' + PFE.SCEN[k].t + '</span></button>';
+  }).join('');
+  var fields = sv.def.map(function(d) {
+    return PFE.numField(d[1], sv.v[d[0]], 'PFE.scenSet(\'' + key + '\',\'' + d[0] + '\',this.value)', d[3] || '', sv.ex[d[0]], 'pfe-ns-' + key + '-' + d[0]);
+  }).join('');
+  return '<h3 class="pfe-h">What If I Don’t Get Any Scholarships?</h3>'
+    + '<div class="pfe-row" style="margin-bottom:12px;"><span class="pfe-badge pfe-b-repay" style="font-size:11px;padding:4px 10px;">Scholarships: $0 (assumed)</span><span class="pfe-muted">Shaded boxes marked “example” are starting values — replace them with your own.</span></div>'
+    + '<div class="pfe-scen" role="group" aria-label="Scenarios">' + tabs + '</div>'
+    + '<div class="pfe-h3">Scenario ' + key + ' — ' + sc.t + '</div><p class="pfe-p">' + sc.d + '</p>'
+    + '<div class="pfe-box"><div class="pfe-fields">' + fields + '</div></div>'
+    + '<div id="pfe-ns-res" aria-live="polite">' + PFE.scenResult(key) + '</div>'
+    + '<div class="pfe-sec-t">All six scenarios side by side</div><div id="pfe-ns-all">' + PFE.scenTable() + '</div>'
+    + '<p class="pfe-muted">Don’t assume you qualify for every funding source. Lower-cost paths may lead to different credentials, transfer requirements, and career outcomes. Loan payments use the ' + PFE.factVal('ugLoanRate') + '% federal undergraduate rate and the federal Tiered Standard plan term; they ignore interest that builds during school, so real payments may be a bit higher.</p>';
+};
+PFE.scenSet = function(key, k, val) {
+  var n = parseFloat(val);
+  PFE.s.nosch.vals[key] = PFE.s.nosch.vals[key] || {};
+  PFE.s.nosch.vals[key][k] = isFinite(n) && n >= 0 ? n : 0;
+  PFE.save();
+  var r = document.getElementById('pfe-ns-res'); if (r) r.innerHTML = PFE.scenResult(key);
+  var a = document.getElementById('pfe-ns-all'); if (a) a.innerHTML = PFE.scenTable();
+  var box = document.getElementById('pfe-ns-' + key + '-' + k); if (box) box.classList.remove('pfe-ex');
+};
+PFE.scenResult = function(key) {
+  var r = PFE.scenCompute(key);
+  var fundRows = r.funding.map(function(f) { return '<tr><td>' + f[0] + '</td><td>' + PFE.$(f[1]) + '</td></tr>'; }).join('');
+  return '<div class="pfe-stats">'
+    + '<div class="pfe-stat"><div class="pfe-stat-l">Estimated cost</div><div class="pfe-stat-v">' + PFE.$(r.cost) + '</div><div class="pfe-stat-s">' + r.duration + (r.duration === 1 ? ' yr' : ' yrs') + ' total</div></div>'
+    + '<div class="pfe-stat ' + (r.gap > 0 ? 'red' : 'green') + '"><div class="pfe-stat-l">Remaining gap</div><div class="pfe-stat-v">' + PFE.$(r.gap) + '</div><div class="pfe-stat-s">after funding sources</div></div>'
+    + '<div class="pfe-stat gold"><div class="pfe-stat-l">Estimated borrowing</div><div class="pfe-stat-v">' + PFE.$(r.borrow) + '</div><div class="pfe-stat-s">federal student loans</div></div>'
+    + '<div class="pfe-stat blue"><div class="pfe-stat-l">Est. monthly payment</div><div class="pfe-stat-v">' + PFE.$(r.monthly) + '</div><div class="pfe-stat-s">' + (r.borrow ? r.term + '-yr term' : 'no loan') + '</div></div>'
+    + '</div>'
+    + (r.beyond > 0 ? '<div class="pfe-warn">⚠ ' + PFE.$(r.beyond) + ' of the gap is more than federal student loans allow. ' + PFE_DATA.LOAN_LIMITS_NOTE + ' Options: a cheaper school, more work or savings, a payment plan, a Parent PLUS loan, or a private loan.</div>' : '')
+    + (r.earnings ? '<div class="pfe-note">💵 Estimated earnings: about ' + PFE.$(r.earnings) + ' per year before taxes.' + (r.surplus > 0 ? ' That is about ' + PFE.$(r.surplus) + ' more than the education costs over the whole period.' : '') + '</div>' : '')
+    + '<div class="pfe-grid2"><div><div class="pfe-sec-t">Potential funding sources (whole program)</div><table class="pfe-table"><tbody>' + fundRows + '<tr><td>Scholarships</td><td>$0</td></tr></tbody></table></div>'
+    + '<div><div class="pfe-sec-t">Important risks & tradeoffs</div><ul class="pfe-risk">' + r.risks.map(function(x) { return '<li>' + x + '</li>'; }).join('') + '</ul></div></div>'
+    + '<div class="pfe-row" style="margin-top:12px;"><button class="pfe-btn" onclick="PFE.planFromScenario(\'' + key + '\')">Save as a funding plan →</button></div>';
+};
+PFE.scenTable = function() {
+  var rows = Object.keys(PFE.SCEN).map(function(k) {
+    var r = PFE.scenCompute(k);
+    return '<tr><td><button class="pfe-btn2" style="padding:3px 8px;font-size:11px;" onclick="PFE.s.nosch.scen=\'' + k + '\';PFE.save();PFE.render()">' + k + '</button> ' + PFE.SCEN[k].t + '</td><td>' + r.duration + (r.duration === 1 ? ' yr' : ' yrs') + '</td><td>' + PFE.$(r.cost) + '</td><td>' + PFE.$(r.gap) + '</td><td>' + PFE.$(r.borrow) + '</td><td>' + PFE.$(r.monthly) + '</td></tr>';
+  }).join('');
+  return '<div class="pfe-scroll"><table class="pfe-table"><thead><tr><th>Scenario</th><th>Length</th><th>Cost</th><th>Gap</th><th>Borrowing</th><th>Monthly</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+};
+
+// ── Understand Student Loans Before You Borrow ──────────────────────
+PFE.vLoans = function() {
+  var L = PFE.s.loan, o = PFE.opts || {};
+  if (o.fromCompare) {
+    var c = PFE.s.compare, best = null;
+    c.options.slice(0, c.count).forEach(function(op) { var r = PFECalc.option(op); if (r.coa > 0 && (!best || r.programGap < best.programGap)) best = r; });
+    if (best) L.amount = Math.round(best.programGap);
+    PFE.opts.fromCompare = false; PFE.save();
+  }
+  var rate = L.rate === '' ? PFE.factVal('ugLoanRate') : L.rate;
+  var fee = L.fee === '' ? PFE.factVal('ugLoanFee') : L.fee;
+  var careers = PFE.savedCareers();
+  var careerSel = '<select id="pfe-l-car" onchange="PFE.loanCareer(this.value)"><option value="">— Choose a saved career —</option>'
+    + careers.map(function(cr, i) { return '<option value="' + i + '"' + (String(L.career) === String(i) ? ' selected' : '') + '>' + PFE.esc(cr.t) + (cr.salary ? ' (' + PFE.$(cr.salary) + ')' : '') + '</option>'; }).join('') + '</select>';
+  function learn(t, h) { return '<details class="pfe-acc"><summary>' + t + '</summary><div>' + h + '</div></details>'; }
+  return '<h3 class="pfe-h">Understand Student Loans Before You Borrow</h3>'
+    + '<div class="pfe-warn">Borrow only what you need — not the maximum you are offered. You can accept less than the full loan amount in your aid offer.</div>'
+    + '<div class="pfe-grid2" style="align-items:start;"><div>'
+    + '<div class="pfe-box"><div class="pfe-h3">🧮 Loan calculator</div><div class="pfe-fields">'
+    + PFE.numField('Total amount borrowed ($)', L.amount, 'PFE.loanSet(\'amount\',this.value)', '', false, 'pfe-l-amt')
+    + PFE.numField('Annual interest rate (%)', rate, 'PFE.loanSet(\'rate\',this.value)', 'Federal undergrad rate for 2026–27: ' + PFE.factVal('ugLoanRate') + '%', false, 'pfe-l-rate')
+    + PFE.numField('Repayment period (years)', L.years, 'PFE.loanSet(\'years\',this.value)', 'Federal Tiered Standard plan: 10–25 yrs depending on balance', false, 'pfe-l-yrs')
+    + PFE.numField('Origination fee (%)', fee, 'PFE.loanSet(\'fee\',this.value)', 'Federal Direct Loans: ' + PFE.factVal('ugLoanFee') + '%', false, 'pfe-l-fee')
+    + '</div><label class="pfe-row" style="margin-top:10px;font-size:12.5px;gap:6px;"><input type="checkbox"' + (L.accrue ? ' checked' : '') + ' onchange="PFE.loanSet(\'accrue\',this.checked)"/> Include interest that builds while in school (unsubsidized loans)</label>'
+    + '<div class="pfe-fields" style="margin-top:8px;">' + PFE.numField('Months from borrowing to first payment', L.monthsBefore, 'PFE.loanSet(\'monthsBefore\',this.value)', 'e.g. 4 years of school + 6-month grace ≈ 54', false, 'pfe-l-mb') + '</div>'
+    + '<label class="pfe-row" style="margin-top:8px;font-size:12.5px;gap:6px;"><input type="checkbox"' + (L.autoTerm ? ' checked' : '') + ' onchange="PFE.loanSet(\'autoTerm\',this.checked)"/> Use the federal Tiered Standard term for this balance</label>'
+    + '</div><div id="pfe-l-res" aria-live="polite">' + PFE.loanResult() + '</div>'
+    + '<div class="pfe-box"><div class="pfe-h3">💼 Compare with your future income</div>'
+    + '<div class="pfe-fields"><div class="pfe-f"><label for="pfe-l-car">Career</label>' + (careers.length ? careerSel : '<div class="pfe-muted">Save careers in the Careers tab to pull in salary data.</div>') + '</div>'
+    + PFE.numField('Expected starting salary ($/yr, before taxes)', L.salary, 'PFE.loanSet(\'salary\',this.value)', 'LaunchPoint salaries are typical (median) pay — starting pay is often lower', false, 'pfe-l-sal')
+    + PFE.numField('Take-home pay (% of gross)', L.takeHome, 'PFE.loanSet(\'takeHome\',this.value)', 'Assumption — taxes and deductions vary', true, 'pfe-l-th')
+    + '</div><div id="pfe-l-inc" aria-live="polite">' + PFE.loanIncome() + '</div></div>'
+    + '</div><div>'
+    + '<div class="pfe-sec-t" style="margin-top:0;">Loan basics</div>'
+    + learn('Federal vs. private loans', '<p>Federal loans have fixed rates set by law and federal repayment options. Private loans are made by banks and other lenders, usually need a credit check or cosigner, may have variable rates, and have fewer protections. Most experts suggest using federal loans before private ones.</p>')
+    + learn('Subsidized vs. unsubsidized', '<p><strong>Subsidized:</strong> for students with financial need — the government pays the interest while you are in school at least half-time and during certain other periods.<br><strong>Unsubsidized:</strong> interest builds from the day the money is paid out, including while you are in school.</p>')
+    + learn('Interest rates', '<p>Federal undergraduate loans first disbursed July 1, 2026 – June 30, 2027 have a fixed rate of ' + PFE.factVal('ugLoanRate') + '% for the life of the loan. Rates for new loans are reset every July. ' + PFE.sourceLink(PFE.fact('ugLoanRate').source, 'Source') + '</p>')
+    + learn('Origination fees', '<p>A fee is taken out before you get the money — ' + PFE.factVal('ugLoanFee') + '% for federal Direct Loans and ' + PFE.factVal('plusLoanFee') + '% for PLUS loans first disbursed Oct 1, 2026 – Sept 30, 2027. You still owe the full amount you borrowed.</p>')
+    + learn('Interest accrual & capitalization', '<p><strong>Accrual</strong> means interest building up over time. <strong>Capitalization</strong> means unpaid interest gets added to your balance — after that, you pay interest on the interest. Paying interest while in school (if you can) keeps your balance from growing.</p>')
+    + learn('Repayment terms & grace periods', '<p>Federal Direct Loans usually have a six-month grace period after you leave school or drop below half-time before payments start. Borrowers with loans made on or after July 1, 2026 choose between the <strong>Tiered Standard plan</strong> (fixed payments over 10, 15, 20, or 25 years depending on how much you owe) and an income-based plan called the <strong>Repayment Assistance Plan (RAP)</strong>. Longer terms mean lower monthly payments but more total interest.</p>')
+    + learn('Deferment & forbearance', '<p>These let you pause or lower payments temporarily — for example, if you go back to school or face hardship. Interest may keep growing during the pause, which can make the loan cost more.</p>')
+    + learn('Delinquency & default', '<p>A loan is <strong>delinquent</strong> the day after you miss a payment. If federal loan payments stay unpaid long enough, the loan goes into <strong>default</strong>, which can damage your credit and lead to collection actions such as taking tax refunds or part of your paycheck. If you are struggling, contact your loan servicer early.</p>')
+    + learn('Parent borrowing responsibilities', '<p>A Parent PLUS loan is the parent’s legal debt, not the student’s. New Parent PLUS borrowers from July 1, 2026 are limited to $20,000 per student per year and $65,000 per student total, at ' + PFE.factVal('plusLoanRate') + '% for 2026–27. Families should talk openly about who will repay.</p>')
+    + learn('Total repayment cost', '<p>The true cost of a loan is everything you pay back — the amount borrowed plus all interest. The calculator shows this as “total repaid.”</p>')
+    + learn('Income-based plans & forgiveness', '<p>Income-based repayment and loan forgiveness programs have detailed rules that change over time. LaunchPoint does <strong>not</strong> assume you will qualify for them. Check current rules at <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">StudentAid.gov</a> before counting on them.</p>')
+    + PFE.quiz('loans')
+    + '</div></div>';
+};
+PFE.loanSet = function(k, v) {
+  var L = PFE.s.loan;
+  if (k === 'accrue' || k === 'autoTerm') L[k] = !!v;
+  else if (v === '' && (k === 'rate' || k === 'fee')) L[k] = '';
+  else { var n = parseFloat(v); L[k] = isFinite(n) && n >= 0 ? n : 0; }
+  if (k === 'years') L.autoTerm = false;
+  if (k === 'salary') L.career = '';
+  PFE.save();
+  if (k === 'autoTerm' || k === 'years') { PFE.render(); return; }
+  var r = document.getElementById('pfe-l-res'); if (r) r.innerHTML = PFE.loanResult();
+  var i = document.getElementById('pfe-l-inc'); if (i) i.innerHTML = PFE.loanIncome();
+};
+PFE.loanCareer = function(idx) {
+  var cr = PFE.savedCareers()[parseInt(idx, 10)];
+  PFE.s.loan.career = idx;
+  if (cr) PFE.s.loan.salary = cr.salary;
+  PFE.save(); PFE.render();
+};
+PFE.loanCalc = function() {
+  var L = PFE.s.loan;
+  var rate = L.rate === '' ? PFE.factVal('ugLoanRate') : L.rate;
+  var fee = L.fee === '' ? PFE.factVal('ugLoanFee') : L.fee;
+  var amt = PFECalc.num(L.amount);
+  var pre = L.accrue ? amt + amt * rate / 100 * PFECalc.num(L.monthsBefore) / 12 : amt;
+  var years = L.autoTerm ? PFECalc.tieredStandardYears(pre) : PFECalc.num(L.years);
+  return PFECalc.loan({ amount: amt, ratePct: rate, years: years, feePct: fee, accrueInSchool: L.accrue, monthsBeforeRepay: L.monthsBefore });
+};
+PFE.loanResult = function() {
+  var L = PFE.s.loan, R = PFE.loanCalc();
+  if (!R.borrowed) return '<div class="pfe-note">Enter an amount to borrow to see your estimate.</div>';
+  if (!R.months) return '<div class="pfe-warn">Enter a repayment period longer than 0 years.</div>';
+  return '<div class="pfe-stats">'
+    + '<div class="pfe-stat blue"><div class="pfe-stat-l">Monthly payment</div><div class="pfe-stat-v">' + PFE.$(R.monthly, { cents: 1 }) + '</div><div class="pfe-stat-s">for ' + (R.months / 12) + ' years</div></div>'
+    + '<div class="pfe-stat"><div class="pfe-stat-l">Total repaid</div><div class="pfe-stat-v">' + PFE.$(R.totalRepaid) + '</div></div>'
+    + '<div class="pfe-stat red"><div class="pfe-stat-l">Total interest</div><div class="pfe-stat-v">' + PFE.$(R.totalInterest) + '</div></div>'
+    + '<div class="pfe-stat gold"><div class="pfe-stat-l">Balance when payments start</div><div class="pfe-stat-v">' + PFE.$(R.balanceAtRepayment) + '</div><div class="pfe-stat-s">' + (R.accruedInSchool ? '+' + PFE.$(R.accruedInSchool) + ' in-school interest' : 'no in-school interest') + '</div></div>'
+    + '</div>'
+    + '<p class="pfe-muted">You borrow ' + PFE.$(R.borrowed) + ' but receive about ' + PFE.$(R.received) + ' after the ' + PFE.$(R.feeAmount) + ' origination fee. <strong>Assumptions:</strong> fixed rate; equal monthly payments (standard amortization); in-school interest is simple interest added to the balance when repayment starts; no extra payments, rate discounts, pauses, or income-based plans.</p>'
+    + '<div class="pfe-row" style="margin-bottom:14px;"><button class="pfe-btn2" onclick="PFE.toBudget()">Use this payment in my Budget →</button></div>';
+};
+PFE.loanIncome = function() {
+  var L = PFE.s.loan, R = PFE.loanCalc(), sal = PFECalc.num(L.salary);
+  if (!sal) return '<p class="pfe-muted" style="margin-top:8px;">Pick a career or type a salary to compare.</p>';
+  var gross = sal / 12, take = gross * Math.min(100, PFECalc.num(L.takeHome)) / 100;
+  var pctG = R.monthly / gross * 100, pctT = take ? R.monthly / take * 100 : 0;
+  var tone = pctG <= 8 ? ['green', 'Manageable for many budgets'] : pctG <= 12 ? ['gold', 'Tight — plan carefully'] : ['red', 'High — consider borrowing less'];
+  return '<div class="pfe-stats" style="margin-top:10px;">'
+    + '<div class="pfe-stat"><div class="pfe-stat-l">Gross monthly pay</div><div class="pfe-stat-v">' + PFE.$(gross) + '</div><div class="pfe-stat-s">before taxes</div></div>'
+    + '<div class="pfe-stat"><div class="pfe-stat-l">Est. take-home / mo</div><div class="pfe-stat-v">' + PFE.$(take) + '</div><div class="pfe-stat-s">after taxes (assumption)</div></div>'
+    + '<div class="pfe-stat ' + tone[0] + '"><div class="pfe-stat-l">Loan payment share</div><div class="pfe-stat-v">' + pctT.toFixed(1) + '%</div><div class="pfe-stat-s">of take-home · ' + pctG.toFixed(1) + '% of gross</div></div>'
+    + '</div><p class="pfe-muted">' + tone[1] + '. A common rule of thumb: keep total student debt below your expected first-year salary (yours: ' + PFE.$(sal) + ' vs. ' + PFE.$(R.borrowed) + ' borrowed). Salaries are estimates and vary by location, employer, and experience.</p>';
+};
+// Financial Life / Budget integration — REPLACES the Budget's student-loan line (never adds), so it is not double-counted.
+PFE.toBudget = function() {
+  var pay = Math.round(PFE.loanCalc().monthly);
+  var sl = document.getElementById('sl-loans');
+  if (!sl) return;
+  if (pay > parseInt(sl.max || 1500, 10)) sl.max = String(Math.ceil(pay / 25) * 25);
+  sl.value = String(Math.round(pay / 25) * 25);
+  try { Budget.calc(); } catch (e) {}
+  try { APP.goTab('budget'); } catch (e) {}
+  try {
+    var prev = document.getElementById('pfe-budget-note'); if (prev) prev.remove();
+    var host = document.getElementById('p-budget');
+    if (host) {
+      var n = document.createElement('div');
+      n.id = 'pfe-budget-note'; n.className = 'pfe-note'; n.setAttribute('role', 'status');
+      n.innerHTML = '🎓 Your Budget’s <strong>Student loans</strong> line was set to about ' + PFE.$(pay) + '/mo from your loan estimate. It replaced the previous amount instead of adding to it, so the payment is only counted once.';
+      host.insertBefore(n, host.firstChild);
+    }
+  } catch (e) {}
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — My Education Funding Plan
+// ═══════════════════════════════════════════════════════════════════
+PFE.CREDENTIALS = ['Industry certification','Certificate','Apprenticeship completion','Associate degree','Bachelor’s degree','Graduate / professional degree','Not sure yet'];
+PFE.blankPlan = function(name) {
+  return { id: 'p' + Date.now().toString(36) + Math.floor(Math.random() * 1e4).toString(36), name: name || 'My plan',
+    created: PFE.today(), updated: PFE.today(), sample: false,
+    career: '', credential: '', school: '', years: 0, programCost: 0,
+    scholarshipsText: '', scholarshipsAmt: 0, grantIds: [], grantsAmt: 0,
+    workStudy: 'maybe', workAmt: 0, employerText: '', employerAmt: 0,
+    savingsGoal: 0, savingsAmt: 0, familyAmt: 0, loanAmt: null,
+    deadlines: [], notes: '' };
+};
+PFE.planCalc = function(p) {
+  var cost = PFECalc.num(p.programCost);
+  var free = PFECalc.num(p.grantsAmt) + PFECalc.num(p.scholarshipsAmt);
+  var own = PFECalc.num(p.savingsAmt) + PFECalc.num(p.familyAmt) + PFECalc.num(p.workAmt) + PFECalc.num(p.employerAmt);
+  var gap = Math.max(0, cost - free - own);
+  var loan = p.loanAmt === null || p.loanAmt === undefined || p.loanAmt === '' ? gap : Math.min(PFECalc.num(p.loanAmt), gap);
+  var term = PFECalc.tieredStandardYears(loan);
+  var monthly = PFECalc.monthlyPayment(loan, PFE.factVal('ugLoanRate'), term * 12);
+  var yrs = PFECalc.num(p.years) || 1;
+  var fedCap = 0; for (var i = 0; i < Math.ceil(yrs); i++) fedCap += PFECalc.dependentAnnualLimit(i) * Math.min(1, yrs - i);
+  return { cost: cost, free: free, own: own, net: Math.max(0, cost - free), gap: gap, loan: loan, term: term, monthly: monthly,
+           afterLoan: Math.max(0, gap - loan), fedCap: fedCap, years: yrs };
+};
+PFE.activePlan = function() {
+  var ps = PFE.s.plans;
+  return ps.filter(function(p) { return p.id === PFE.s.activePlan; })[0] || ps[0] || null;
+};
+PFE.newPlan = function(p) {
+  p = p || PFE.blankPlan('Plan ' + (PFE.s.plans.length + 1));
+  PFE.s.plans.push(p); PFE.s.activePlan = p.id; PFE.save();
+  PFE.go('plan', { noScroll: true });
+};
+PFE.examplePlan = function() {
+  var p = PFE.blankPlan('Example: Registered Nurse (ADN)');
+  p.sample = true; p.career = 'Registered Nurse'; p.credential = 'Associate degree'; p.school = 'Associate Degree in Nursing program';
+  p.years = 2; p.programCost = 18000; p.grantsAmt = 6000; p.scholarshipsAmt = 0; p.savingsAmt = 2000;
+  p.notes = 'These figures are illustrative, not actual school prices or aid awards.';
+  PFE.newPlan(p);
+};
+PFE.planFromCompare = function() {
+  var c = PFE.s.compare, best = null, bo = null;
+  c.options.slice(0, c.count).forEach(function(o) { var r = PFECalc.option(o); if (r.coa > 0 && (!best || r.programGap < best.programGap)) { best = r; bo = o; } });
+  if (!bo) { PFE.go('plan'); return; }
+  var p = PFE.blankPlan(bo.label || 'From Compare Costs');
+  var yrs = best.years || 1;
+  p.school = bo.label; p.years = best.years; p.programCost = Math.round(best.programCoa);
+  p.grantsAmt = Math.round((PFECalc.num(bo.fedGrants) + PFECalc.num(bo.stateGrants) + PFECalc.num(bo.instGrants)) * yrs);
+  p.scholarshipsAmt = Math.round(PFECalc.num(bo.scholarships) * yrs);
+  p.familyAmt = Math.round(PFECalc.num(bo.family) * yrs); p.savingsAmt = Math.round(PFECalc.num(bo.savings) * yrs);
+  p.employerAmt = Math.round((PFECalc.num(bo.employer) + PFECalc.num(bo.otherFree)) * yrs); p.workAmt = Math.round(PFECalc.num(bo.workStudy) * yrs);
+  p.credential = { university: 'Bachelor’s degree', community: 'Associate degree', technical: 'Certificate', certificate: 'Certificate', apprenticeship: 'Apprenticeship completion' }[bo.kind] || '';
+  p.sample = !!bo.sample;
+  PFE.newPlan(p);
+};
+PFE.planFromScenario = function(key) {
+  var r = PFE.scenCompute(key), sc = PFE.SCEN[key];
+  var p = PFE.blankPlan('No-scholarship: ' + sc.t);
+  p.years = r.duration; p.programCost = Math.round(r.cost); p.scholarshipsAmt = 0;
+  r.funding.forEach(function(f) {
+    var v = Math.round(f[1]);
+    if (/grant/i.test(f[0])) p.grantsAmt += v;
+    else if (/employer/i.test(f[0])) p.employerAmt += v;
+    else if (/family|savings/i.test(f[0])) p.familyAmt += v;
+    else p.workAmt += v;
+  });
+  p.notes = 'Created from Scenario ' + key + ' (' + sc.t + ') in the No-Scholarship Planner, assuming $0 in scholarships.';
+  PFE.newPlan(p);
+};
+PFE.planSet = function(k, v, rerender) {
+  var p = PFE.activePlan(); if (!p) return;
+  if (['programCost','years','grantsAmt','scholarshipsAmt','workAmt','employerAmt','savingsGoal','savingsAmt','familyAmt'].indexOf(k) >= 0) {
+    var n = parseFloat(v); p[k] = isFinite(n) && n >= 0 ? n : 0;
+  } else if (k === 'loanAmt') {
+    var m = parseFloat(v); p.loanAmt = v === '' ? null : (isFinite(m) && m >= 0 ? m : 0);
+  } else p[k] = v;
+  p.updated = PFE.today();
+  PFE.save();
+  if (rerender) PFE.render(); else { var s = document.getElementById('pfe-plan-sum'); if (s) s.innerHTML = PFE.planSummary(p); }
+};
+PFE.planSchool = function(key) {
+  var p = PFE.activePlan(); if (!p || !key) return;
+  var s = PFE.schools().filter(function(x) { return x.key === key; })[0];
+  if (s) { p.school = s.name; p.years = PFE.CAT_YEARS[s.cat]; p.programCost = Math.round(s.price * p.years); p.sample = false; p.updated = PFE.today(); }
+  PFE.save(); PFE.render();
+};
+PFE.planGrant = function(id, on) {
+  var p = PFE.activePlan(); if (!p) return;
+  var i = p.grantIds.indexOf(id);
+  if (on && i < 0) p.grantIds.push(id); if (!on && i >= 0) p.grantIds.splice(i, 1);
+  PFE.save();
+};
+PFE.planDeadline = function(action, i, field, val) {
+  var p = PFE.activePlan(); if (!p) return;
+  if (action === 'add') p.deadlines.push({ label: '', date: '' });
+  if (action === 'del') p.deadlines.splice(i, 1);
+  if (action === 'set') { p.deadlines[i][field] = val; PFE.save(); return; }
+  PFE.save(); PFE.render();
+};
+PFE.planDelete = function(id, confirmed) {
+  if (!confirmed) { PFE._confirmDel = id; PFE.render(); return; }
+  PFE.s.plans = PFE.s.plans.filter(function(p) { return p.id !== id; });
+  PFE.s.planCmp = PFE.s.planCmp.filter(function(x) { return x !== id; });
+  if (PFE.s.activePlan === id) PFE.s.activePlan = PFE.s.plans[0] ? PFE.s.plans[0].id : null;
+  PFE._confirmDel = null; PFE.save(); PFE.render();
+};
+PFE.planDup = function(id) {
+  var src = PFE.s.plans.filter(function(p) { return p.id === id; })[0]; if (!src) return;
+  var p = JSON.parse(JSON.stringify(src)); var b = PFE.blankPlan(); p.id = b.id; p.name = src.name + ' (copy)'; p.created = p.updated = PFE.today();
+  PFE.newPlan(p);
+};
+PFE.planCmpToggle = function(id, on) {
+  var a = PFE.s.planCmp, i = a.indexOf(id);
+  if (on && i < 0) { a.push(id); if (a.length > 3) a.shift(); }
+  if (!on && i >= 0) a.splice(i, 1);
+  PFE.save(); PFE.render();
+};
+PFE.nextSteps = function(p) {
+  var s = PFE.s, g = PFE.grade(), steps = [], c = PFE.planCalc(p);
+  if (!p.career) steps.push('Choose a career goal (try the Careers tab).');
+  if (!p.programCost) steps.push('Look up the full cost of attendance for your school or program.');
+  if (!s.checklist.submit) steps.push(g >= 12 || !g ? 'Complete the FAFSA at StudentAid.gov.' : 'Learn about the FAFSA now — you’ll file it senior year.');
+  if (!p.grantIds.length) steps.push('Research grants you might qualify for in “Grants & Other Aid.”');
+  if (c.gap > 0) steps.push('Close your ' + PFE.$(c.gap) + ' gap: compare lower-cost options, add work or savings, or plan careful borrowing.');
+  if (c.loan > c.fedCap) steps.push('Your planned borrowing is above federal student loan limits for this many years — rethink the plan.');
+  if (PFECalc.num(p.savingsGoal) > PFECalc.num(p.savingsAmt)) steps.push('Keep saving toward your goal: ' + PFE.$(p.savingsGoal - p.savingsAmt) + ' to go.');
+  if (!steps.length) steps.push('Review this plan with a parent or counselor, and update it as you get real aid offers.');
+  return steps;
+};
+PFE.vPlan = function() {
+  var ps = PFE.s.plans, p = PFE.activePlan();
+  var careers = PFE.savedCareers();
+  var list = ps.map(function(x) {
+    var c = PFE.planCalc(x), on = p && x.id === p.id;
+    return '<div class="pfe-opt-col" style="' + (on ? 'border-color:#C9A84C;background:#fffdf7;' : '') + 'padding:10px 12px;">'
+      + '<div class="pfe-row" style="justify-content:space-between;"><button class="pfe-btn2" style="border:none;padding:0;background:none;font-weight:700;text-align:left;" onclick="PFE.s.activePlan=\'' + x.id + '\';PFE.save();PFE.render()">' + PFE.esc(x.name) + '</button>'
+      + (x.sample ? '<span class="pfe-badge pfe-b-sample">illustrative</span>' : '') + '</div>'
+      + '<div class="pfe-muted">Gap ' + PFE.$(c.gap) + ' · updated ' + PFE.esc(x.updated) + '</div>'
+      + '<div class="pfe-row" style="margin-top:6px;gap:6px;"><label style="font-size:11.5px;display:flex;gap:4px;align-items:center;"><input type="checkbox"' + (PFE.s.planCmp.indexOf(x.id) >= 0 ? ' checked' : '') + ' onchange="PFE.planCmpToggle(\'' + x.id + '\',this.checked)"/> Compare</label>'
+      + '<button class="pfe-btn2" style="padding:3px 8px;font-size:11px;" onclick="PFE.planDup(\'' + x.id + '\')">Duplicate</button>'
+      + (PFE._confirmDel === x.id
+          ? '<button class="pfe-btn2 danger" style="padding:3px 8px;font-size:11px;" onclick="PFE.planDelete(\'' + x.id + '\',true)">Confirm delete</button><button class="pfe-btn2" style="padding:3px 8px;font-size:11px;" onclick="PFE._confirmDel=null;PFE.render()">Cancel</button>'
+          : '<button class="pfe-btn2 danger" style="padding:3px 8px;font-size:11px;" onclick="PFE.planDelete(\'' + x.id + '\')">Delete</button>')
+      + '</div></div>';
+  }).join('');
+  var head = '<h3 class="pfe-h">My Education Funding Plan</h3>'
+    + '<p class="pfe-p">Put it all together: your career goal, your school, what it costs, and exactly how you’ll pay for it. Save as many plans as you like and compare them.</p>'
+    + '<div class="pfe-privacy">🔒 Your plans are saved on this device only. Use estimates — don’t enter Social Security numbers, account numbers, passwords, or tax details. Only you decide what to share.</div>'
+    + '<div class="pfe-row" style="margin-bottom:14px;"><button class="pfe-btn" onclick="PFE.newPlan()">+ New plan</button><button class="pfe-btn2" onclick="PFE.examplePlan()">Load an example plan (illustrative)</button></div>';
+  if (!p) return head + '<div class="pfe-note">You don’t have a plan yet. Start a new one, load the example, or save a result from Compare Costs or the No-Scholarship Planner.</div>';
+  var c = PFE.planCalc(p);
+  var nf = function(label, k, hint) { return PFE.numField(label, PFECalc.num(p[k]) || '', 'PFE.planSet(\'' + k + '\',this.value)', hint || '', false, 'pfe-p-' + k); };
+  var tf = function(label, k, ph) { return '<div class="pfe-f"><label for="pfe-p-' + k + '">' + label + '</label><input id="pfe-p-' + k + '" type="text" maxlength="120" value="' + PFE.esc(p[k]) + '" placeholder="' + (ph || '') + '" oninput="PFE.planSet(\'' + k + '\',this.value)"/></div>'; };
+  var grants = PFE.programs().filter(function(g) { return (g.type === 'grant' || g.type === 'service' || g.type === 'benefit') && g.active !== false && !g.generated && (g.geo === 'US' || g.geo === PFE.s.state); });
+  var fafsaDone = PFE_DATA.FAFSA_CHECKLIST.filter(function(x) { return PFE.s.checklist[x.id]; }).length;
+  var careerDl = '<datalist id="pfe-careers">' + careers.map(function(cr) { return '<option value="' + PFE.esc(cr.t) + '">'; }).join('') + '</datalist>';
+  var form = '<div class="pfe-box">'
+    + '<div class="pfe-fields">' + tf('Plan name', 'name') + '</div>'
+    + '<div class="pfe-sec-t">Goal</div><div class="pfe-fields">'
+    + '<div class="pfe-f"><label for="pfe-p-career">Preferred career</label><input id="pfe-p-career" list="pfe-careers" maxlength="120" value="' + PFE.esc(p.career) + '" oninput="PFE.planSet(\'career\',this.value)" placeholder="' + (careers.length ? 'Pick a saved career or type one' : 'e.g. Electrician') + '"/>' + careerDl + '</div>'
+    + '<div class="pfe-f"><label for="pfe-p-cred">Credential</label><select id="pfe-p-cred" onchange="PFE.planSet(\'credential\',this.value)"><option value="">— Choose —</option>' + PFE.CREDENTIALS.map(function(x) { return '<option' + (p.credential === x ? ' selected' : '') + '>' + x + '</option>'; }).join('') + '</select></div>'
+    + '<div class="pfe-f"><label for="pfe-p-sch">Pick from LaunchPoint schools</label>' + PFE.schoolSelect('pfe-p-sch', '', 'PFE.planSchool(this.value)', true) + '</div>'
+    + tf('School or training program', 'school', 'e.g. Jefferson State CC') + '</div>'
+    + '<div class="pfe-sec-t">Costs</div><div class="pfe-fields">' + nf('Program length (years)', 'years') + nf('Estimated total program cost ($)', 'programCost', 'Whole program, all costs — not just tuition') + '</div>'
+    + '<div class="pfe-sec-t">Free money (whole program)</div><div class="pfe-fields">' + nf('Grants I expect ($)', 'grantsAmt', 'Only count grants you are reasonably likely to get') + nf('Scholarships ($)', 'scholarshipsAmt') + tf('Scholarships I’m considering', 'scholarshipsText', 'names, separated by commas') + '</div>'
+    + '<details class="pfe-acc" style="margin-top:10px;"><summary>Grants to investigate (' + p.grantIds.length + ' selected)</summary><div>'
+    + grants.map(function(g) { return '<label class="pfe-ms"><input type="checkbox"' + (p.grantIds.indexOf(g.id) >= 0 ? ' checked' : '') + ' onchange="PFE.planGrant(\'' + g.id + '\',this.checked)"/><span>' + PFE.esc(g.name) + '</span></label>'; }).join('') + '</div></details>'
+    + '<div class="pfe-sec-t">Your resources (whole program)</div><div class="pfe-fields">'
+    + nf('Family contribution ($)', 'familyAmt') + nf('Savings I’ll use ($)', 'savingsAmt') + nf('Savings goal ($)', 'savingsGoal')
+    + '<div class="pfe-f"><label for="pfe-p-ws">Interested in work-study?</label><select id="pfe-p-ws" onchange="PFE.planSet(\'workStudy\',this.value)">' + [['yes','Yes'],['maybe','Maybe'],['no','No']].map(function(x) { return '<option value="' + x[0] + '"' + (p.workStudy === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join('') + '</select></div>'
+    + nf('Work / work-study earnings ($)', 'workAmt', 'Potential — not guaranteed') + nf('Employer assistance ($)', 'employerAmt') + tf('Employer opportunities', 'employerText', 'e.g. hospital tuition program') + '</div>'
+    + '<div class="pfe-sec-t">Borrowing</div><div class="pfe-fields">' + PFE.numField('Planned loans ($)', p.loanAmt === null ? '' : p.loanAmt, 'PFE.planSet(\'loanAmt\',this.value)', 'Leave blank to assume the whole gap is borrowed', false, 'pfe-p-loanAmt') + '</div>'
+    + '<div class="pfe-sec-t">Important deadlines</div>'
+    + p.deadlines.map(function(d, i) { return '<div class="pfe-row" style="margin-bottom:6px;"><input class="pfe-in" style="flex:2;min-width:160px;" maxlength="100" aria-label="Deadline name" placeholder="e.g. School priority aid date" value="' + PFE.esc(d.label) + '" oninput="PFE.planDeadline(\'set\',' + i + ',\'label\',this.value)"/><input class="pfe-in" style="flex:1;min-width:140px;" type="date" aria-label="Deadline date" value="' + PFE.esc(d.date) + '" onchange="PFE.planDeadline(\'set\',' + i + ',\'date\',this.value)"/><button class="pfe-btn2 danger" aria-label="Remove deadline" onclick="PFE.planDeadline(\'del\',' + i + ')">✕</button></div>'; }).join('')
+    + '<button class="pfe-btn2" onclick="PFE.planDeadline(\'add\')">+ Add a deadline</button> <span class="pfe-muted">Only add deadlines you have confirmed with the school or agency.</span>'
+    + '<div class="pfe-sec-t">Notes</div><textarea class="pfe-in" rows="2" maxlength="600" aria-label="Plan notes" oninput="PFE.planSet(\'notes\',this.value)">' + PFE.esc(p.notes) + '</textarea>'
+    + '<p class="pfe-muted" style="margin-top:8px;">FAFSA preparation: ' + fafsaDone + ' of ' + PFE_DATA.FAFSA_CHECKLIST.length + ' checklist steps done (<a href="#" onclick="PFE.go(\'fafsa\');return false;">open checklist</a>).</p>'
+    + '</div>';
+  var cmp = PFE.planCompareTable();
+  return head
+    + (ps.length ? '<div class="pfe-cmp-grid" style="margin-bottom:16px;">' + list + '</div>' : '')
+    + cmp
+    + '<div class="pfe-grid2" style="align-items:start;"><div>' + form + '</div><div><div id="pfe-plan-sum" aria-live="polite">' + PFE.planSummary(p) + '</div>'
+    + '<div class="pfe-row" style="margin-top:10px;"><button class="pfe-btn2" onclick="PFE.printPlan(\'' + p.id + '\')">🖨️ Print</button><button class="pfe-btn2" onclick="PFE.printPlan(\'' + p.id + '\',null,true)">📄 Export PDF</button><button class="pfe-btn gold" onclick="PFE.shareModal(\'' + p.id + '\')">Share a summary…</button></div>'
+    + '<p class="pfe-muted">“Export PDF” opens your browser’s print window — choose “Save as PDF.”</p></div></div>';
+};
+PFE.planSummary = function(p) {
+  var c = PFE.planCalc(p);
+  var pct = function(v) { return c.cost ? Math.min(100, v / c.cost * 100) : 0; };
+  var gapOptions = [];
+  if (c.gap > 0) {
+    var perYr = c.gap / c.years;
+    gapOptions.push('<strong>Work:</strong> covering it by working would take about ' + Math.ceil(perYr / (12 * 40)) + ' hours a week at $12/hour (example wage) over ' + c.years + ' year' + (c.years === 1 ? '' : 's') + '.');
+    gapOptions.push('<strong>Payment plan:</strong> spreading each year’s gap over 10 months would be about ' + PFE.$(perYr / 10) + '/month, if your school offers one.');
+    gapOptions.push('<strong>Qualifying assistance:</strong> look for grants, employer help, or service programs you may qualify for — <a href="#" onclick="PFE.go(\'grants\');return false;">search aid</a>.');
+    gapOptions.push('<strong>A lower-cost path:</strong> see how community college, trade school, or apprenticeships compare — <a href="#" onclick="PFE.go(\'noscholarship\');return false;">open the planner</a>.');
+    gapOptions.push('<strong>Borrowing, where appropriate:</strong> about ' + PFE.$(c.monthly) + '/month for ' + c.term + ' years if you borrow ' + PFE.$(c.loan) + ' at ' + PFE.factVal('ugLoanRate') + '%.');
+  }
+  return '<div class="pfe-box" style="background:#fff;">'
+    + '<div class="pfe-row" style="justify-content:space-between;"><div class="pfe-h3">📋 Plan summary</div>' + (p.sample ? '<span class="pfe-badge pfe-b-sample">illustrative figures</span>' : '<span class="pfe-badge pfe-b-oblig">estimates</span>') + '</div>'
+    + (p.sample ? '<div class="pfe-warn" style="margin-top:8px;">These figures are illustrative, not actual school prices or aid awards. <button class="pfe-btn2" style="padding:3px 9px;font-size:11px;" onclick="PFE.planSet(\'sample\',false,true)">I’ve replaced them with my own numbers</button></div>' : '')
+    + '<dl class="pfe-kv" style="grid-template-columns:170px 1fr;">'
+    + '<dt>Career goal</dt><dd>' + PFE.esc(p.career || '—') + '</dd>'
+    + '<dt>Education pathway</dt><dd>' + PFE.esc([p.credential, p.school].filter(Boolean).join(' — ') || '—') + '</dd>'
+    + '<dt>Estimated program cost</dt><dd><strong>' + PFE.$(c.cost) + '</strong>' + (c.years ? ' over ' + c.years + ' yr' : '') + '</dd>'
+    + '<dt>Estimated grants</dt><dd>' + PFE.$(p.grantsAmt) + '</dd>'
+    + '<dt>Scholarships</dt><dd>' + PFE.$(p.scholarshipsAmt) + '</dd>'
+    + '<dt>Family + savings</dt><dd>' + PFE.$(PFECalc.num(p.familyAmt) + PFECalc.num(p.savingsAmt)) + '</dd>'
+    + '<dt>Work + employer help</dt><dd>' + PFE.$(PFECalc.num(p.workAmt) + PFECalc.num(p.employerAmt)) + '</dd>'
+    + '<dt>Remaining funding gap</dt><dd><strong style="color:' + (c.gap ? '#dc2626' : '#059669') + ';font-size:15px;">' + PFE.$(c.gap) + '</strong></dd>'
+    + '<dt>Planned loans</dt><dd>' + PFE.$(c.loan) + (c.loan ? ' ≈ ' + PFE.$(c.monthly) + '/mo for ' + c.term + ' yrs' : '') + '</dd>'
+    + '</dl>'
+    + '<div class="pfe-bar" style="margin-top:12px;" role="img" aria-label="Funding mix"><span style="width:' + pct(c.free) + '%;background:#059669"></span><span style="width:' + pct(c.own) + '%;background:#2563eb"></span><span style="width:' + pct(c.loan) + '%;background:#C9A84C"></span><span style="width:' + pct(c.afterLoan) + '%;background:#dc2626"></span></div>'
+    + '<div class="pfe-legend"><span><i style="background:#059669"></i>Free money</span><span><i style="background:#2563eb"></i>Your resources</span><span><i style="background:#C9A84C"></i>Loans</span><span><i style="background:#dc2626"></i>Not yet covered</span></div>'
+    + (c.loan > c.fedCap ? '<div class="pfe-warn" style="margin-top:10px;">Planned borrowing is above what federal student loans allow for a dependent student over this many years (about ' + PFE.$(c.fedCap) + ').</div>' : '')
+    + (gapOptions.length ? '<div class="pfe-sec-t">Ways to close the gap</div><ul class="pfe-risk" style="list-style:disc;padding-left:18px;">' + gapOptions.map(function(x) { return '<li style="padding-left:0;">' + x + '</li>'; }).join('') + '</ul>' : '<div class="pfe-privacy" style="margin-top:10px;">🎉 This plan covers the full estimated cost without a gap.</div>')
+    + '<div class="pfe-sec-t">Next steps</div><ol style="margin:0;padding-left:18px;font-size:12.5px;color:#374151;line-height:1.7;">' + PFE.nextSteps(p).map(function(x) { return '<li>' + x + '</li>'; }).join('') + '</ol>'
+    + '</div>';
+};
+PFE.planCompareTable = function() {
+  var sel = PFE.s.plans.filter(function(p) { return PFE.s.planCmp.indexOf(p.id) >= 0; });
+  if (sel.length < 2) return PFE.s.plans.length >= 2 ? '<p class="pfe-muted" style="margin:-6px 0 14px;">Tick “Compare” on two or three plans to see them side by side.</p>' : '';
+  var C = sel.map(PFE.planCalc);
+  var row = function(l, f) { return '<tr><td>' + l + '</td>' + C.map(function(c, i) { return '<td>' + f(c, sel[i]) + '</td>'; }).join('') + '</tr>'; };
+  return '<div class="pfe-box"><div class="pfe-h3">Plan comparison</div><div class="pfe-scroll"><table class="pfe-table"><thead><tr><th></th>' + sel.map(function(p) { return '<th>' + PFE.esc(p.name) + '</th>'; }).join('') + '</tr></thead><tbody>'
+    + row('Career', function(c, p) { return PFE.esc(p.career || '—'); })
+    + row('Credential', function(c, p) { return PFE.esc(p.credential || '—'); })
+    + row('Years', function(c) { return c.years; })
+    + row('Program cost', function(c) { return PFE.$(c.cost); })
+    + row('Free money', function(c) { return PFE.$(c.free); })
+    + row('Your resources', function(c) { return PFE.$(c.own); })
+    + row('Funding gap', function(c) { return '<strong>' + PFE.$(c.gap) + '</strong>'; })
+    + row('Planned loans', function(c) { return PFE.$(c.loan); })
+    + row('Est. monthly payment', function(c) { return PFE.$(c.monthly) + (c.loan ? ' (' + c.term + ' yrs)' : ''); })
+    + '</tbody></table></div></div>';
+};
+
+// ── Print / PDF / student-approved share summary ────────────────────
+PFE.SHARE_SECTIONS = [['goal','Career goal & education pathway',true],['costs','Program cost',true],['aid','Grants & scholarships',true],['family','Family contribution',false],['savings','Savings',false],['work','Work & employer help',true],['loans','Loans & monthly payment',true],['deadlines','Deadlines & next steps',true]];
+PFE.shareModal = function(id) {
+  var ov = document.createElement('div');
+  ov.className = 'pfe-modal-ov'; ov.id = 'pfe-share-ov'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-labelledby', 'pfe-share-t');
+  ov.onclick = function(e) { if (e.target === ov) ov.remove(); };
+  ov.innerHTML = '<div class="pfe-modal"><h3 class="pfe-h" id="pfe-share-t">Share a summary with a parent or counselor</h3>'
+    + '<p class="pfe-p">You choose exactly what to include. LaunchPoint does not send your plan anywhere — this creates a summary you can print or save as a PDF and hand to someone you trust.</p>'
+    + PFE.SHARE_SECTIONS.map(function(s) { return '<label class="pfe-ms"><input type="checkbox" name="pfe-share" value="' + s[0] + '"' + (s[2] ? ' checked' : '') + '/><span>' + s[1] + '</span></label>'; }).join('')
+    + '<p class="pfe-muted" style="margin-top:8px;">Family contribution and savings are unchecked by default because they are private financial information.</p>'
+    + '<div class="pfe-row" style="margin-top:14px;"><button class="pfe-btn gold" id="pfe-share-go">Create summary</button><button class="pfe-btn2" onclick="document.getElementById(\'pfe-share-ov\').remove()">Cancel</button></div></div>';
+  document.body.appendChild(ov);
+  document.getElementById('pfe-share-go').onclick = function() {
+    var secs = Array.prototype.slice.call(ov.querySelectorAll('input[name=pfe-share]:checked')).map(function(x) { return x.value; });
+    ov.remove();
+    PFE.printPlan(id, secs);
+  };
+  var first = ov.querySelector('input'); if (first) first.focus();
+};
+PFE.printHtml = function(p, sections) {
+  var c = PFE.planCalc(p), all = !sections, has = function(k) { return all || sections.indexOf(k) >= 0; };
+  var rows = [];
+  if (has('goal')) { rows.push(['Career goal', PFE.esc(p.career || '—')]); rows.push(['Credential', PFE.esc(p.credential || '—')]); rows.push(['School / program', PFE.esc(p.school || '—')]); rows.push(['Program length', c.years + ' year(s)']); }
+  if (has('costs')) rows.push(['Estimated program cost', PFE.$(c.cost)]);
+  if (has('aid')) { rows.push(['Estimated grants', PFE.$(p.grantsAmt)]); rows.push(['Scholarships', PFE.$(p.scholarshipsAmt) + (p.scholarshipsText ? ' (' + PFE.esc(p.scholarshipsText) + ')' : '')]);
+    var gn = PFE.programs().filter(function(g) { return p.grantIds.indexOf(g.id) >= 0; }).map(function(g) { return PFE.esc(g.name); });
+    if (gn.length) rows.push(['Grants to investigate', gn.join('; ')]); }
+  if (has('family')) rows.push(['Family contribution', PFE.$(p.familyAmt)]);
+  if (has('savings')) { rows.push(['Savings used', PFE.$(p.savingsAmt)]); if (p.savingsGoal) rows.push(['Savings goal', PFE.$(p.savingsGoal)]); }
+  if (has('work')) { rows.push(['Work / work-study (potential)', PFE.$(p.workAmt)]); rows.push(['Employer assistance', PFE.$(p.employerAmt) + (p.employerText ? ' (' + PFE.esc(p.employerText) + ')' : '')]); }
+  if (all || (has('costs') && has('aid') && has('family') && has('savings') && has('work'))) rows.push(['<strong>Remaining funding gap</strong>', '<strong>' + PFE.$(c.gap) + '</strong>']);
+  if (has('loans')) rows.push(['Planned loans', PFE.$(c.loan) + (c.loan ? ' — about ' + PFE.$(c.monthly) + '/month for ' + c.term + ' years at ' + PFE.factVal('ugLoanRate') + '%' : '')]);
+  var dl = has('deadlines') ? '<h2>Deadlines</h2>' + (p.deadlines.filter(function(d) { return d.label || d.date; }).map(function(d) { return '<div>' + PFE.esc(d.date || 'Date TBD') + ' — ' + PFE.esc(d.label) + '</div>'; }).join('') || '<div>None added yet.</div>')
+    + '<h2>Next steps</h2><ol>' + PFE.nextSteps(p).map(function(x) { return '<li>' + x.replace(/<[^>]+>/g, '') + '</li>'; }).join('') + '</ol>' : '';
+  return '<h1>' + (sections ? 'Education Funding Summary' : 'My Education Funding Plan') + '</h1>'
+    + '<div>' + (sections ? 'Shared by ' + PFE.esc(PFE.firstName()) + ' · ' : '') + PFE.esc(p.name) + ' · ' + PFE.today() + (p.sample ? ' · ILLUSTRATIVE FIGURES' : '') + '</div>'
+    + '<h2>Plan</h2><table>' + rows.map(function(r) { return '<tr><td>' + r[0] + '</td><td class="r">' + r[1] + '</td></tr>'; }).join('') + '</table>'
+    + dl
+    + (p.notes ? '<h2>Notes</h2><div>' + PFE.esc(p.notes) + '</div>' : '')
+    + '<div class="foot">All figures are student-entered estimates, not actual school prices or aid awards. Financial aid rules change — confirm with StudentAid.gov, the state higher education agency, and each school’s financial aid office. Created with LaunchPoint Navigator.</div>';
+};
+PFE.printPlan = function(id, sections, pdf) {
+  var p = PFE.s.plans.filter(function(x) { return x.id === id; })[0]; if (!p) return;
+  var host = document.getElementById('pfe-print');
+  if (!host) { host = document.createElement('div'); host.id = 'pfe-print'; document.body.appendChild(host); }
+  host.innerHTML = PFE.printHtml(p, sections || null);
+  document.body.classList.add('pfe-printing');
+  var done = function() { document.body.classList.remove('pfe-printing'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  try { window.print(); } catch (e) {}
+  setTimeout(done, 1500);
+};
+
+// ── My Profile card (education funding milestones) ──────────────────
+PFE.profileCard = function() {
+  if (!PFE.s) PFE.load();
+  var ms = PFE.milestones(), done = ms.filter(function(m) { return m.done; }).length, p = PFE.activePlan();
+  var c = p ? PFE.planCalc(p) : null;
+  return '<div class="pf-card"><div class="pf-card-hdr"><div class="pf-card-ico">💸</div><div class="pf-card-title">Paying for My Education</div></div>'
+    + '<div class="pfe-prog-wrap" style="margin-top:4px;"><div class="pfe-prog"><span style="width:' + Math.round(done / ms.length * 100) + '%"></span></div><strong>' + done + ' / ' + ms.length + ' milestones</strong></div>'
+    + ms.map(function(m) { return '<div style="font-size:12px;color:' + (m.done ? '#059669' : '#6b7280') + ';padding:2px 0;">' + (m.done ? '✓' : '○') + ' ' + m.label + '</div>'; }).join('')
+    + (c ? '<div style="margin-top:10px;background:#f9fafb;border-radius:9px;padding:10px 12px;font-size:12.5px;color:#1B2F52;"><strong>' + PFE.esc(p.name) + '</strong> — funding gap ' + PFE.$(c.gap) + (p.sample ? ' (illustrative)' : '') + '</div>' : '')
+    + '<button class="pfe-btn2" style="margin-top:10px;" onclick="APP.goTab(\'roadmap\');setTimeout(function(){PFE.go(\'' + (c ? 'plan' : 'home') + '\')},60)">Open Paying for My Education →</button></div>';
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// PAYING FOR MY EDUCATION — admin content management (Admin › Command Center)
+// Overrides are stored in localStorage 'lppfe_programs_v1'; seed data is never modified,
+// so any change can be reverted per program ("Reset to default").
+// ═══════════════════════════════════════════════════════════════════
+var PFEAdmin = {
+  _filter: '',
+  ok: function() { return typeof ADM !== 'undefined' && ADM._authenticated; },
+  store: function() { return PFE.adminStore(); },
+  write: function(st) { try { localStorage.setItem(PFE.PKEY, JSON.stringify(st)); return true; } catch (e) { return false; } },
+  log: function(st, id, what) {
+    st.history = st.history || [];
+    st.history.unshift({ id: id, what: what, at: new Date().toISOString(), by: (typeof ADM !== 'undefined' && document.getElementById('cc-admin-name') ? document.getElementById('cc-admin-name').textContent : 'Admin') });
+    if (st.history.length > 200) st.history.length = 200;
+  },
+  render: function() {
+    var t = document.getElementById('cc-pfeadmin');
+    if (!t) return;
+    if (!PFEAdmin.ok()) { t.innerHTML = '<div class="cc-section-title">💸 Financial Aid Content</div><p>Please sign in to the admin dashboard first.</p>'; return; }
+    var st = PFEAdmin.store(), E = PFE.esc;
+    var progs = PFE.programs().filter(function(p) { return !p.generated || (st.programs && st.programs[p.id]) || PFEAdmin._filter === 'pending'; });
+    if (PFEAdmin._filter) progs = progs.filter(function(p) { return p.status === PFEAdmin._filter; });
+    var stale = function(p) { if (!p.lastVerified) return true; var d = new Date(p.lastVerified); return isNaN(d) || (Date.now() - d.getTime()) > 365 * 864e5; };
+    var counts = { verified: 0, illustrative: 0, pending: 0 };
+    PFE.programs().filter(function(p) { return !p.generated; }).forEach(function(p) { counts[p.status] = (counts[p.status] || 0) + 1; });
+    var facts = Object.keys(PFE_DATA.FACTS).map(function(k) {
+      var f = PFE.fact(k);
+      return '<tr><td style="font-size:12px;">' + E(f.label) + '</td>'
+        + '<td><input class="pfe-in" style="width:130px;" id="pfa-f-' + k + '" value="' + E(f.value) + '" aria-label="' + E(f.label) + ' value"/></td>'
+        + '<td><input class="pfe-in" style="width:130px;" type="date" id="pfa-fd-' + k + '" value="' + E(f.verified || '') + '" aria-label="Verified date"/></td>'
+        + '<td><input class="pfe-in" id="pfa-fs-' + k + '" value="' + E(f.source || '') + '" aria-label="Source URL"/></td>'
+        + '<td><button class="pfe-btn2" onclick="PFEAdmin.saveFact(\'' + k + '\')">Save</button></td></tr>';
+    }).join('');
+    var rows = progs.map(function(p) {
+      var ovr = st.programs && st.programs[p.id];
+      return '<div class="pfe-prog-card" style="padding:10px 14px;"><div class="pfe-row" style="justify-content:space-between;">'
+        + '<div><strong style="color:#1B2F52;font-size:13px;">' + E(p.name) + '</strong> ' + PFE.statusBadge(p.status)
+        + (p.active === false ? ' <span class="pfe-badge pfe-b-expired">Hidden</span>' : '') + (PFE.isExpired(p) ? ' <span class="pfe-badge pfe-b-expired">Expired</span>' : '')
+        + (p.status === 'verified' && stale(p) ? ' <span class="pfe-badge pfe-b-pending">Re-verify (12+ months)</span>' : '')
+        + '<div class="pfe-muted">' + E(p.geo) + ' · ' + E(p.category) + ' · last verified: ' + E(p.lastVerified || 'never') + (ovr ? ' · edited' : '') + '</div></div>'
+        + '<div class="pfe-row" style="gap:6px;"><button class="pfe-btn2" onclick="PFEAdmin.edit(\'' + p.id + '\')">Edit</button>'
+        + '<button class="pfe-btn2" onclick="PFEAdmin.verifyToday(\'' + p.id + '\')" ' + (p.sourceUrl ? '' : 'disabled title="Add an official source URL first"') + '>Mark verified today</button>'
+        + (ovr && !p.custom ? '<button class="pfe-btn2" onclick="PFEAdmin.reset(\'' + p.id + '\')">Reset to default</button>' : '')
+        + (p.custom ? '<button class="pfe-btn2 danger" onclick="PFEAdmin.toggleActive(\'' + p.id + '\')">' + (p.active === false ? 'Show' : 'Hide') + '</button>' : '<button class="pfe-btn2" onclick="PFEAdmin.toggleActive(\'' + p.id + '\')">' + (p.active === false ? 'Show' : 'Hide') + '</button>')
+        + '</div></div></div>';
+    }).join('');
+    var hist = (st.history || []).slice(0, 25).map(function(h) { return '<li>' + E(h.at.slice(0, 16).replace('T', ' ')) + ' — ' + E(h.id) + ': ' + E(h.what) + '</li>'; }).join('');
+    var chip = function(v, l) { return '<button class="pfe-chip' + (PFEAdmin._filter === v ? ' on' : '') + '" onclick="PFEAdmin._filter=\'' + v + '\';PFEAdmin.render()">' + l + '</button>'; };
+    t.innerHTML = '<div class="cc-section-title">💸 Financial Aid Content</div>'
+      + '<div class="pfe-note">Edit the programs and key figures students see in <strong>Roadmap › Paying for My Education</strong>. Only mark something <strong>Verified</strong> after checking it against the official source. Unverified items are labeled for students automatically. Changes are saved in this browser; use Export to move them to another device.</div>'
+      + '<div class="pfe-stats"><div class="pfe-stat green"><div class="pfe-stat-l">Verified</div><div class="pfe-stat-v">' + (counts.verified || 0) + '</div></div><div class="pfe-stat"><div class="pfe-stat-l">Illustrative</div><div class="pfe-stat-v">' + (counts.illustrative || 0) + '</div></div><div class="pfe-stat gold"><div class="pfe-stat-l">Awaiting verification</div><div class="pfe-stat-v">' + (counts.pending || 0) + '</div><div class="pfe-stat-s">+ ' + PFE_DATA.STATES.length + ' state placeholders</div></div></div>'
+      + '<h4 class="pfe-h3">Key federal figures</h4><div class="pfe-scroll"><table class="pfe-table"><thead><tr><th>Figure</th><th>Value</th><th>Verified</th><th>Source URL</th><th></th></tr></thead><tbody>' + facts + '</tbody></table></div>'
+      + '<div class="pfe-row" style="justify-content:space-between;margin:18px 0 8px;"><h4 class="pfe-h3" style="margin:0;">Programs</h4><div class="pfe-row" style="gap:6px;">'
+      + chip('', 'All') + chip('verified', 'Verified') + chip('illustrative', 'Illustrative') + chip('pending', 'Awaiting verification')
+      + '<button class="pfe-btn" onclick="PFEAdmin.edit(null)">+ Add program</button></div></div>'
+      + rows
+      + '<div class="pfe-row" style="margin-top:14px;"><button class="pfe-btn2" onclick="PFEAdmin.exportJson()">⬇ Export content (JSON)</button><label class="pfe-btn2" style="cursor:pointer;">⬆ Import content<input type="file" accept="application/json" style="display:none;" onchange="PFEAdmin.importJson(this)"/></label></div>'
+      + '<h4 class="pfe-h3" style="margin-top:18px;">Verification history</h4><ul style="font-size:12px;color:#4b5563;">' + (hist || '<li>No changes yet.</li>') + '</ul>';
+  },
+  saveFact: function(k) {
+    var st = PFEAdmin.store(), base = PFE_DATA.FACTS[k];
+    var raw = document.getElementById('pfa-f-' + k).value.trim();
+    var val = typeof base.value === 'number' ? parseFloat(raw) : raw;
+    if (typeof base.value === 'number' && (!isFinite(val) || val < 0)) { alert('Please enter a valid non-negative number.'); return; }
+    var src = document.getElementById('pfa-fs-' + k).value.trim();
+    if (src && !/^https:\/\//i.test(src)) { alert('Source URL must start with https://'); return; }
+    st.facts = st.facts || {};
+    st.facts[k] = { value: val, verified: document.getElementById('pfa-fd-' + k).value, source: src };
+    PFEAdmin.log(st, k, 'figure set to ' + val);
+    PFEAdmin.write(st); PFEAdmin.render();
+  },
+  FIELDS: [['name','Program name','text'],['description','Description','area'],['category','Source','sel',['federal','state','other']],['type','Type','sel',['grant','loan','work','service','training','payment','benefit']],
+    ['geo','Where (US or 2-letter state)','text'],['eduTypes','Education types (comma-separated: university, community, technical, certificate, apprenticeship)','text'],
+    ['eligibility','General eligibility','area'],['amount','Funding amount (as shown to students)','text'],['amountStatus','Amount status','sel',['verified','unverified','illustrative']],
+    ['application','Application process','area'],['deadline','Deadline (only if verified)','text'],['expires','Program end date (optional, hides it after)','date'],
+    ['sourceUrl','Official source URL (https://)','text'],['sourceName','Source name','text'],['lastVerified','Last verified','date'],
+    ['repayment','Repayment','sel',['none','required','conditional']],['obligation','Work or service obligation','sel',['none','employment','service']],['status','Content status','sel',['verified','illustrative','pending']]],
+  edit: function(id) {
+    if (!PFEAdmin.ok()) return;
+    var p = id ? PFE.programs().filter(function(x) { return x.id === id; })[0] : { id: '', name: '', category: 'state', type: 'grant', geo: PFE.s ? PFE.s.state : 'AL', eduTypes: [], status: 'pending', amountStatus: 'unverified', repayment: 'none', obligation: 'none', active: true };
+    if (!p) return;
+    var E = PFE.esc;
+    var f = PFEAdmin.FIELDS.map(function(d) {
+      var v = d[0] === 'eduTypes' ? (p.eduTypes || []).join(', ') : (p[d[0]] || '');
+      var inp = d[2] === 'area' ? '<textarea id="pfa-e-' + d[0] + '" rows="2">' + E(v) + '</textarea>'
+        : d[2] === 'sel' ? '<select id="pfa-e-' + d[0] + '">' + d[3].map(function(o) { return '<option' + (v === o ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select>'
+        : '<input id="pfa-e-' + d[0] + '" type="' + (d[2] === 'date' ? 'date' : 'text') + '" value="' + E(v) + '"/>';
+      return '<div class="pfe-f" style="margin-bottom:8px;"><label for="pfa-e-' + d[0] + '">' + d[1] + '</label>' + inp + '</div>';
+    }).join('');
+    var ov = document.createElement('div');
+    ov.className = 'pfe-modal-ov'; ov.id = 'pfa-ov'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true');
+    ov.innerHTML = '<div class="pfe-modal" style="max-width:640px;"><h3 class="pfe-h">' + (id ? 'Edit program' : 'Add program') + '</h3>' + f
+      + '<div id="pfa-err" class="pfe-warn" style="display:none;"></div>'
+      + '<div class="pfe-row"><button class="pfe-btn" onclick="PFEAdmin.saveEdit(\'' + E(id || '') + '\')">Save</button><button class="pfe-btn2" onclick="document.getElementById(\'pfa-ov\').remove()">Cancel</button></div></div>';
+    document.body.appendChild(ov);
+  },
+  saveEdit: function(id) {
+    var g = function(k) { var e = document.getElementById('pfa-e-' + k); return e ? e.value.trim() : ''; };
+    var rec = {};
+    PFEAdmin.FIELDS.forEach(function(d) { rec[d[0]] = g(d[0]); });
+    rec.eduTypes = rec.eduTypes.split(',').map(function(x) { return x.trim(); }).filter(function(x) { return PFE_DATA.EDU_TYPES[x]; });
+    rec.geo = (rec.geo || 'US').toUpperCase();
+    var errs = [];
+    if (!rec.name) errs.push('Program name is required.');
+    if (rec.geo !== 'US' && !PFE_DATA.STATES.some(function(s) { return s[0] === rec.geo; })) errs.push('“Where” must be US or a 2-letter state code.');
+    if (rec.sourceUrl && !/^https:\/\//i.test(rec.sourceUrl)) errs.push('Source URL must start with https://');
+    if (rec.status === 'verified' && (!rec.sourceUrl || !rec.lastVerified)) errs.push('Verified programs need an official source URL and a last-verified date.');
+    if (rec.amountStatus === 'verified' && rec.status !== 'verified') errs.push('An amount can only be marked verified when the program is verified.');
+    if (errs.length) { var e = document.getElementById('pfa-err'); e.innerHTML = errs.map(PFE.esc).join('<br>'); e.style.display = 'block'; return; }
+    var st = PFEAdmin.store();
+    st.programs = st.programs || {}; st.added = st.added || [];
+    if (id) {
+      var custom = st.added.filter(function(x) { return x.id === id; })[0];
+      if (custom) Object.assign(custom, rec); else st.programs[id] = Object.assign(st.programs[id] || {}, rec);
+      PFEAdmin.log(st, id, 'edited (status: ' + rec.status + ')');
+    } else {
+      rec.id = 'custom-' + Date.now().toString(36); rec.custom = true; rec.active = true;
+      st.added.push(rec);
+      PFEAdmin.log(st, rec.id, 'added (status: ' + rec.status + ')');
+    }
+    PFEAdmin.write(st);
+    var ov = document.getElementById('pfa-ov'); if (ov) ov.remove();
+    PFEAdmin.render();
+  },
+  patch: function(id, obj, what) {
+    var st = PFEAdmin.store(); st.programs = st.programs || {}; st.added = st.added || [];
+    var custom = st.added.filter(function(x) { return x.id === id; })[0];
+    if (custom) Object.assign(custom, obj); else st.programs[id] = Object.assign(st.programs[id] || {}, obj);
+    PFEAdmin.log(st, id, what); PFEAdmin.write(st); PFEAdmin.render();
+  },
+  verifyToday: function(id) { PFEAdmin.patch(id, { lastVerified: PFE.today(), status: 'verified' }, 'marked verified'); },
+  toggleActive: function(id) {
+    var p = PFE.programs().filter(function(x) { return x.id === id; })[0]; if (!p) return;
+    PFEAdmin.patch(id, { active: p.active === false }, p.active === false ? 'shown' : 'hidden from students');
+  },
+  reset: function(id) {
+    var st = PFEAdmin.store(); if (st.programs) delete st.programs[id];
+    PFEAdmin.log(st, id, 'reset to default'); PFEAdmin.write(st); PFEAdmin.render();
+  },
+  exportJson: function() {
+    var blob = new Blob([JSON.stringify(PFEAdmin.store(), null, 2)], { type: 'application/json' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'lpn-financial-aid-content-' + PFE.today() + '.json';
+    document.body.appendChild(a); a.click(); setTimeout(function() { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  },
+  importJson: function(input) {
+    var f = input.files && input.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function() {
+      try {
+        var d = JSON.parse(r.result);
+        if (!d || typeof d !== 'object' || (d.programs && typeof d.programs !== 'object') || (d.added && !Array.isArray(d.added))) throw new Error('bad format');
+        var st = { programs: d.programs || {}, added: d.added || [], facts: d.facts || {}, history: d.history || [] };
+        PFEAdmin.log(st, 'all', 'imported from file');
+        PFEAdmin.write(st); PFEAdmin.render();
+      } catch (e) { alert('That file is not a valid LaunchPoint financial aid content export.'); }
+    };
+    r.readAsText(f);
   }
 };
 
